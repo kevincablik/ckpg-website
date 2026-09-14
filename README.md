@@ -89,10 +89,9 @@ After the host issues domain instructions:
 
 ## Brand assets
 
-Official project imagery (not stock photography):
+Official project imagery (not stock photography), also copied under `src/assets/images/` for Astro `<Image>`:
 
 - `public/images/ckpg-logo.png` — CK Property Group wordmark (header/footer)
 - `public/images/ckpg-mark.png` — CK slash mark used in the header lockup
-- `public/images/seventh-franklin-exterior.jpg` — seventh&franklin exterior
-- `public/images/seventh-franklin-dusk.jpg` — seventh&franklin dusk elevation
-- `public/images/midrvr-hero.jpg` — MID RVR exterior
+- `public/images/seventh-franklin-*.jpg` — seventh&franklin exterior, interiors, roof deck, terrace
+- `public/images/midrvr-*.jpg` — MID RVR exteriors, roof deck, interiors

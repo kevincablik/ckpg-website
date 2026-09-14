@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ButtonLink from "../components/ButtonLink.astro";
 import ProjectFeature from "../components/ProjectFeature.astro";
+import SmartImage from "../components/SmartImage.astro";
+import ImageStrip from "../components/ImageStrip.astro";
 import { site } from "../data/site";
 import {
   atlantaCommunities,
@@ -10,6 +12,13 @@ import {
   midRvr,
   seventhAndFranklin,
 } from "../data/projects";
+import {
+  homeBleed,
+  homeHero,
+  homeStrip,
+  midRvrGallery,
+  seventhFranklinGallery,
+} from "../data/gallery";
 ---
 
 <BaseLayout
@@ -19,17 +28,19 @@ import {
   image="/images/seventh-franklin-exterior.jpg"
   imageAlt="Exterior of seventh&franklin in Downtown Boise"
 >
-  <section class="relative min-h-[88vh] bg-ink text-paper">
-    <img
-      src="/images/seventh-franklin-exterior.jpg"
-      alt="Exterior rendering of seventh&franklin at the gateway to Downtown Boise."
-      class="absolute inset-0 h-full w-full object-cover"
-      width="2400"
-      height="1349"
-      fetchpriority="high"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/20"></div>
-    <div class="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 md:px-8 md:pb-20">
+  <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
+    <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+      <SmartImage
+        src={homeHero.src}
+        alt={homeHero.alt}
+        class="h-full w-full object-cover"
+        widths={[800, 1200, 1800, 2400]}
+        sizes="100vw"
+        priority
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/15"></div>
+    <div class="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 md:px-8 md:pb-24">
       <p class="eyebrow text-paper/70">CK Property Group</p>
       <h1 class="font-display mt-5 max-w-3xl text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
         Prime locations.<br />Sophisticated design.<br />Quality execution.
@@ -69,8 +80,27 @@ import {
       <p class="eyebrow">Featured communities</p>
       <h2 class="font-display mt-3 text-4xl md:text-5xl">Work in Boise and the Wood River Valley</h2>
     </div>
-    <ProjectFeature project={seventhAndFranklin} />
-    <ProjectFeature project={midRvr} reverse />
+    <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
+    <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse />
+  </section>
+
+  <section class="relative min-h-[70vh] overflow-hidden bg-ink text-paper">
+    <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+      <SmartImage
+        src={homeBleed.src}
+        alt={homeBleed.alt}
+        widths={[800, 1400, 2000]}
+        sizes="100vw"
+        class="h-full w-full object-cover"
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+    <div class="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:px-8 md:py-20">
+      <div>
+        <p class="eyebrow text-paper/70">{homeBleed.caption}</p>
+        <p class="font-display mt-3 text-4xl md:text-5xl">Downtown Boise</p>
+      </div>
+    </div>
   </section>
 
   <section class="border-t border-line bg-paper-deep/60">
@@ -90,6 +120,16 @@ import {
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line py-20 md:py-24">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <p class="eyebrow">Selected views</p>
+      <h2 class="font-display mt-3 mb-10 text-4xl">Boise and Hailey</h2>
+    </div>
+    <div class="mx-auto max-w-6xl">
+      <ImageStrip images={homeStrip} />
     </div>
   </section>
 

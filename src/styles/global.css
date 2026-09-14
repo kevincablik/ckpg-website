@@ -71,3 +71,8 @@ body {
 .prose-ck a:hover {
   color: var(--color-ink-soft);
 }
+
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-sand) transparent;
+}

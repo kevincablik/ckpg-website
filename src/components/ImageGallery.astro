@@ -1,0 +1,43 @@
+---
+import type { GalleryImage } from "../data/gallery";
+import SmartImage from "./SmartImage.astro";
+
+interface Props {
+  images: GalleryImage[];
+  dense?: boolean;
+}
+
+const { images, dense = false } = Astro.props;
+---
+
+<div
+  class:list={[
+    "grid gap-2 md:gap-3",
+    dense ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3",
+  ]}
+>
+  {
+    images.map((image, index) => (
+      <figure
+        class:list={[
+          "overflow-hidden bg-paper-deep",
+          !dense && index === 0 && "col-span-2 md:col-span-2 md:row-span-2",
+        ]}
+      >
+        <div class:list={[!dense && index === 0 ? "aspect-[4/3] md:h-full md:aspect-auto md:min-h-[28rem]" : "aspect-[4/3]"]}>
+          <SmartImage
+            src={image.src}
+            alt={image.alt}
+            sizes={
+              !dense && index === 0
+                ? "(min-width: 768px) 66vw, 100vw"
+                : "(min-width: 768px) 33vw, 50vw"
+            }
+            priority={index === 0}
+          />
+        </div>
+        <figcaption class="sr-only">{image.caption}</figcaption>
+      </figure>
+    ))
+  }
+</div>
