@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import ProjectFeature from "../components/ProjectFeature.astro";
+import SmartImage from "../components/SmartImage.astro";
+import ImageStrip from "../components/ImageStrip.astro";
+import { site } from "../data/site";
+import {
+  atlantaCommunities,
+  homePortfolio,
+  howWeWork,
+  midRvr,
+  seventhAndFranklin,
+} from "../data/projects";
+import {
+  homeBleed,
+  homeHero,
+  homeStrip,
+  midRvrGallery,
+  seventhFranklinGallery,
+} from "../data/gallery";
+---
+
+<BaseLayout
+  title={`${site.name} | Urban Infill Development`}
+  description={site.description}
+  path="/"
+  image="/images/seventh-franklin-exterior.jpg"
+  imageAlt="Exterior of seventh&franklin in Downtown Boise"
+>
+  <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
+    <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+      <SmartImage
+        src={homeHero.src}
+        alt={homeHero.alt}
+        class="h-full w-full object-cover"
+        widths={[800, 1200, 1800, 2400]}
+        sizes="100vw"
+        priority
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/15"></div>
+    <div class="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 md:px-8 md:pb-24">
+      <p class="eyebrow text-paper/70">CK Property Group</p>
+      <h1 class="font-display mt-5 max-w-3xl text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
+        Prime locations.<br />Sophisticated design.<br />Quality execution.
+      </h1>
+      <p class="mt-8 max-w-xl text-base font-light leading-relaxed text-paper/85 md:text-lg">
+        CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhouse communities.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <ButtonLink href="/projects" variant="light">View Our Projects</ButtonLink>
+        <ButtonLink href="/contact" variant="ghost-light">Get in Touch</ButtonLink>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line">
+    <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-12 md:px-8 md:py-28">
+      <div class="md:col-span-4">
+        <p class="eyebrow">Who we are</p>
+        <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">A mother-and-son team</h2>
+      </div>
+      <div class="md:col-span-8">
+        <p class="max-w-2xl text-lg font-light leading-relaxed text-ink-soft">
+          Founded in 2014 by Anna and Kevin Cablik, CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
+        </p>
+        <p class="mt-6 max-w-2xl text-base font-light leading-relaxed text-muted">
+          As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
+        </p>
+        <div class="mt-10">
+          <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-6xl px-5 pt-4 md:px-8">
+      <p class="eyebrow">Featured communities</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">Work in Boise and the Wood River Valley</h2>
+    </div>
+    <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
+    <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse />
+  </section>
+
+  <section class="relative min-h-[70vh] overflow-hidden bg-ink text-paper">
+    <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+      <SmartImage
+        src={homeBleed.src}
+        alt={homeBleed.alt}
+        widths={[800, 1400, 2000]}
+        sizes="100vw"
+        class="h-full w-full object-cover"
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+    <div class="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:px-8 md:py-20">
+      <div>
+        <p class="eyebrow text-paper/70">{homeBleed.caption}</p>
+        <p class="font-display mt-3 text-4xl md:text-5xl">Downtown Boise</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line bg-paper-deep/60">
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <p class="eyebrow">How we work</p>
+      <h2 class="font-display mt-3 max-w-xl text-4xl md:text-5xl">
+        Prime locations. Sophisticated design. Quality execution.
+      </h2>
+      <div class="mt-16 grid gap-12 md:grid-cols-3 md:gap-10">
+        {
+          howWeWork.map((item) => (
+            <div class="border-t border-line pt-8">
+              <p class="font-display text-2xl text-stone">{item.number}</p>
+              <h3 class="mt-4 text-lg tracking-wide">{item.title}</h3>
+              <p class="mt-4 text-sm font-light leading-relaxed text-muted">{item.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line py-20 md:py-24">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <p class="eyebrow">Selected views</p>
+      <h2 class="font-display mt-3 mb-10 text-4xl">Boise and Hailey</h2>
+    </div>
+    <div class="mx-auto max-w-6xl">
+      <ImageStrip images={homeStrip} />
+    </div>
+  </section>
+
+  <section class="border-t border-line">
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+      <p class="eyebrow">Select portfolio</p>
+      <h2 class="font-display mt-3 text-4xl">Communities by name</h2>
+      <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
+        In addition to seventh&franklin and MID RVR, CK Property Group’s work includes the following communities.
+      </p>
+      <ul class="mt-12 divide-y divide-line border-y border-line">
+        {
+          homePortfolio.map((item) => (
+            <li class="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between">
+              <span class="text-lg">{item.name}</span>
+              <span class="text-sm tracking-wide text-stone">{item.place}</span>
+            </li>
+          ))
+        }
+        <li class="py-5">
+          <p class="text-lg">Atlanta communities</p>
+          <p class="mt-2 text-sm font-light leading-relaxed text-muted">
+            Including {atlantaCommunities.join(", ")}, and others.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
+      <div class="max-w-xl">
+        <p class="eyebrow text-paper/50">Start a conversation</p>
+        <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">
+          Partnerships, land, and current communities.
+        </h2>
+      </div>
+      <ButtonLink href="/contact" variant="light">Get in Touch</ButtonLink>
+    </div>
+  </section>
+</BaseLayout>

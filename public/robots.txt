@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ckpgdevelopment.com/sitemap-index.xml

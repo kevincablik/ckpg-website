@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title={`Contact | ${site.name}`}
+  description="Contact CK Property Group about partnerships, land opportunities, and current communities including seventh&franklin and MID RVR."
+  path="/contact"
+  image="/images/midrvr-hero.jpg"
+  imageAlt="MID RVR townhomes in Hailey"
+>
+  <section>
+    <div class="mx-auto grid max-w-6xl gap-16 px-5 py-16 md:grid-cols-12 md:px-8 md:py-24">
+      <div class="md:col-span-5">
+        <p class="eyebrow">Contact</p>
+        <h1 class="font-display mt-4 text-5xl leading-[0.95] md:text-6xl">
+          Let’s talk about the next site
+        </h1>
+        <p class="mt-6 text-lg font-light leading-relaxed text-ink-soft">
+          We welcome conversations about partnerships, land opportunities, and current communities.
+        </p>
+        <dl class="mt-10 space-y-6 border-t border-line pt-8">
+          <div>
+            <dt class="eyebrow">Email</dt>
+            <dd class="mt-2">
+              <a class="text-lg underline-offset-4 hover:underline" href={`mailto:${site.email}`}>
+                {site.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Current communities</dt>
+            <dd class="mt-2 text-sm font-light leading-relaxed text-muted">
+              seventh&franklin, Downtown Boise<br />
+              MID RVR, 317 N River Street, Hailey
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="md:col-span-6 md:col-start-7">
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

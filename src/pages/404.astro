@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title={`Page not found | ${site.name}`}
+  description="The page you requested is not available."
+  path="/404"
+>
+  <section class="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+    <p class="eyebrow">404</p>
+    <h1 class="font-display mt-4 text-5xl">This page is not here</h1>
+    <p class="mt-4 max-w-md text-muted">The address may have changed. Visit the home page or browse current projects.</p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <ButtonLink href="/" variant="dark">Home</ButtonLink>
+      <ButtonLink href="/projects" variant="ghost-dark">Projects</ButtonLink>
+    </div>
+  </section>
+</BaseLayout>

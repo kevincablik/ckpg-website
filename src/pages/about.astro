@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import { site } from "../data/site";
+import { howWeWork } from "../data/projects";
+---
+
+<BaseLayout
+  title={`About | ${site.name}`}
+  description="Founded in 2014 by Anna and Kevin Cablik, CK Property Group is a privately funded urban and infill development company focused on for-sale townhome communities."
+  path="/about"
+  image="/images/midrvr-hero.jpg"
+  imageAlt="MID RVR townhomes in Hailey"
+>
+  <section class="border-b border-line">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <p class="eyebrow">About</p>
+      <h1 class="font-display mt-4 max-w-3xl text-5xl leading-[0.95] md:text-6xl">
+        Founded in 2014 by Anna and Kevin Cablik
+      </h1>
+      <p class="mt-8 max-w-2xl text-lg font-light leading-relaxed text-ink-soft">
+        CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live. As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+      <p class="eyebrow">Core principles</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">How we approach every site</h2>
+      <div class="mt-14 grid gap-10 md:grid-cols-3">
+        {
+          howWeWork.map((item) => (
+            <div class="border-t border-line pt-8">
+              <h3 class="text-xl">{item.title}</h3>
+              <p class="mt-4 text-sm font-light leading-relaxed text-muted">{item.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line bg-paper-deep/50">
+    <div class="mx-auto grid max-w-6xl gap-16 px-5 py-20 md:grid-cols-2 md:px-8 md:py-28">
+      <article>
+        <p class="eyebrow">Founder</p>
+        <h2 class="font-display mt-3 text-4xl">Anna Cablik</h2>
+        <div class="mt-6 space-y-4 text-[0.98rem] font-light leading-relaxed text-muted">
+          <p>
+            Anna Cablik is a founder of CK Property Group. Her career in construction includes founding Anatek, Inc., a general contractor, and Anasteel & Supply Company, a reinforcing-steel fabricator.
+          </p>
+          <p>
+            That work encompassed major civic and commercial projects, including the Atlanta Airport International Terminal and Mercedes-Benz Stadium. She has served on the Truist board and previously served on the board of Georgia Power.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <p class="eyebrow">Managing Partner</p>
+        <h2 class="font-display mt-3 text-4xl">Kevin Cablik</h2>
+        <div class="mt-6 space-y-4 text-[0.98rem] font-light leading-relaxed text-muted">
+          <p>
+            Kevin Cablik is Managing Partner of CK Property Group. He earned a Bachelor of Science in Building Construction from the Georgia Institute of Technology in 2006.
+          </p>
+          <p>
+            His work in development, construction, and operations includes KC Constructors and KC Property Management, alongside the CK Property Group portfolio of urban infill townhome communities.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-16 md:flex-row md:items-end md:justify-between md:px-8 md:py-20">
+      <p class="font-display max-w-xl text-3xl leading-snug md:text-4xl">
+        {site.tagline}
+      </p>
+      <ButtonLink href="/contact" variant="light">Get in Touch</ButtonLink>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  variant?: "light" | "dark" | "ghost-light" | "ghost-dark";
+  external?: boolean;
+}
+
+const { href, variant = "dark", external = false } = Astro.props;
+
+const classes = {
+  light:
+    "inline-flex items-center gap-2 border border-paper bg-paper px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink transition-colors hover:bg-transparent hover:text-paper",
+  dark: "inline-flex items-center gap-2 border border-ink bg-ink px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] uppercase text-paper transition-colors hover:bg-transparent hover:text-ink",
+  "ghost-light":
+    "inline-flex items-center gap-2 border border-paper/50 px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] uppercase text-paper transition-colors hover:border-paper hover:bg-paper hover:text-ink",
+  "ghost-dark":
+    "inline-flex items-center gap-2 border border-ink/25 px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper",
+}[variant];
+---
+
+<a
+  href={href}
+  class={classes}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noreferrer" : undefined}
+>
+  <slot />
+  <span aria-hidden="true">→</span>
+</a>

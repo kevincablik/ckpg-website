@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectFeature from "../components/ProjectFeature.astro";
+import { site } from "../data/site";
+import { midRvr, selectPortfolio, seventhAndFranklin } from "../data/projects";
+import { midRvrGallery, seventhFranklinGallery } from "../data/gallery";
+---
+
+<BaseLayout
+  title={`Projects | ${site.name}`}
+  description="Featured CK Property Group communities including seventh&franklin in Downtown Boise and MID RVR in Hailey, plus a select portfolio of urban infill townhomes."
+  path="/projects"
+  image="/images/seventh-franklin-exterior.jpg"
+  imageAlt="Exterior of seventh&franklin in Downtown Boise"
+>
+  <section class="border-b border-line">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <p class="eyebrow">Projects</p>
+      <h1 class="font-display mt-4 max-w-3xl text-5xl leading-[0.95] md:text-6xl">
+        Thoughtfully designed townhome communities
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg font-light leading-relaxed text-muted">
+        CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Featured work includes seventh&franklin in Downtown Boise and MID RVR in Hailey.
+      </p>
+    </div>
+  </section>
+
+  <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} detail />
+  <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse detail />
+
+  <section class="border-t border-line bg-paper-deep/50">
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+      <p class="eyebrow">Select portfolio</p>
+      <h2 class="font-display mt-3 text-4xl">Additional communities</h2>
+      <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
+        Names of completed and related communities. 410 RVR in Hailey is a separate project from MID RVR.
+      </p>
+      <ul class="mt-12 grid gap-0 sm:grid-cols-2">
+        {
+          selectPortfolio.map((item) => (
+            <li class="flex items-baseline justify-between gap-6 border-t border-line py-5">
+              <span>{item.name}</span>
+              <span class="text-sm tracking-wide text-stone">{item.place}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-8 text-sm text-muted">Atlanta work also includes others beyond the communities listed here.</p>
+    </div>
+  </section>
+</BaseLayout>
