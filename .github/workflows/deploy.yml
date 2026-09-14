@@ -1,5 +1,8 @@
-# Deploy the Astro site to GitHub Pages.
-# After the first run, confirm Settings → Pages → Source is "GitHub Actions".
+# Deploy the Astro site to GitHub Pages (custom domain ckpgdevelopment.com).
+#
+# First-time setup (once): repo Settings → Pages → Source: GitHub Actions.
+# configure-pages is omitted on purpose: it fails until Pages is enabled, and
+# this site already sets site/base in astro.config.mjs for the custom domain.
 name: Deploy GitHub Pages
 
 on:
@@ -28,9 +31,6 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci

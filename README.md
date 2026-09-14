@@ -66,12 +66,14 @@ Until the custom domain is attached, GitHub’s default project URL is `https://
 
 ### One-time: enable Pages (Kevin)
 
-1. Open the repo **Settings → Pages**.
-2. Under **Build and deployment → Source**, choose **GitHub Actions** (if it is not already selected). Save if GitHub asks.
-3. Merge this change to `main` (or wait for the workflow on `main`). Open the **Actions** tab and confirm **Deploy GitHub Pages** is green.
-4. If GitHub asks to approve the `github-pages` environment on the first run, approve it.
+GitHub does **not** auto-enable Pages for this repo. Until this click is done, **Deploy** fails with `Get Pages site failed` / `Not Found`.
 
-You can also run the workflow manually: **Actions → Deploy GitHub Pages → Run workflow**.
+1. Open [Settings → Pages](https://github.com/kevincablik/ckpg-website/settings/pages).
+2. Under **Build and deployment → Source**, choose **GitHub Actions**. GitHub saves this as soon as you select it.
+3. Re-run the workflow: **Actions → Deploy GitHub Pages → Run workflow** (or push an empty commit / wait for the next push to `main`).
+4. If GitHub asks to approve the `github-pages` environment on the first successful deploy, approve it.
+
+The **build** job (Node 22, `npm ci`, `npm run build`) does not need Pages to be on; only **deploy** does.
 
 ### One-time: custom domain `ckpgdevelopment.com`
 
