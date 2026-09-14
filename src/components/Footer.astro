@@ -1,0 +1,62 @@
+---
+import { nav, site } from "../data/site";
+---
+
+<footer class="bg-ink text-paper">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8 md:py-20">
+    <div class="md:col-span-6">
+      <a href="/" class="inline-block" aria-label={`${site.name} home`}>
+        <img
+          src="/images/ckpg-logo.png"
+          alt={site.legalName}
+          class="h-14 w-auto"
+          width="224"
+          height="126"
+        />
+      </a>
+      <p class="mt-6 max-w-sm text-sm font-light leading-relaxed tracking-wide text-paper/75">
+        {site.tagline}
+      </p>
+    </div>
+
+    <nav class="md:col-span-3" aria-label="Footer">
+      <p class="eyebrow text-paper/50">Navigate</p>
+      <ul class="mt-4 space-y-3">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-sm tracking-wide text-paper/80 transition-colors hover:text-paper"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="md:col-span-3">
+      <p class="eyebrow text-paper/50">Contact</p>
+      <a
+        href={`mailto:${site.email}`}
+        class="mt-4 inline-block text-sm tracking-wide text-paper/80 transition-colors hover:text-paper"
+      >
+        {site.email}
+      </a>
+      <p class="mt-4 text-sm leading-relaxed text-paper/60">
+        Partnerships, land, and current communities.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div
+      class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-xs tracking-wide text-paper/45 md:flex-row md:items-center md:justify-between md:px-8"
+    >
+      <p>© {new Date().getFullYear()} {site.legalName}</p>
+      <p>Urban infill development</p>
+    </div>
+  </div>
+</footer>

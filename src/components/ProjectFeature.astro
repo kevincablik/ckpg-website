@@ -1,0 +1,108 @@
+---
+import type { FeaturedProject } from "../data/projects";
+import ButtonLink from "./ButtonLink.astro";
+
+interface Props {
+  project: FeaturedProject;
+  reverse?: boolean;
+  detail?: boolean;
+}
+
+const { project, reverse = false, detail = false } = Astro.props;
+---
+
+<article
+  id={project.id}
+  class="scroll-mt-28 border-t border-line"
+>
+  <div
+    class:list={[
+      "mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:gap-14 md:px-8 md:py-24",
+      reverse && "md:[&>div:first-child]:order-2",
+    ]}
+  >
+    <div class="overflow-hidden bg-paper-deep">
+      <img
+        src={project.image.src}
+        alt={project.image.alt}
+        class="aspect-[4/3] h-full w-full object-cover"
+        width="1600"
+        height="1200"
+        loading={detail ? "eager" : "lazy"}
+      />
+    </div>
+
+    <div>
+      <p class="eyebrow">{project.kicker}</p>
+      <h2 class="font-display mt-4 text-4xl font-normal leading-[1.1] tracking-tight text-ink md:text-5xl">
+        {project.name}
+      </h2>
+      <p class="font-display mt-3 text-2xl italic text-ink-soft md:text-[1.65rem]">
+        {project.headline}
+      </p>
+      {
+        detail ? (
+          project.body.map((paragraph) => (
+            <p class="mt-5 max-w-xl text-[0.98rem] font-light leading-relaxed text-muted">
+              {paragraph}
+            </p>
+          ))
+        ) : (
+          <p class="mt-6 max-w-xl text-[0.98rem] font-light leading-relaxed text-muted">
+            {project.summary}
+          </p>
+        )
+      }
+
+      <ul class="mt-8 space-y-3 border-t border-line pt-6">
+        {
+          project.bullets.map((item) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-ink-soft">
+              <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-ink" aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        {
+          !detail && (
+            <ButtonLink href={project.href} variant="dark">
+              View project
+            </ButtonLink>
+          )
+        }
+        {
+          project.externalUrl && (
+            <ButtonLink href={project.externalUrl} variant="ghost-dark" external>
+              {project.externalLabel ?? "Project site"}
+            </ButtonLink>
+          )
+        }
+        {
+          detail && (
+            <ButtonLink href={`/contact?interest=${project.id}`} variant="dark">
+              Inquire
+            </ButtonLink>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  {
+    detail && project.extraImage && (
+      <div class="mx-auto max-w-6xl px-5 pb-8 md:px-8 md:pb-16">
+        <img
+          src={project.extraImage.src}
+          alt={project.extraImage.alt}
+          class="aspect-[16/8] w-full object-cover"
+          width="2200"
+          height="1100"
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+</article>

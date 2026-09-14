@@ -1,0 +1,124 @@
+---
+import { projectInterestOptions, site } from "../data/site";
+
+const formspree = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT?.trim();
+const email = import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || site.email;
+const requestedInterest = Astro.url.searchParams.get("interest") ?? "general";
+const validInterest = projectInterestOptions.some((option) => option.value === requestedInterest)
+  ? requestedInterest
+  : "general";
+
+const action = formspree || `mailto:${email}`;
+const method = formspree ? "POST" : "GET";
+---
+
+<form
+  class="space-y-6"
+  action={action}
+  method={method}
+  data-contact-form
+  data-email={email}
+  data-formspree={formspree ? "true" : "false"}
+>
+  {
+    !formspree && (
+      <>
+        <input type="hidden" name="subject" value="CK Property Group inquiry" />
+        {/* TODO: Replace mailto with Formspree once Kevin confirms the live inbox. Set PUBLIC_FORMSPREE_ENDPOINT. */}
+      </>
+    )
+  }
+
+  <div>
+    <label for="name" class="eyebrow block">Name</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      required
+      autocomplete="name"
+      class="mt-2 w-full border-0 border-b border-line bg-transparent py-3 text-ink outline-none transition-colors focus:border-ink"
+    />
+  </div>
+
+  <div>
+    <label for="email" class="eyebrow block">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      autocomplete="email"
+      class="mt-2 w-full border-0 border-b border-line bg-transparent py-3 text-ink outline-none transition-colors focus:border-ink"
+    />
+  </div>
+
+  <div>
+    <label for="interest" class="eyebrow block">Project interest</label>
+    <select
+      id="interest"
+      name="interest"
+      class="mt-2 w-full appearance-none border-0 border-b border-line bg-transparent py-3 text-ink outline-none transition-colors focus:border-ink"
+    >
+      {
+        projectInterestOptions.map((option) => (
+          <option value={option.value} selected={option.value === validInterest}>
+            {option.label}
+          </option>
+        ))
+      }
+    </select>
+    <p class="mt-2 text-xs text-stone">Optional. Defaults to General.</p>
+  </div>
+
+  <div>
+    <label for="message" class="eyebrow block">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="6"
+      class="mt-2 w-full resize-y border-0 border-b border-line bg-transparent py-3 text-ink outline-none transition-colors focus:border-ink"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="inline-flex items-center gap-2 border border-ink bg-ink px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] uppercase text-paper transition-colors hover:bg-transparent hover:text-ink"
+  >
+    Send message
+    <span aria-hidden="true">→</span>
+  </button>
+
+  <p class="text-sm leading-relaxed text-muted">
+    Or email
+    <a class="underline underline-offset-4" href={`mailto:${email}`}>{email}</a>.
+    {
+      !formspree && (
+        <span class="block mt-2 text-xs text-stone">
+          This form currently opens an email draft. Connect Formspree when the inbox is confirmed.
+        </span>
+      )
+    }
+  </p>
+</form>
+
+<script>
+  const form = document.querySelector("[data-contact-form]");
+
+  form?.addEventListener("submit", (event) => {
+    if (!(form instanceof HTMLFormElement)) return;
+    if (form.dataset.formspree === "true") return;
+
+    event.preventDefault();
+    const data = new FormData(form);
+    const email = form.dataset.email ?? "info@ckpgdevelopment.com";
+    const name = String(data.get("name") ?? "").trim();
+    const from = String(data.get("email") ?? "").trim();
+    const interest = String(data.get("interest") ?? "general").trim();
+    const message = String(data.get("message") ?? "").trim();
+    const body = [`Name: ${name}`, `Email: ${from}`, `Project interest: ${interest}`, "", message].join("\n");
+    const href = `mailto:${email}?subject=${encodeURIComponent("CK Property Group inquiry")}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  });
+</script>
