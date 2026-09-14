@@ -53,12 +53,12 @@ const method = formspree ? "POST" : "GET";
     />
   </div>
 
-  <div>
+  <div class="relative">
     <label for="interest" class="eyebrow block">Project interest</label>
     <select
       id="interest"
       name="interest"
-      class="mt-2 w-full appearance-none border-0 border-b border-line bg-transparent py-3 text-ink outline-none transition-colors focus:border-ink"
+      class="mt-2 w-full appearance-none border-0 border-b border-line bg-transparent py-3 pr-8 text-ink outline-none transition-colors focus:border-ink"
     >
       {
         projectInterestOptions.map((option) => (
@@ -68,6 +68,7 @@ const method = formspree ? "POST" : "GET";
         ))
       }
     </select>
+    <span class="pointer-events-none absolute right-0 top-9 text-stone" aria-hidden="true">▾</span>
     <p class="mt-2 text-xs text-stone">Optional. Defaults to General.</p>
   </div>
 
@@ -91,7 +92,7 @@ const method = formspree ? "POST" : "GET";
   </button>
 
   <p class="text-sm leading-relaxed text-muted">
-    Or email
+    Or email{' '}
     <a class="underline underline-offset-4" href={`mailto:${email}`}>{email}</a>.
     {
       !formspree && (

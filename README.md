@@ -91,7 +91,8 @@ After the host issues domain instructions:
 
 Official project imagery (not stock photography):
 
-- `public/images/ckpg-logo.png` — CK Property Group wordmark
+- `public/images/ckpg-logo.png` — CK Property Group wordmark (header/footer)
+- `public/images/ckpg-mark.png` — CK slash mark used in the header lockup
 - `public/images/seventh-franklin-exterior.jpg` — seventh&franklin exterior
 - `public/images/seventh-franklin-dusk.jpg` — seventh&franklin dusk elevation
 - `public/images/midrvr-hero.jpg` — MID RVR exterior
