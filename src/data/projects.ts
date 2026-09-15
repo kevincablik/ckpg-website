@@ -90,11 +90,11 @@ export const rvr410: FeaturedProject = {
   bullets: ["12 townhomes", "410 N River Street, Hailey", "Completed"],
   image: {
     src: "/images/410-rvr-dusk.jpg",
-    alt: "Dusk view of the 410 RVR townhomes at 410 N River Street in Hailey.",
+    alt: "Dusk rendering of the 410 RVR townhomes at 410 N River Street in Hailey.",
   },
   extraImage: {
-    src: "/images/410-rvr-entry.jpg",
-    alt: "Completed townhome entries at 410 RVR in Hailey.",
+    src: "/images/410-rvr-terrace.jpg",
+    alt: "Rooftop terrace at 410 RVR in Hailey.",
   },
   href: "/projects#410-rvr",
 };

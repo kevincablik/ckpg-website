@@ -25,9 +25,13 @@ import midrvrBedroom from "../assets/images/midrvr-bedroom.jpg";
 import midrvrLivingPhoto from "../assets/images/midrvr-living-photo.jpg";
 
 import rvr410Dusk from "../assets/images/410-rvr-dusk.jpg";
-import rvr410Entry from "../assets/images/410-rvr-entry.jpg";
+import rvr410Living from "../assets/images/410-rvr-living.jpg";
+import rvr410Aerial from "../assets/images/410-rvr-aerial.jpg";
+import rvr410Bedroom from "../assets/images/410-rvr-bedroom.jpg";
 import rvr410Terrace from "../assets/images/410-rvr-terrace.jpg";
-import rvr410Roofs from "../assets/images/410-rvr-roofs.jpg";
+import rvr410TerraceRender from "../assets/images/410-rvr-terrace-render.jpg";
+import rvr410Bath from "../assets/images/410-rvr-bath.jpg";
+import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -155,22 +159,42 @@ export const midRvrGallery: GalleryImage[] = [
 export const rvr410Gallery: GalleryImage[] = [
   {
     src: rvr410Dusk,
-    alt: "410 RVR, Hailey",
+    alt: "Dusk rendering of the 410 RVR townhomes at 410 N River Street in Hailey.",
     caption: "410 RVR",
   },
   {
-    src: rvr410Entry,
-    alt: "410 RVR, Hailey",
+    src: rvr410Living,
+    alt: "Living room at 410 RVR in Hailey.",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Aerial,
+    alt: "Aerial rendering of 410 RVR in Hailey.",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Bedroom,
+    alt: "Bedroom at 410 RVR in Hailey.",
     caption: "410 RVR",
   },
   {
     src: rvr410Terrace,
-    alt: "410 RVR, Hailey",
+    alt: "Rooftop terrace at 410 RVR in Hailey.",
     caption: "410 RVR",
   },
   {
-    src: rvr410Roofs,
-    alt: "410 RVR, Hailey",
+    src: rvr410TerraceRender,
+    alt: "Rooftop terrace rendering of 410 RVR in Hailey.",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Bath,
+    alt: "Bathroom at 410 RVR in Hailey.",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Interior,
+    alt: "Interior rendering of 410 RVR in Hailey.",
     caption: "410 RVR",
   },
 ];
@@ -186,7 +210,7 @@ export const homeStrip: GalleryImage[] = [
   { ...midRvrGallery[3], href: "/projects#mid-rvr" },
   { ...midRvrGallery[4], href: "/projects#mid-rvr" },
   { ...rvr410Gallery[0], href: "/projects#410-rvr" },
-  { ...rvr410Gallery[1], href: "/projects#410-rvr" },
+  { ...rvr410Gallery[4], href: "/projects#410-rvr" },
   { ...seventhFranklinGallery[5], href: "/projects#seventh-and-franklin" },
   { ...seventhFranklinGallery[6], href: "/projects#seventh-and-franklin" },
 ];
@@ -194,5 +218,5 @@ export const homeStrip: GalleryImage[] = [
 export const homeFeaturedThumbs = {
   seventh: seventhFranklinGallery.slice(2, 6),
   mid: [midRvrGallery[1], midRvrGallery[2], midRvrGallery[3], midRvrGallery[5]],
-  rvr410: rvr410Gallery.slice(1),
+  rvr410: [rvr410Gallery[1], rvr410Gallery[2], rvr410Gallery[3], rvr410Gallery[4]],
 };
