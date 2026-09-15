@@ -10,6 +10,7 @@ import {
   homePortfolio,
   howWeWork,
   midRvr,
+  rvr410,
   seventhAndFranklin,
 } from "../data/projects";
 import {
@@ -17,6 +18,7 @@ import {
   homeHero,
   homeStrip,
   midRvrGallery,
+  rvr410Gallery,
   seventhFranklinGallery,
 } from "../data/gallery";
 ---
@@ -82,6 +84,7 @@ import {
     </div>
     <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
     <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse />
+    <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
   </section>
 
   <section class="relative min-h-[70vh] overflow-hidden bg-ink text-paper">
@@ -138,14 +141,16 @@ import {
       <p class="eyebrow">Select portfolio</p>
       <h2 class="font-display mt-3 text-4xl">Communities by name</h2>
       <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
-        In addition to seventh&franklin and MID RVR, CK Property Group’s work includes the following communities.
+        In addition to seventh&franklin, MID RVR, and completed 410 RVR, CK Property Group’s work includes the following communities.
       </p>
       <ul class="mt-12 divide-y divide-line border-y border-line">
         {
           homePortfolio.map((item) => (
             <li class="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between">
               <span class="text-lg">{item.name}</span>
-              <span class="text-sm tracking-wide text-stone">{item.place}</span>
+              <span class="text-sm tracking-wide text-stone">
+                {"status" in item && item.status ? `${item.status} · ${item.place}` : item.place}
+              </span>
             </li>
           ))
         }

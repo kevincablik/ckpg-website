@@ -21,6 +21,7 @@ export const projectInterestOptions = [
   { value: "general", label: "General" },
   { value: "seventh-and-franklin", label: "seventh&franklin" },
   { value: "mid-rvr", label: "MID RVR" },
+  { value: "410-rvr", label: "410 RVR" },
   { value: "other", label: "Other" },
 ] as const;
 

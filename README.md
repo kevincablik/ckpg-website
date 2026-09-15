@@ -121,3 +121,4 @@ Official project imagery (not stock photography), also copied under `src/assets/
 - `public/images/ckpg-mark.png` — CK slash mark used in the header lockup
 - `public/images/seventh-franklin-*.jpg` — seventh&franklin exterior, interiors, roof deck, terrace
 - `public/images/midrvr-*.jpg` — MID RVR exteriors, roof deck, interiors
+- `public/images/410-rvr-*.jpg` — 410 RVR exteriors (completed Hailey community)

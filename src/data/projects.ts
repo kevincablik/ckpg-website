@@ -60,7 +60,7 @@ export const midRvr: FeaturedProject = {
     "MID RVR is a collection of 10 townhomes in Hailey, designed by Pivot North Architecture and developed in partnership with CK Property Group. Lock-and-leave mountain living near the gateway to Sun Valley, private garages and rooftop decks.",
   body: [
     "MID RVR brings lock-and-leave mountain living to River Street in Hailey, near the gateway to Sun Valley. The community is a collection of 10 townhomes across two buildings, with private garages and rooftop decks.",
-    "The project is designed by Pivot North Architecture, built by Conrad Brothers, and developed in partnership with CK Property Group. 410 RVR, a separate completed community one block north, is listed with other select work in the portfolio below.",
+    "The project is designed by Pivot North Architecture, built by Conrad Brothers, and developed in partnership with CK Property Group. 410 RVR is a separate completed community at 410 N River Street.",
   ],
   bullets: [
     "10 townhomes across two buildings",
@@ -75,12 +75,36 @@ export const midRvr: FeaturedProject = {
   href: "/projects#mid-rvr",
 };
 
-export const featuredProjects = [seventhAndFranklin, midRvr] as const;
+export const rvr410: FeaturedProject = {
+  id: "410-rvr",
+  name: "410 RVR",
+  location: "410 N River Street, Hailey",
+  kicker: "Completed · 410 N River Street, Hailey",
+  headline: "Twelve townhomes on River Street",
+  summary:
+    "410 RVR is a completed community of 12 townhomes at 410 N River Street in Hailey. It is a separate project from MID RVR at 317 N River Street.",
+  body: [
+    "410 RVR is a completed community of 12 townhomes at 410 N River Street in Hailey.",
+    "It is a separate project from MID RVR at 317 N River Street.",
+  ],
+  bullets: ["12 townhomes", "410 N River Street, Hailey", "Completed"],
+  image: {
+    src: "/images/410-rvr-dusk.jpg",
+    alt: "Dusk view of the 410 RVR townhomes at 410 N River Street in Hailey.",
+  },
+  extraImage: {
+    src: "/images/410-rvr-entry.jpg",
+    alt: "Completed townhome entries at 410 RVR in Hailey.",
+  },
+  href: "/projects#410-rvr",
+};
+
+export const featuredProjects = [seventhAndFranklin, midRvr, rvr410] as const;
 
 export const homePortfolio = [
   { name: "Kootenai Townhomes", place: "Boise" },
   { name: "Midtown Heights", place: "Boise" },
-  { name: "410 RVR", place: "Hailey" },
+  { name: "410 RVR", place: "Hailey", status: "Completed" },
 ] as const;
 
 export const atlantaCommunities = [
@@ -92,7 +116,7 @@ export const atlantaCommunities = [
 export const selectPortfolio = [
   { name: "Kootenai Townhomes", place: "Boise" },
   { name: "Midtown Heights", place: "Boise" },
-  { name: "410 RVR", place: "Hailey" },
+  { name: "410 RVR", place: "Hailey", status: "Completed" },
   { name: "Edge on Lucy", place: "Atlanta" },
   { name: "975 Piedmont", place: "Atlanta" },
   { name: "Skypointe", place: "Atlanta" },

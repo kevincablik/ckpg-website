@@ -24,6 +24,11 @@ import midrvrKitchen from "../assets/images/midrvr-kitchen.jpg";
 import midrvrBedroom from "../assets/images/midrvr-bedroom.jpg";
 import midrvrLivingPhoto from "../assets/images/midrvr-living-photo.jpg";
 
+import rvr410Dusk from "../assets/images/410-rvr-dusk.jpg";
+import rvr410Entry from "../assets/images/410-rvr-entry.jpg";
+import rvr410Terrace from "../assets/images/410-rvr-terrace.jpg";
+import rvr410Roofs from "../assets/images/410-rvr-roofs.jpg";
+
 export type GalleryImage = {
   src: ImageMetadata;
   alt: string;
@@ -147,6 +152,29 @@ export const midRvrGallery: GalleryImage[] = [
   },
 ];
 
+export const rvr410Gallery: GalleryImage[] = [
+  {
+    src: rvr410Dusk,
+    alt: "410 RVR, Hailey",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Entry,
+    alt: "410 RVR, Hailey",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Terrace,
+    alt: "410 RVR, Hailey",
+    caption: "410 RVR",
+  },
+  {
+    src: rvr410Roofs,
+    alt: "410 RVR, Hailey",
+    caption: "410 RVR",
+  },
+];
+
 export const homeHero = seventhFranklinGallery[0];
 export const homeBleed = seventhFranklinGallery[4];
 
@@ -157,6 +185,8 @@ export const homeStrip: GalleryImage[] = [
   { ...midRvrGallery[1], href: "/projects#mid-rvr" },
   { ...midRvrGallery[3], href: "/projects#mid-rvr" },
   { ...midRvrGallery[4], href: "/projects#mid-rvr" },
+  { ...rvr410Gallery[0], href: "/projects#410-rvr" },
+  { ...rvr410Gallery[1], href: "/projects#410-rvr" },
   { ...seventhFranklinGallery[5], href: "/projects#seventh-and-franklin" },
   { ...seventhFranklinGallery[6], href: "/projects#seventh-and-franklin" },
 ];
@@ -164,4 +194,5 @@ export const homeStrip: GalleryImage[] = [
 export const homeFeaturedThumbs = {
   seventh: seventhFranklinGallery.slice(2, 6),
   mid: [midRvrGallery[1], midRvrGallery[2], midRvrGallery[3], midRvrGallery[5]],
+  rvr410: rvr410Gallery.slice(1),
 };
