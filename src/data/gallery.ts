@@ -48,6 +48,8 @@ import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
 import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
 
+import kootenai01 from "../assets/images/kootenai-01.jpg";
+
 export type GalleryImage = {
   src: ImageMetadata;
   alt: string;
@@ -283,6 +285,14 @@ export const midtownHeightsGallery: GalleryImage[] = [
   },
 ];
 
+export const kootenaiGallery: GalleryImage[] = [
+  {
+    src: kootenai01,
+    alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise",
+    caption: "Kootenai Townhomes",
+  },
+];
+
 export const homeHero = seventhFranklinGallery[0];
 export const homeBleed = seventhFranklinGallery[4];
 
@@ -299,6 +309,7 @@ export const homeStrip: GalleryImage[] = [
   { ...rvr410Gallery[4], href: "/projects#410-rvr" },
   { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
   { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
+  { ...kootenaiGallery[0], href: "/projects#kootenai-townhomes" },
 ];
 
 export const homeFeaturedThumbs = {

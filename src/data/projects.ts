@@ -24,7 +24,7 @@ export const seventhAndFranklin: FeaturedProject = {
   id: "seventh-and-franklin",
   name: "seventh&franklin",
   location: "Downtown Boise",
-  kicker: "Downtown Boise",
+  kicker: "Completed · Downtown Boise",
   headline: "Historic landmark, reimagined",
   summary:
     "At the gateway to Downtown Boise, seventh&franklin blends the character of the historic J.W. McLean House—originally designed in 1903—with contemporary architecture, designer interiors, and private rooftop living. Residences are positioned for privacy and retreat while remaining steps from dining, culture, parks, and the Boise River.",
@@ -155,9 +155,9 @@ export const midtownHeights: FeaturedProject = {
   kicker: "Completed · 1709 S Federal Way, Boise",
   headline: "Thirty-five townhomes in Boise",
   summary:
-    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise. CK Property Group developed and entitled the community, which was later sold to a Berkshire Hathaway subsidiary.",
   body: [
-    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise. CK Property Group developed and entitled the community, which was later sold to a Berkshire Hathaway subsidiary.",
   ],
   bullets: ["35 townhomes", "1709 S Federal Way, Boise", "Completed"],
   image: {
@@ -171,19 +171,36 @@ export const midtownHeights: FeaturedProject = {
   href: "/projects#midtown-heights",
 };
 
-export const featuredProjects = [
-  seventhAndFranklinPhase2,
-  seventhAndFranklinPhase3,
+export const kootenaiTownhomes: FeaturedProject = {
+  id: "kootenai-townhomes",
+  name: "Kootenai Townhomes",
+  location: "2294 W Kootenai St, Boise",
+  kicker: "Completed · 2294 W Kootenai St, Boise",
+  headline: "Seventeen townhomes in Boise",
+  summary:
+    "Kootenai Townhomes is a completed community of 17 townhomes at 2294 W Kootenai St in Boise.",
+  body: [
+    "Kootenai Townhomes is a completed community of 17 townhomes at 2294 W Kootenai St in Boise.",
+  ],
+  bullets: ["17 townhomes", "2294 W Kootenai St, Boise", "Completed"],
+  image: {
+    src: "/images/kootenai-01.jpg",
+    alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise.",
+  },
+  href: "/projects#kootenai-townhomes",
+};
+
+export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
+
+export const completedProjects = [
   seventhAndFranklin,
   midtownHeights,
-  midRvr,
+  kootenaiTownhomes,
   rvr410,
+  midRvr,
 ] as const;
 
-export const homePortfolio = [
-  { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "410 RVR", place: "Hailey", status: "Completed" },
-] as const;
+export const featuredProjects = [...currentProjects, ...completedProjects] as const;
 
 export const atlantaCommunities = [
   "1463 LaFrance",
@@ -192,8 +209,6 @@ export const atlantaCommunities = [
 ] as const;
 
 export const selectPortfolio = [
-  { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "410 RVR", place: "Hailey", status: "Completed" },
   { name: "Edge on Lucy", place: "Atlanta" },
   { name: "975 Piedmont", place: "Atlanta" },
   { name: "Skypointe", place: "Atlanta" },

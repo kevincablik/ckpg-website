@@ -4,15 +4,12 @@ import PageHero from "../components/PageHero.astro";
 import ProjectFeature from "../components/ProjectFeature.astro";
 import { site } from "../data/site";
 import {
-  midRvr,
-  midtownHeights,
-  rvr410,
+  completedProjects,
+  currentProjects,
   selectPortfolio,
-  seventhAndFranklin,
-  seventhAndFranklinPhase2,
-  seventhAndFranklinPhase3,
 } from "../data/projects";
 import {
+  kootenaiGallery,
   midRvrGallery,
   midtownHeightsGallery,
   rvr410Gallery,
@@ -20,34 +17,67 @@ import {
   seventhFranklinPhase2Gallery,
   seventhFranklinPhase3Gallery,
 } from "../data/gallery";
+
+const galleries = {
+  "seventh-and-franklin-phase-2": seventhFranklinPhase2Gallery,
+  "seventh-and-franklin-phase-3": seventhFranklinPhase3Gallery,
+  "seventh-and-franklin": seventhFranklinGallery,
+  "midtown-heights": midtownHeightsGallery,
+  "kootenai-townhomes": kootenaiGallery,
+  "410-rvr": rvr410Gallery,
+  "mid-rvr": midRvrGallery,
+} as const;
+
+const landingHero = midtownHeightsGallery[1];
+
+function galleryFor(id: keyof typeof galleries | string) {
+  return galleries[id as keyof typeof galleries];
+}
 ---
 
 <BaseLayout
   title={`Projects | ${site.name}`}
-  description="Featured CK Property Group communities including seventh&franklin Phase 2 and Phase 3 in Downtown Boise, completed Midtown Heights in Boise, MID RVR in Hailey, and completed 410 RVR in Hailey."
+  description="Featured CK Property Group communities including seventh&franklin Phase 2 and Phase 3 in Downtown Boise, and completed seventh&franklin, Midtown Heights, and Kootenai Townhomes in Boise, plus MID RVR and 410 RVR in Hailey."
   path="/projects"
-  image="/images/midtown-heights-01.jpg"
-  imageAlt="Rooftop terrace at Midtown Heights in Boise"
+  image="/images/midtown-heights-02.jpg"
+  imageAlt="Rooftop lounge at Midtown Heights in Boise"
 >
   <PageHero
-    src={midtownHeightsGallery[0].src}
-    alt={midtownHeightsGallery[0].alt}
+    src={landingHero.src}
+    alt={landingHero.alt}
     eyebrow="Projects"
     title="Thoughtfully designed townhome communities"
   />
 
   <div class="mx-auto max-w-2xl px-5 py-10 text-center md:py-12">
     <p class="text-sm font-light leading-relaxed text-muted md:text-base">
-      CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Featured work includes seventh&franklin Phase 2 and Phase 3 in Downtown Boise, completed Midtown Heights in Boise, MID RVR in Hailey, and completed 410 RVR in Hailey.
+      CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Current work includes seventh&franklin Phase 2 and Phase 3 in Downtown Boise. Completed communities include seventh&franklin, Midtown Heights, and Kootenai Townhomes in Boise, and MID RVR and 410 RVR in Hailey.
     </p>
   </div>
 
-  <ProjectFeature project={seventhAndFranklinPhase2} gallery={seventhFranklinPhase2Gallery} />
-  <ProjectFeature project={seventhAndFranklinPhase3} gallery={seventhFranklinPhase3Gallery} />
-  <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
-  <ProjectFeature project={midtownHeights} gallery={midtownHeightsGallery} />
-  <ProjectFeature project={midRvr} gallery={midRvrGallery} />
-  <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
+  <section>
+    <div class="mx-auto max-w-2xl px-5 pb-8 text-center md:pb-10">
+      <p class="eyebrow">Current</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">In progress</h2>
+    </div>
+    {
+      currentProjects.map((project) => (
+        <ProjectFeature project={project} gallery={galleryFor(project.id)} />
+      ))
+    }
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-2xl px-5 py-12 text-center md:py-16">
+      <p class="eyebrow">Completed</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">Delivered communities</h2>
+    </div>
+    {
+      completedProjects.map((project) => (
+        <ProjectFeature project={project} gallery={galleryFor(project.id)} />
+      ))
+    }
+  </section>
 
   <section class="border-t border-line bg-paper-deep/50">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
