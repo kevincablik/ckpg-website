@@ -50,6 +50,56 @@ export const seventhAndFranklin: FeaturedProject = {
   externalLabel: "seventhandfranklin.com",
 };
 
+export const seventhAndFranklinPhase2: FeaturedProject = {
+  id: "seventh-and-franklin-phase-2",
+  name: "seventh&franklin Phase 2",
+  location: "Downtown Boise",
+  kicker: "In progress · Downtown Boise",
+  headline: "The next chapter at Seventh & Franklin",
+  summary:
+    "seventh&franklin Phase 2 continues the Seventh & Franklin community in Downtown Boise, in the 711 W Franklin area. The project is in progress.",
+  body: [
+    "seventh&franklin Phase 2 continues the Seventh & Franklin community in Downtown Boise, in the 711 W Franklin area. The project is in progress.",
+  ],
+  bullets: ["In progress", "Downtown Boise", "711 W Franklin area"],
+  image: {
+    src: "/images/seventh-franklin-phase2-01.jpg",
+    alt: "Exterior rendering of seventh&franklin Phase 2 in Downtown Boise.",
+  },
+  extraImage: {
+    src: "/images/seventh-franklin-phase2-02.jpg",
+    alt: "Street elevation of seventh&franklin Phase 2 in Downtown Boise.",
+  },
+  href: "/projects#seventh-and-franklin-phase-2",
+  externalUrl: "https://seventhandfranklin.com",
+  externalLabel: "seventhandfranklin.com",
+};
+
+export const seventhAndFranklinPhase3: FeaturedProject = {
+  id: "seventh-and-franklin-phase-3",
+  name: "seventh&franklin Phase 3",
+  location: "711 W Franklin, Downtown Boise",
+  kicker: "Current · 711 W Franklin",
+  headline: "The last phase of the community",
+  summary:
+    "seventh&franklin Phase 3 is the last phase of the Seventh & Franklin community at 711 W Franklin in Downtown Boise.",
+  body: [
+    "seventh&franklin Phase 3 is the last phase of the Seventh & Franklin community at 711 W Franklin in Downtown Boise.",
+  ],
+  bullets: ["Last phase of the Seventh & Franklin community", "711 W Franklin, Downtown Boise", "Current"],
+  image: {
+    src: "/images/seventh-franklin-phase3-01.jpg",
+    alt: "Aerial rendering of seventh&franklin Phase 3 at 711 W Franklin in Downtown Boise.",
+  },
+  extraImage: {
+    src: "/images/seventh-franklin-phase3-02.jpg",
+    alt: "Street rendering of seventh&franklin Phase 3 at 711 W Franklin in Downtown Boise.",
+  },
+  href: "/projects#seventh-and-franklin-phase-3",
+  externalUrl: "https://seventhandfranklin.com",
+  externalLabel: "seventhandfranklin.com",
+};
+
 export const midRvr: FeaturedProject = {
   id: "mid-rvr",
   name: "MID RVR",
@@ -98,7 +148,13 @@ export const rvr410: FeaturedProject = {
   href: "/projects#410-rvr",
 };
 
-export const featuredProjects = [seventhAndFranklin, midRvr, rvr410] as const;
+export const featuredProjects = [
+  seventhAndFranklinPhase2,
+  seventhAndFranklinPhase3,
+  seventhAndFranklin,
+  midRvr,
+  rvr410,
+] as const;
 
 export const homePortfolio = [
   { name: "Kootenai Townhomes", place: "Boise" },

@@ -11,7 +11,7 @@ import {
   howWeWork,
   midRvr,
   rvr410,
-  seventhAndFranklin,
+  seventhAndFranklinPhase2,
 } from "../data/projects";
 import {
   homeBleed,
@@ -20,6 +20,7 @@ import {
   midRvrGallery,
   rvr410Gallery,
   seventhFranklinGallery,
+  seventhFranklinPhase2Gallery,
 } from "../data/gallery";
 ---
 
@@ -27,8 +28,8 @@ import {
   title={`${site.name} | Urban Infill Development`}
   description={site.description}
   path="/"
-  image="/images/seventh-franklin-exterior.jpg"
-  imageAlt="Exterior of seventh&franklin in Downtown Boise"
+  image="/images/seventh-franklin-phase2-01.jpg"
+  imageAlt="Exterior of seventh&franklin Phase 2 in Downtown Boise"
 >
   <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
     <BleedPhoto src={homeHero.src} alt={homeHero.alt} priority />
@@ -65,7 +66,7 @@ import {
   <section class="bg-paper pb-8 pt-6 md:pb-12 md:pt-10">
     <h2 class="font-display px-5 text-center text-4xl md:text-5xl">Featured communities</h2>
     <div class="mt-10 px-4 md:px-10">
-      <ProjectPoster project={seventhAndFranklin} image={seventhFranklinGallery[0]} featured />
+      <ProjectPoster project={seventhAndFranklinPhase2} image={seventhFranklinPhase2Gallery[0]} featured />
     </div>
     <div class="mt-6 grid gap-6 px-4 md:mt-8 md:grid-cols-2 md:px-10">
       <ProjectPoster project={midRvr} image={midRvrGallery[0]} overlay={false} />
@@ -117,7 +118,7 @@ import {
       <p class="eyebrow">Select portfolio</p>
       <h2 class="font-display mt-3 text-4xl">Communities by name</h2>
       <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
-        In addition to seventh&franklin, MID RVR, and completed 410 RVR, CK Property Group’s work includes the following communities.
+        In addition to seventh&franklin—including Phase 2 and Phase 3—MID RVR, and completed 410 RVR, CK Property Group’s work includes the following communities.
       </p>
       <ul class="mt-10 divide-y divide-line border-y border-line">
         {

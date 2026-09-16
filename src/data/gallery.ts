@@ -13,6 +13,18 @@ import seventhFranklinKitchenHistoric from "../assets/images/seventh-franklin-ki
 import seventhFranklinBath from "../assets/images/seventh-franklin-bath.jpg";
 import seventhFranklinTerraceLounge from "../assets/images/seventh-franklin-terrace-lounge.jpg";
 
+import seventhFranklinPhase201 from "../assets/images/seventh-franklin-phase2-01.jpg";
+import seventhFranklinPhase202 from "../assets/images/seventh-franklin-phase2-02.jpg";
+import seventhFranklinPhase203 from "../assets/images/seventh-franklin-phase2-03.jpg";
+
+import seventhFranklinPhase301 from "../assets/images/seventh-franklin-phase3-01.jpg";
+import seventhFranklinPhase302 from "../assets/images/seventh-franklin-phase3-02.jpg";
+import seventhFranklinPhase303 from "../assets/images/seventh-franklin-phase3-03.jpg";
+import seventhFranklinPhase304 from "../assets/images/seventh-franklin-phase3-04.jpg";
+import seventhFranklinPhase305 from "../assets/images/seventh-franklin-phase3-05.jpg";
+import seventhFranklinPhase306 from "../assets/images/seventh-franklin-phase3-06.jpg";
+import seventhFranklinPhase307 from "../assets/images/seventh-franklin-phase3-07.jpg";
+
 import midrvrHero from "../assets/images/midrvr-hero.jpg";
 import midrvrStreet from "../assets/images/midrvr-exterior-street.jpg";
 import midrvrElevation from "../assets/images/midrvr-elevation.jpg";
@@ -100,6 +112,62 @@ export const seventhFranklinGallery: GalleryImage[] = [
     src: seventhFranklinBath,
     alt: "seventh&franklin, Downtown Boise",
     caption: "seventh&franklin",
+  },
+];
+
+export const seventhFranklinPhase2Gallery: GalleryImage[] = [
+  {
+    src: seventhFranklinPhase201,
+    alt: "Exterior of seventh&franklin Phase 2 in Downtown Boise",
+    caption: "seventh&franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase202,
+    alt: "Street elevation of seventh&franklin Phase 2 in Downtown Boise",
+    caption: "seventh&franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase203,
+    alt: "Rooftop terrace at seventh&franklin Phase 2 in Downtown Boise",
+    caption: "seventh&franklin Phase 2",
+  },
+];
+
+export const seventhFranklinPhase3Gallery: GalleryImage[] = [
+  {
+    src: seventhFranklinPhase301,
+    alt: "Aerial rendering of seventh&franklin Phase 3 at 711 W Franklin in Downtown Boise",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase302,
+    alt: "Street rendering of seventh&franklin Phase 3 at 711 W Franklin in Downtown Boise",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase303,
+    alt: "Bar lounge at seventh&franklin Phase 3",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase304,
+    alt: "Kitchen at seventh&franklin Phase 3",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase305,
+    alt: "Living room at seventh&franklin Phase 3",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase306,
+    alt: "Bathroom at seventh&franklin Phase 3",
+    caption: "seventh&franklin Phase 3",
+  },
+  {
+    src: seventhFranklinPhase307,
+    alt: "Roof deck at seventh&franklin Phase 3",
+    caption: "seventh&franklin Phase 3",
   },
 ];
 
@@ -203,16 +271,16 @@ export const homeHero = seventhFranklinGallery[0];
 export const homeBleed = seventhFranklinGallery[4];
 
 export const homeStrip: GalleryImage[] = [
+  { ...seventhFranklinPhase2Gallery[0], href: "/projects#seventh-and-franklin-phase-2" },
+  { ...seventhFranklinPhase2Gallery[1], href: "/projects#seventh-and-franklin-phase-2" },
+  { ...seventhFranklinPhase3Gallery[0], href: "/projects#seventh-and-franklin-phase-3" },
+  { ...seventhFranklinPhase3Gallery[1], href: "/projects#seventh-and-franklin-phase-3" },
   { ...seventhFranklinGallery[2], href: "/projects#seventh-and-franklin" },
   { ...seventhFranklinGallery[3], href: "/projects#seventh-and-franklin" },
-  { ...seventhFranklinGallery[4], href: "/projects#seventh-and-franklin" },
   { ...midRvrGallery[1], href: "/projects#mid-rvr" },
   { ...midRvrGallery[3], href: "/projects#mid-rvr" },
-  { ...midRvrGallery[4], href: "/projects#mid-rvr" },
   { ...rvr410Gallery[0], href: "/projects#410-rvr" },
   { ...rvr410Gallery[4], href: "/projects#410-rvr" },
-  { ...seventhFranklinGallery[5], href: "/projects#seventh-and-franklin" },
-  { ...seventhFranklinGallery[6], href: "/projects#seventh-and-franklin" },
 ];
 
 export const homeFeaturedThumbs = {

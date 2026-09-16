@@ -20,6 +20,8 @@ export const nav = [
 export const projectInterestOptions = [
   { value: "general", label: "General" },
   { value: "seventh-and-franklin", label: "seventh&franklin" },
+  { value: "seventh-and-franklin-phase-2", label: "seventh&franklin Phase 2" },
+  { value: "seventh-and-franklin-phase-3", label: "seventh&franklin Phase 3" },
   { value: "mid-rvr", label: "MID RVR" },
   { value: "410-rvr", label: "410 RVR" },
   { value: "other", label: "Other" },
