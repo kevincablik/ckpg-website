@@ -7,38 +7,29 @@ interface Props {
   dense?: boolean;
 }
 
-const { images, dense = false } = Astro.props;
+const { images } = Astro.props;
 ---
 
-<div
-  class:list={[
-    "grid gap-1",
-    dense ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3",
-  ]}
->
+<div class="grid grid-cols-1 gap-1 md:grid-cols-2">
   {
     images.map((image, index) => (
       <figure
         class:list={[
           "overflow-hidden bg-paper-deep",
-          !dense && index === 0 && "col-span-2 md:col-span-2 md:row-span-2",
+          index === 0 && "md:col-span-2",
         ]}
       >
         <div
           class:list={[
-            !dense && index === 0
-              ? "min-h-[42vh] aspect-[4/3] md:aspect-auto md:h-full md:min-h-[78vh]"
-              : "aspect-[3/2] min-h-[22vh] md:min-h-[32vh]",
+            index === 0
+              ? "min-h-[58vh] aspect-[16/10] md:aspect-auto md:min-h-[86vh]"
+              : "aspect-[3/2] min-h-[38vh] md:min-h-[56vh]",
           ]}
         >
           <SmartImage
             src={image.src}
             alt={image.alt}
-            sizes={
-              !dense && index === 0
-                ? "(min-width: 768px) 66vw, 100vw"
-                : "(min-width: 768px) 33vw, 50vw"
-            }
+            sizes={index === 0 ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
             priority={index === 0}
           />
         </div>

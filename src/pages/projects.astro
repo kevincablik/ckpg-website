@@ -19,12 +19,17 @@ import { midRvrGallery, rvr410Gallery, seventhFranklinGallery } from "../data/ga
     alt={seventhFranklinGallery[0].alt}
     eyebrow="Projects"
     title="Thoughtfully designed townhome communities"
-    lede="CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Featured work includes seventh&franklin in Downtown Boise, MID RVR in Hailey, and completed 410 RVR in Hailey."
   />
 
-  <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} detail />
-  <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse detail />
-  <ProjectFeature project={rvr410} gallery={rvr410Gallery} detail />
+  <div class="mx-auto max-w-2xl px-5 py-10 text-center md:py-12">
+    <p class="text-sm font-light leading-relaxed text-muted md:text-base">
+      CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Featured work includes seventh&franklin in Downtown Boise, MID RVR in Hailey, and completed 410 RVR in Hailey.
+    </p>
+  </div>
+
+  <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
+  <ProjectFeature project={midRvr} gallery={midRvrGallery} />
+  <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
 
   <section class="border-t border-line bg-paper-deep/50">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">

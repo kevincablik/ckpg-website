@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BleedPhoto from "../components/BleedPhoto.astro";
 import ButtonLink from "../components/ButtonLink.astro";
-import ProjectFeature from "../components/ProjectFeature.astro";
+import ProjectPoster from "../components/ProjectPoster.astro";
 import ImageStrip from "../components/ImageStrip.astro";
 import { site } from "../data/site";
 import {
@@ -32,56 +32,53 @@ import {
 >
   <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
     <BleedPhoto src={homeHero.src} alt={homeHero.alt} priority />
-    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/10"></div>
-    <div class="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-14 pt-32 md:px-8 md:pb-20">
-      <p class="eyebrow text-paper/70">CK Property Group</p>
-      <h1 class="font-display mt-5 max-w-3xl text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
+    <div class="absolute inset-0 bg-ink/30"></div>
+    <div class="relative mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center px-5 py-28 text-center">
+      <h1 class="font-display text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
         Prime locations.<br />Sophisticated design.<br />Quality execution.
       </h1>
-      <p class="mt-6 max-w-lg text-sm font-light leading-relaxed text-paper/85 md:text-base">
-        CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhouse communities.
-      </p>
-      <div class="mt-10 flex flex-wrap gap-3">
-        <ButtonLink href="/projects" variant="light">View Our Projects</ButtonLink>
-        <ButtonLink href="/contact" variant="ghost-light">Get in Touch</ButtonLink>
-      </div>
-    </div>
-  </section>
-
-  <section class="md:grid md:min-h-[85svh] md:grid-cols-2">
-    <div class="relative min-h-[52vh] bg-ink md:min-h-full">
-      <BleedPhoto src={seventhFranklinGallery[1].src} alt={seventhFranklinGallery[1].alt} />
-    </div>
-    <div class="flex flex-col justify-center px-5 py-16 md:px-14 md:py-24 lg:px-20">
-      <p class="eyebrow">Who we are</p>
-      <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">A mother-and-son team</h2>
-      <p class="mt-6 max-w-xl text-base font-light leading-relaxed text-ink-soft">
-        Founded in 2014 by Anna and Kevin Cablik, CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
-      </p>
-      <p class="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted">
-        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
-      </p>
       <div class="mt-10">
-        <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>
+        <ButtonLink href="/projects" variant="light">View Our Projects</ButtonLink>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="px-5 py-8 md:px-8">
-      <p class="eyebrow">Featured communities</p>
+    <div class="relative min-h-[78svh] bg-ink md:min-h-[88svh]">
+      <BleedPhoto src={seventhFranklinGallery[1].src} alt={seventhFranklinGallery[1].alt} />
     </div>
-    <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
-    <ProjectFeature project={midRvr} gallery={midRvrGallery} reverse />
-    <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
+    <div class="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">
+      <p class="eyebrow">Who we are</p>
+      <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">A mother-and-son team</h2>
+      <p class="mt-6 text-base font-light leading-relaxed text-ink-soft">
+        Founded in 2014 by Anna and Kevin Cablik, CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
+      </p>
+      <p class="mt-4 text-sm font-light leading-relaxed text-muted">
+        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project. CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhouse communities.
+      </p>
+      <div class="mt-10 flex justify-center">
+        <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>
+      </div>
+    </div>
   </section>
 
-  <section class="relative min-h-[80svh] overflow-hidden bg-ink text-paper md:min-h-[92svh]">
+  <section class="bg-paper pb-8 pt-6 md:pb-12 md:pt-10">
+    <h2 class="font-display px-5 text-center text-4xl md:text-5xl">Featured communities</h2>
+    <div class="mt-10 px-4 md:px-10">
+      <ProjectPoster project={seventhAndFranklin} image={seventhFranklinGallery[0]} featured />
+    </div>
+    <div class="mt-6 grid gap-6 px-4 md:mt-8 md:grid-cols-2 md:px-10">
+      <ProjectPoster project={midRvr} image={midRvrGallery[0]} overlay={false} />
+      <ProjectPoster project={rvr410} image={rvr410Gallery[0]} overlay={false} />
+    </div>
+  </section>
+
+  <section class="relative min-h-[88svh] overflow-hidden bg-ink text-paper md:min-h-[100svh]">
     <BleedPhoto src={homeBleed.src} alt={homeBleed.alt} />
-    <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-transparent"></div>
-    <div class="relative mx-auto flex min-h-[80svh] max-w-6xl items-end px-5 py-16 md:min-h-[92svh] md:px-8 md:py-20">
+    <div class="absolute inset-0 bg-ink/20"></div>
+    <div class="relative mx-auto flex min-h-[88svh] items-end justify-center px-5 py-16 text-center md:min-h-[100svh] md:py-20">
       <div>
-        <p class="eyebrow text-paper/70">{homeBleed.caption}</p>
+        <p class="eyebrow text-paper/75">{homeBleed.caption}</p>
         <p class="font-display mt-3 text-4xl md:text-6xl">Downtown Boise</p>
       </div>
     </div>
@@ -108,7 +105,7 @@ import {
   </section>
 
   <section class="border-t border-line py-16 md:py-20">
-    <div class="px-5 md:px-8">
+    <div class="px-5 md:px-10">
       <p class="eyebrow">Selected views</p>
       <h2 class="font-display mt-3 mb-8 text-4xl">Boise and Hailey</h2>
     </div>

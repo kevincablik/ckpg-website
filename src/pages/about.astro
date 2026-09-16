@@ -20,14 +20,22 @@ import { midRvrGallery, seventhFranklinGallery } from "../data/gallery";
     alt={midRvrGallery[0].alt}
     eyebrow="About"
     title="Founded in 2014 by Anna and Kevin Cablik"
-    lede="CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live."
   />
 
-  <section class="md:grid md:min-h-[70svh] md:grid-cols-2">
-    <div class="flex flex-col justify-center px-5 py-16 md:px-14 md:py-20 lg:px-16">
+  <div class="mx-auto max-w-2xl px-5 py-10 text-center md:py-12">
+    <p class="text-sm font-light leading-relaxed text-muted md:text-base">
+      CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
+    </p>
+  </div>
+
+  <section>
+    <div class="relative min-h-[70svh] bg-ink md:min-h-[88svh]">
+      <BleedPhoto src={seventhFranklinGallery[4].src} alt={seventhFranklinGallery[4].alt} />
+    </div>
+    <div class="mx-auto max-w-2xl px-5 py-16 md:py-20">
       <p class="eyebrow">Core principles</p>
       <h2 class="font-display mt-3 text-4xl md:text-5xl">How we approach every site</h2>
-      <p class="mt-6 max-w-xl text-sm font-light leading-relaxed text-muted">
+      <p class="mt-6 text-sm font-light leading-relaxed text-muted">
         As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
       </p>
       <div class="mt-10 space-y-8">
@@ -40,9 +48,6 @@ import { midRvrGallery, seventhFranklinGallery } from "../data/gallery";
           ))
         }
       </div>
-    </div>
-    <div class="relative min-h-[48vh] bg-ink md:min-h-full">
-      <BleedPhoto src={seventhFranklinGallery[4].src} alt={seventhFranklinGallery[4].alt} />
     </div>
   </section>
 

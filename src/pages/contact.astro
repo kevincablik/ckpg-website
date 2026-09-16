@@ -13,10 +13,9 @@ import { midRvrGallery } from "../data/gallery";
   image="/images/midrvr-hero.jpg"
   imageAlt="MID RVR townhomes in Hailey"
 >
-  <section class="md:grid md:min-h-[100svh] md:grid-cols-2">
-    <div class="relative min-h-[46vh] bg-ink md:min-h-[100svh]">
+  <section class="md:grid md:min-h-[100svh] md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
+    <div class="relative min-h-[52vh] bg-ink md:min-h-[100svh]">
       <BleedPhoto src={midRvrGallery[0].src} alt={midRvrGallery[0].alt} priority />
-      <div class="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent md:bg-gradient-to-r"></div>
     </div>
 
     <div class="flex flex-col justify-center bg-paper px-5 py-16 md:px-12 md:py-24 md:pt-32 lg:px-16">

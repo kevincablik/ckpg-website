@@ -10,22 +10,22 @@ const { images } = Astro.props;
 ---
 
 <div class="overflow-x-auto">
-  <ul class="flex snap-x snap-mandatory gap-1 pb-2">
+  <ul class="flex snap-x snap-mandatory gap-3 px-5 pb-2 md:gap-4 md:px-10">
     {
       images.map((image) => {
         const Tag = image.href ? "a" : "div";
         return (
-          <li class="w-[86vw] shrink-0 snap-start sm:w-[54vw] lg:w-[38vw]">
+          <li class="w-[88vw] shrink-0 snap-start sm:w-[70vw] lg:w-[48vw]">
             <Tag href={image.href} class="group block">
-              <div class="aspect-[3/2] overflow-hidden bg-paper-deep">
+              <div class="aspect-[3/2] min-h-[36vh] overflow-hidden bg-paper-deep md:min-h-[52vh]">
                 <SmartImage
                   src={image.src}
                   alt={image.alt}
                   class="transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(min-width: 1024px) 38vw, (min-width: 640px) 54vw, 86vw"
+                  sizes="(min-width: 1024px) 48vw, (min-width: 640px) 70vw, 88vw"
                 />
               </div>
-              <p class="eyebrow mt-3 px-5 md:px-8">{image.caption}</p>
+              <p class="eyebrow mt-3">{image.caption}</p>
             </Tag>
           </li>
         );
