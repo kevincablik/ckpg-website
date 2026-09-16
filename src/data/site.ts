@@ -19,12 +19,14 @@ export const nav = [
 
 export const projectInterestOptions = [
   { value: "general", label: "General" },
-  { value: "seventh-and-franklin", label: "seventh&franklin" },
   { value: "seventh-and-franklin-phase-2", label: "seventh&franklin Phase 2" },
   { value: "seventh-and-franklin-phase-3", label: "seventh&franklin Phase 3" },
-  { value: "mid-rvr", label: "MID RVR" },
-  { value: "410-rvr", label: "410 RVR" },
+  { value: "seventh-and-franklin", label: "seventh&franklin Phase 1" },
   { value: "midtown-heights", label: "Midtown Heights" },
+  { value: "kootenai-townhomes", label: "Kootenai Townhomes" },
+  { value: "k2-apartments", label: "K2 Apartments" },
+  { value: "410-rvr", label: "410 RVR" },
+  { value: "mid-rvr", label: "MID RVR" },
   { value: "other", label: "Other" },
 ] as const;
 

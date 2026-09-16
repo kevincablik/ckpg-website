@@ -25,16 +25,17 @@ import seventhFranklinPhase305 from "../assets/images/seventh-franklin-phase3-05
 import seventhFranklinPhase306 from "../assets/images/seventh-franklin-phase3-06.jpg";
 import seventhFranklinPhase307 from "../assets/images/seventh-franklin-phase3-07.jpg";
 
-import midrvrHero from "../assets/images/midrvr-hero.jpg";
+import midrvrTwilight02 from "../assets/images/midrvr-twilight-02.jpg";
+import midrvrTwilight01 from "../assets/images/midrvr-twilight-01.jpg";
+import midrvrTwilight03 from "../assets/images/midrvr-twilight-03.jpg";
 import midrvrStreet from "../assets/images/midrvr-exterior-street.jpg";
-import midrvrElevation from "../assets/images/midrvr-elevation.jpg";
-import midrvrRoof from "../assets/images/midrvr-roof-deck.jpg";
-import midrvrDusk from "../assets/images/midrvr-dusk.jpg";
-import midrvrLiving from "../assets/images/midrvr-living.jpg";
-import midrvrDining from "../assets/images/midrvr-dining.jpg";
-import midrvrKitchen from "../assets/images/midrvr-kitchen.jpg";
-import midrvrBedroom from "../assets/images/midrvr-bedroom.jpg";
-import midrvrLivingPhoto from "../assets/images/midrvr-living-photo.jpg";
+import midrvrInterior01 from "../assets/images/midrvr-interior-01.jpg";
+import midrvrInterior02 from "../assets/images/midrvr-interior-02.jpg";
+import midrvrInterior03 from "../assets/images/midrvr-interior-03.jpg";
+import midrvrInterior04 from "../assets/images/midrvr-interior-04.jpg";
+import midrvrInterior06 from "../assets/images/midrvr-interior-06.jpg";
+import midrvrInterior07 from "../assets/images/midrvr-interior-07.jpg";
+import midrvrInterior05 from "../assets/images/midrvr-interior-05.jpg";
 
 import rvr410Dusk from "../assets/images/410-rvr-dusk.jpg";
 import rvr410Living from "../assets/images/410-rvr-living.jpg";
@@ -45,8 +46,24 @@ import rvr410TerraceRender from "../assets/images/410-rvr-terrace-render.jpg";
 import rvr410Bath from "../assets/images/410-rvr-bath.jpg";
 import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 
-import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
-import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
+import midtownHeightsRoof1 from "../assets/images/midtown-heights-roof-1.jpg";
+import midtownHeightsRoof2 from "../assets/images/midtown-heights-roof-2.jpg";
+
+import kootenai01 from "../assets/images/kootenai-01.jpg";
+import kootenai02 from "../assets/images/kootenai-02.jpg";
+import kootenai03 from "../assets/images/kootenai-03.jpg";
+import kootenai04 from "../assets/images/kootenai-04.jpg";
+import kootenai05 from "../assets/images/kootenai-05.jpg";
+import kootenai06 from "../assets/images/kootenai-06.jpg";
+import kootenai07 from "../assets/images/kootenai-07.jpg";
+import kootenai08 from "../assets/images/kootenai-08.jpg";
+
+import k201 from "../assets/images/k2-01.jpg";
+import k202 from "../assets/images/k2-02.jpg";
+import k203 from "../assets/images/k2-03.jpg";
+import k204 from "../assets/images/k2-04.jpg";
+import k205 from "../assets/images/k2-05.jpg";
+import k206 from "../assets/images/k2-06.jpg";
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -58,80 +75,80 @@ export type GalleryImage = {
 export const seventhFranklinGallery: GalleryImage[] = [
   {
     src: seventhFranklinExterior,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinDusk,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinLiving,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinRoof,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinTerrace,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinLivingModern,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinKitchen,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinBedroomHistoric,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinKitchenHistoric,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinBedroom,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinTerraceLounge,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
   {
     src: seventhFranklinBath,
-    alt: "seventh&franklin, Downtown Boise",
-    caption: "seventh&franklin",
+    alt: "seventh&franklin Phase 1, Downtown Boise",
+    caption: "seventh&franklin Phase 1",
   },
 ];
 
 export const seventhFranklinPhase2Gallery: GalleryImage[] = [
   {
     src: seventhFranklinPhase201,
-    alt: "Exterior of seventh&franklin Phase 2 in Downtown Boise",
+    alt: "Exterior of seventh&franklin Phase 2 (Building B) in Downtown Boise",
     caption: "seventh&franklin Phase 2",
   },
   {
     src: seventhFranklinPhase202,
-    alt: "Street elevation of seventh&franklin Phase 2 in Downtown Boise",
+    alt: "Street elevation of seventh&franklin Phase 2 (Building B) in Downtown Boise",
     caption: "seventh&franklin Phase 2",
   },
   {
     src: seventhFranklinPhase203,
-    alt: "Rooftop terrace at seventh&franklin Phase 2 in Downtown Boise",
+    alt: "Rooftop terrace at seventh&franklin Phase 2 (Building B) in Downtown Boise",
     caption: "seventh&franklin Phase 2",
   },
 ];
@@ -174,56 +191,92 @@ export const seventhFranklinPhase3Gallery: GalleryImage[] = [
   },
 ];
 
-export const midRvrGallery: GalleryImage[] = [
+export const midtownHeightsGallery: GalleryImage[] = [
   {
-    src: midrvrHero,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: midtownHeightsRoof1,
+    alt: "Rooftop terrace rendering at Midtown Heights, 1709 S Federal Way in Boise",
+    caption: "Midtown Heights",
   },
   {
-    src: midrvrStreet,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: midtownHeightsRoof2,
+    alt: "Rooftop lounge rendering at Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
+];
+
+export const kootenaiTownhomesGallery: GalleryImage[] = [
+  {
+    src: kootenai01,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrElevation,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai02,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrRoof,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai03,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrDusk,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai04,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrLiving,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai05,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrDining,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai06,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrKitchen,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai07,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
   },
   {
-    src: midrvrLivingPhoto,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: kootenai08,
+    alt: "Kootenai Townhomes, 2294 W Kootenai St, Boise",
+    caption: "Kootenai Townhomes",
+  },
+];
+
+export const k2ApartmentsGallery: GalleryImage[] = [
+  {
+    src: k201,
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
   },
   {
-    src: midrvrBedroom,
-    alt: "MID RVR, Hailey",
-    caption: "MID RVR",
+    src: k202,
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k203,
+    alt: "Interior of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k204,
+    alt: "Kitchen at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k205,
+    alt: "Living area at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k206,
+    alt: "Window view from K2 Apartments in Boise",
+    caption: "K2 Apartments",
   },
 ];
 
@@ -270,16 +323,61 @@ export const rvr410Gallery: GalleryImage[] = [
   },
 ];
 
-export const midtownHeightsGallery: GalleryImage[] = [
+export const midRvrGallery: GalleryImage[] = [
   {
-    src: midtownHeightsTerrace,
-    alt: "Rooftop terrace at Midtown Heights, 1709 S Federal Way in Boise",
-    caption: "Midtown Heights",
+    src: midrvrTwilight02,
+    alt: "Twilight photograph of completed MID RVR townhomes at the corner of River Street in Hailey",
+    caption: "MID RVR",
   },
   {
-    src: midtownHeightsLounge,
-    alt: "Rooftop lounge at Midtown Heights in Boise",
-    caption: "Midtown Heights",
+    src: midrvrTwilight01,
+    alt: "Twilight photograph of the completed MID RVR street elevation in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrTwilight03,
+    alt: "Twilight photograph of completed MID RVR townhomes in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrStreet,
+    alt: "Street-level photograph of completed MID RVR townhomes in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior01,
+    alt: "Living room at MID RVR in Hailey, with mountain views beyond the balcony",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior02,
+    alt: "Kitchen at MID RVR in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior03,
+    alt: "Bedroom at MID RVR in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior04,
+    alt: "Bathroom at MID RVR in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior06,
+    alt: "Entry and stair at MID RVR in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior07,
+    alt: "Dining room at MID RVR in Hailey",
+    caption: "MID RVR",
+  },
+  {
+    src: midrvrInterior05,
+    alt: "Laundry at MID RVR in Hailey",
+    caption: "MID RVR",
   },
 ];
 
@@ -288,21 +386,15 @@ export const homeBleed = seventhFranklinGallery[4];
 
 export const homeStrip: GalleryImage[] = [
   { ...seventhFranklinPhase2Gallery[0], href: "/projects#seventh-and-franklin-phase-2" },
-  { ...seventhFranklinPhase2Gallery[1], href: "/projects#seventh-and-franklin-phase-2" },
   { ...seventhFranklinPhase3Gallery[0], href: "/projects#seventh-and-franklin-phase-3" },
-  { ...seventhFranklinPhase3Gallery[1], href: "/projects#seventh-and-franklin-phase-3" },
-  { ...seventhFranklinGallery[2], href: "/projects#seventh-and-franklin" },
-  { ...seventhFranklinGallery[3], href: "/projects#seventh-and-franklin" },
-  { ...midRvrGallery[1], href: "/projects#mid-rvr" },
-  { ...midRvrGallery[3], href: "/projects#mid-rvr" },
-  { ...rvr410Gallery[0], href: "/projects#410-rvr" },
-  { ...rvr410Gallery[4], href: "/projects#410-rvr" },
+  { ...seventhFranklinGallery[0], href: "/projects#seventh-and-franklin" },
   { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
   { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
+  { ...k2ApartmentsGallery[0], href: "/projects#k2-apartments" },
+  { ...rvr410Gallery[0], href: "/projects#410-rvr" },
+  { ...rvr410Gallery[4], href: "/projects#410-rvr" },
+  { ...midRvrGallery[0], href: "/projects#mid-rvr" },
+  { ...midRvrGallery[1], href: "/projects#mid-rvr" },
+  { ...midRvrGallery[4], href: "/projects#mid-rvr" },
+  { ...seventhFranklinGallery[3], href: "/projects#seventh-and-franklin" },
 ];
-
-export const homeFeaturedThumbs = {
-  seventh: seventhFranklinGallery.slice(2, 6),
-  mid: [midRvrGallery[1], midRvrGallery[2], midRvrGallery[3], midRvrGallery[5]],
-  rvr410: [rvr410Gallery[1], rvr410Gallery[2], rvr410Gallery[3], rvr410Gallery[4]],
-};
