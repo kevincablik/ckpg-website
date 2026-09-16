@@ -30,7 +30,7 @@ const galleries = {
   "mid-rvr": midRvrGallery,
 } as const;
 
-const landingHero = midtownHeightsGallery[1];
+const landingHero = midtownHeightsGallery[0];
 
 function galleryFor(id: string) {
   return galleries[id as keyof typeof galleries] ?? [];
@@ -41,8 +41,8 @@ function galleryFor(id: string) {
   title={`Projects | ${site.name}`}
   description="Featured CK Property Group communities including seventh&franklin Phase 2 and Phase 3 in Downtown Boise, and completed seventh&franklin, Midtown Heights, Kootenai Townhomes, and K2 Apartments in Boise, plus MID RVR and 410 RVR in Hailey."
   path="/projects"
-  image="/images/midtown-heights-02.jpg"
-  imageAlt="Rooftop lounge at Midtown Heights in Boise"
+  image="/images/midtown-heights-01.jpg"
+  imageAlt="Rooftop terrace at Midtown Heights in Boise"
 >
   <PageHero
     src={landingHero.src}

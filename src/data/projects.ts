@@ -108,9 +108,9 @@ export const midRvr: FeaturedProject = {
   kicker: "Completed · 317 N River Street, Hailey",
   headline: "Mountain living on River Street",
   summary:
-    "MID RVR is a collection of 10 townhomes in Hailey, designed by Pivot North Architecture and developed in partnership with CK Property Group. Lock-and-leave mountain living near the gateway to Sun Valley, private garages and rooftop decks.",
+    "MID RVR is a completed community of 10 townhomes at 317 N River Street in Hailey. Lock-and-leave mountain living near the gateway to Sun Valley, with private garages and rooftop decks.",
   body: [
-    "MID RVR brings lock-and-leave mountain living to River Street in Hailey, near the gateway to Sun Valley. The community is a collection of 10 townhomes across two buildings, with private garages and rooftop decks.",
+    "MID RVR is a completed community of 10 townhomes at 317 N River Street in Hailey, near the gateway to Sun Valley. The townhomes sit across two buildings, with private garages and rooftop decks.",
     "The project is designed by Pivot North Architecture, built by Conrad Brothers, and developed in partnership with CK Property Group.",
   ],
   bullets: [
@@ -206,9 +206,9 @@ export const k2Apartments: FeaturedProject = {
   kicker: "Completed · 2219 W Kootenai St, Boise",
   headline: "Market-rate apartments near Boise State",
   summary:
-    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, near Boise State University.",
   body: [
-    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, near Boise State University and aimed at that market.",
   ],
   bullets: ["Market-rate multifamily", "2219 W Kootenai St, Boise", "Completed"],
   image: {
