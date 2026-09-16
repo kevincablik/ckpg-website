@@ -119,8 +119,12 @@ export const midRvr: FeaturedProject = {
     "Private garages and rooftop decks",
   ],
   image: {
-    src: "/images/midrvr-hero.jpg",
-    alt: "Exterior rendering of MID RVR townhomes on River Street in Hailey, with gabled volumes, balconies, and mountain landscape beyond.",
+    src: "/images/midrvr-web-01.jpg",
+    alt: "Twilight photograph of MID RVR townhomes at 317 N River Street in Hailey.",
+  },
+  extraImage: {
+    src: "/images/midrvr-web-02.jpg",
+    alt: "Twilight aerial of MID RVR at 317 N River Street in Hailey.",
   },
   href: "/projects#mid-rvr",
 };
@@ -194,12 +198,36 @@ export const kootenaiTownhomes: FeaturedProject = {
   href: "/projects#kootenai-townhomes",
 };
 
+export const k2Apartments: FeaturedProject = {
+  id: "k2-apartments",
+  name: "K2 Apartments",
+  location: "2219 W Kootenai St, Boise",
+  kicker: "Completed · 2219 W Kootenai St, Boise",
+  headline: "Market-rate apartments near Boise State",
+  summary:
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+  body: [
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+  ],
+  bullets: ["Market-rate multifamily", "2219 W Kootenai St, Boise", "Completed"],
+  image: {
+    src: "/images/k2-01.jpg",
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise.",
+  },
+  extraImage: {
+    src: "/images/k2-03.jpg",
+    alt: "Interior at K2 Apartments in Boise.",
+  },
+  href: "/projects#k2-apartments",
+};
+
 export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
 
 export const completedProjects = [
   seventhAndFranklin,
   midtownHeights,
   kootenaiTownhomes,
+  k2Apartments,
   rvr410,
   midRvr,
 ] as const;
