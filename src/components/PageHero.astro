@@ -1,0 +1,38 @@
+---
+import type { ImageMetadata } from "astro";
+import BleedPhoto from "./BleedPhoto.astro";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  eyebrow: string;
+  title: string;
+  lede?: string;
+  tall?: boolean;
+}
+
+const { src, alt, eyebrow, title, lede, tall = false } = Astro.props;
+---
+
+<section
+  class:list={[
+    "relative flex items-end overflow-hidden bg-ink text-paper",
+    tall ? "min-h-[100svh]" : "min-h-[58svh] md:min-h-[78svh]",
+  ]}
+>
+  <BleedPhoto src={src} alt={alt} priority />
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/15"></div>
+  <div class="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32 md:px-8 md:pb-20">
+    <p class="eyebrow text-paper/70">{eyebrow}</p>
+    <h1 class="font-display mt-4 max-w-3xl text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
+      {title}
+    </h1>
+    {
+      lede && (
+        <p class="mt-6 max-w-xl text-base font-light leading-relaxed text-paper/85 md:text-lg">
+          {lede}
+        </p>
+      )
+    }
+  </div>
+</section>

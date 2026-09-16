@@ -12,7 +12,7 @@ const { images, dense = false } = Astro.props;
 
 <div
   class:list={[
-    "grid gap-2 md:gap-3",
+    "grid gap-1",
     dense ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3",
   ]}
 >
@@ -24,7 +24,13 @@ const { images, dense = false } = Astro.props;
           !dense && index === 0 && "col-span-2 md:col-span-2 md:row-span-2",
         ]}
       >
-        <div class:list={[!dense && index === 0 ? "aspect-[4/3] md:h-full md:aspect-auto md:min-h-[28rem]" : "aspect-[4/3]"]}>
+        <div
+          class:list={[
+            !dense && index === 0
+              ? "min-h-[42vh] aspect-[4/3] md:aspect-auto md:h-full md:min-h-[78vh]"
+              : "aspect-[3/2] min-h-[22vh] md:min-h-[32vh]",
+          ]}
+        >
           <SmartImage
             src={image.src}
             alt={image.alt}

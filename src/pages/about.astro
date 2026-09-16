@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BleedPhoto from "../components/BleedPhoto.astro";
 import ButtonLink from "../components/ButtonLink.astro";
+import PageHero from "../components/PageHero.astro";
 import { site } from "../data/site";
 import { howWeWork } from "../data/projects";
+import { midRvrGallery, seventhFranklinGallery } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -12,37 +15,39 @@ import { howWeWork } from "../data/projects";
   image="/images/midrvr-hero.jpg"
   imageAlt="MID RVR townhomes in Hailey"
 >
-  <section class="border-b border-line">
-    <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <p class="eyebrow">About</p>
-      <h1 class="font-display mt-4 max-w-3xl text-5xl leading-[0.95] md:text-6xl">
-        Founded in 2014 by Anna and Kevin Cablik
-      </h1>
-      <p class="mt-8 max-w-2xl text-lg font-light leading-relaxed text-ink-soft">
-        CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live. As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
-      </p>
-    </div>
-  </section>
+  <PageHero
+    src={midRvrGallery[0].src}
+    alt={midRvrGallery[0].alt}
+    eyebrow="About"
+    title="Founded in 2014 by Anna and Kevin Cablik"
+    lede="CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live."
+  />
 
-  <section>
-    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+  <section class="md:grid md:min-h-[70svh] md:grid-cols-2">
+    <div class="flex flex-col justify-center px-5 py-16 md:px-14 md:py-20 lg:px-16">
       <p class="eyebrow">Core principles</p>
       <h2 class="font-display mt-3 text-4xl md:text-5xl">How we approach every site</h2>
-      <div class="mt-14 grid gap-10 md:grid-cols-3">
+      <p class="mt-6 max-w-xl text-sm font-light leading-relaxed text-muted">
+        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project.
+      </p>
+      <div class="mt-10 space-y-8">
         {
           howWeWork.map((item) => (
-            <div class="border-t border-line pt-8">
+            <div class="border-t border-line pt-6">
               <h3 class="text-xl">{item.title}</h3>
-              <p class="mt-4 text-sm font-light leading-relaxed text-muted">{item.text}</p>
+              <p class="mt-3 text-sm font-light leading-relaxed text-muted">{item.text}</p>
             </div>
           ))
         }
       </div>
     </div>
+    <div class="relative min-h-[48vh] bg-ink md:min-h-full">
+      <BleedPhoto src={seventhFranklinGallery[4].src} alt={seventhFranklinGallery[4].alt} />
+    </div>
   </section>
 
   <section class="border-t border-line bg-paper-deep/50">
-    <div class="mx-auto grid max-w-6xl gap-16 px-5 py-20 md:grid-cols-2 md:px-8 md:py-28">
+    <div class="mx-auto grid max-w-6xl gap-16 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
       <article>
         <p class="eyebrow">Founder</p>
         <h2 class="font-display mt-3 text-4xl">Anna Cablik</h2>
