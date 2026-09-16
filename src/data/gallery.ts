@@ -25,16 +25,16 @@ import seventhFranklinPhase305 from "../assets/images/seventh-franklin-phase3-05
 import seventhFranklinPhase306 from "../assets/images/seventh-franklin-phase3-06.jpg";
 import seventhFranklinPhase307 from "../assets/images/seventh-franklin-phase3-07.jpg";
 
-import midrvrHero from "../assets/images/midrvr-hero.jpg";
-import midrvrStreet from "../assets/images/midrvr-exterior-street.jpg";
-import midrvrElevation from "../assets/images/midrvr-elevation.jpg";
-import midrvrRoof from "../assets/images/midrvr-roof-deck.jpg";
-import midrvrDusk from "../assets/images/midrvr-dusk.jpg";
-import midrvrLiving from "../assets/images/midrvr-living.jpg";
-import midrvrDining from "../assets/images/midrvr-dining.jpg";
-import midrvrKitchen from "../assets/images/midrvr-kitchen.jpg";
-import midrvrBedroom from "../assets/images/midrvr-bedroom.jpg";
-import midrvrLivingPhoto from "../assets/images/midrvr-living-photo.jpg";
+import midrvrWeb01 from "../assets/images/midrvr-web-01.jpg";
+import midrvrWeb02 from "../assets/images/midrvr-web-02.jpg";
+import midrvrWeb03 from "../assets/images/midrvr-web-03.jpg";
+import midrvrWeb04 from "../assets/images/midrvr-web-04.jpg";
+import midrvrWeb05 from "../assets/images/midrvr-web-05.jpg";
+import midrvrWeb06 from "../assets/images/midrvr-web-06.jpg";
+import midrvrWeb07 from "../assets/images/midrvr-web-07.jpg";
+import midrvrWeb08 from "../assets/images/midrvr-web-08.jpg";
+import midrvrWeb09 from "../assets/images/midrvr-web-09.jpg";
+import midrvrWeb10 from "../assets/images/midrvr-web-10.jpg";
 
 import rvr410Dusk from "../assets/images/410-rvr-dusk.jpg";
 import rvr410Living from "../assets/images/410-rvr-living.jpg";
@@ -47,6 +47,26 @@ import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 
 import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
 import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
+import midtownHeightsStreet from "../assets/images/midtown-heights-03.jpg";
+import midtownHeightsAerial from "../assets/images/midtown-heights-04.jpg";
+
+import kootenai01 from "../assets/images/kootenai-01.jpg";
+import kootenai02 from "../assets/images/kootenai-02.jpg";
+import kootenai03 from "../assets/images/kootenai-03.jpg";
+import kootenai04 from "../assets/images/kootenai-04.jpg";
+import kootenai05 from "../assets/images/kootenai-05.jpg";
+import kootenai06 from "../assets/images/kootenai-06.jpg";
+import kootenai07 from "../assets/images/kootenai-07.jpg";
+import kootenai08 from "../assets/images/kootenai-08.jpg";
+
+import k2Exterior from "../assets/images/k2-01.jpg";
+import k2Massing from "../assets/images/k2-02.jpg";
+import k2Living from "../assets/images/k2-03.jpg";
+import k2Kitchen from "../assets/images/k2-04.jpg";
+import k2Interior from "../assets/images/k2-05.jpg";
+import k2Windows from "../assets/images/k2-06.jpg";
+import k2Aerial from "../assets/images/k2-07.jpg";
+import k2Dusk from "../assets/images/k2-08.jpg";
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -176,53 +196,53 @@ export const seventhFranklinPhase3Gallery: GalleryImage[] = [
 
 export const midRvrGallery: GalleryImage[] = [
   {
-    src: midrvrHero,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb01,
+    alt: "Twilight photograph of MID RVR townhomes at 317 N River Street in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrStreet,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb02,
+    alt: "Twilight aerial of MID RVR at 317 N River Street in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrElevation,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb03,
+    alt: "Twilight street elevation of MID RVR in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrRoof,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb04,
+    alt: "Twilight aerial of MID RVR townhomes and rooftop decks in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrDusk,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb05,
+    alt: "Living room at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrLiving,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb06,
+    alt: "Living room looking toward the mountains at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrDining,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb07,
+    alt: "Living room, kitchen, and stair at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrKitchen,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb08,
+    alt: "Bedroom at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrLivingPhoto,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb09,
+    alt: "Living and kitchen detail at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
   {
-    src: midrvrBedroom,
-    alt: "MID RVR, Hailey",
+    src: midrvrWeb10,
+    alt: "Bedroom at MID RVR Unit 9 in Hailey",
     caption: "MID RVR",
   },
 ];
@@ -281,6 +301,102 @@ export const midtownHeightsGallery: GalleryImage[] = [
     alt: "Rooftop lounge at Midtown Heights in Boise",
     caption: "Midtown Heights",
   },
+  {
+    src: midtownHeightsStreet,
+    alt: "Street elevation of Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
+  {
+    src: midtownHeightsAerial,
+    alt: "Aerial view of Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
+];
+
+export const kootenaiGallery: GalleryImage[] = [
+  {
+    src: kootenai01,
+    alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai02,
+    alt: "Rear lot at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai03,
+    alt: "Site pad at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai04,
+    alt: "Kootenai Townhomes construction site in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai05,
+    alt: "Street edge at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai06,
+    alt: "Kootenai Townhomes site looking toward downtown Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai07,
+    alt: "Kootenai Townhomes site and neighboring houses in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai08,
+    alt: "Kootenai Townhomes construction looking toward adjacent buildings in Boise",
+    caption: "Kootenai Townhomes",
+  },
+];
+
+export const k2Gallery: GalleryImage[] = [
+  {
+    src: k2Aerial,
+    alt: "Aerial photograph of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Dusk,
+    alt: "Dusk photograph of K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Living,
+    alt: "Interior at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Kitchen,
+    alt: "Kitchen at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Interior,
+    alt: "Living area at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Windows,
+    alt: "Windows at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Exterior,
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Massing,
+    alt: "Exterior massing of K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
 ];
 
 export const homeHero = seventhFranklinGallery[0];
@@ -299,10 +415,15 @@ export const homeStrip: GalleryImage[] = [
   { ...rvr410Gallery[4], href: "/projects#410-rvr" },
   { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
   { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
+  { ...midtownHeightsGallery[3], href: "/projects#midtown-heights" },
+  { ...kootenaiGallery[0], href: "/projects#kootenai-townhomes" },
+  { ...kootenaiGallery[1], href: "/projects#kootenai-townhomes" },
+  { ...k2Gallery[0], href: "/projects#k2-apartments" },
+  { ...k2Gallery[1], href: "/projects#k2-apartments" },
 ];
 
 export const homeFeaturedThumbs = {
   seventh: seventhFranklinGallery.slice(2, 6),
-  mid: [midRvrGallery[1], midRvrGallery[2], midRvrGallery[3], midRvrGallery[5]],
+  mid: [midRvrGallery[0], midRvrGallery[1], midRvrGallery[4], midRvrGallery[5]],
   rvr410: [rvr410Gallery[1], rvr410Gallery[2], rvr410Gallery[3], rvr410Gallery[4]],
 };

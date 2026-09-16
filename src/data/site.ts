@@ -25,6 +25,9 @@ export const projectInterestOptions = [
   { value: "mid-rvr", label: "MID RVR" },
   { value: "410-rvr", label: "410 RVR" },
   { value: "midtown-heights", label: "Midtown Heights" },
+  { value: "kootenai-townhomes", label: "Kootenai Townhomes" },
+  { value: "k2-apartments", label: "K2 Apartments" },
+  { value: "dewey-street", label: "Dewey Street Residences" },
   { value: "other", label: "Other" },
 ] as const;
 
