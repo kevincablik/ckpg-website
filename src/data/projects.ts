@@ -187,6 +187,10 @@ export const kootenaiTownhomes: FeaturedProject = {
     src: "/images/kootenai-01.jpg",
     alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise.",
   },
+  extraImage: {
+    src: "/images/kootenai-02.jpg",
+    alt: "Rear lot at Kootenai Townhomes in Boise.",
+  },
   href: "/projects#kootenai-townhomes",
 };
 

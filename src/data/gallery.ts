@@ -49,6 +49,13 @@ import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
 import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
 
 import kootenai01 from "../assets/images/kootenai-01.jpg";
+import kootenai02 from "../assets/images/kootenai-02.jpg";
+import kootenai03 from "../assets/images/kootenai-03.jpg";
+import kootenai04 from "../assets/images/kootenai-04.jpg";
+import kootenai05 from "../assets/images/kootenai-05.jpg";
+import kootenai06 from "../assets/images/kootenai-06.jpg";
+import kootenai07 from "../assets/images/kootenai-07.jpg";
+import kootenai08 from "../assets/images/kootenai-08.jpg";
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -291,6 +298,41 @@ export const kootenaiGallery: GalleryImage[] = [
     alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise",
     caption: "Kootenai Townhomes",
   },
+  {
+    src: kootenai02,
+    alt: "Rear lot at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai03,
+    alt: "Site pad at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai04,
+    alt: "Kootenai Townhomes construction site in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai05,
+    alt: "Street edge at Kootenai Townhomes in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai06,
+    alt: "Kootenai Townhomes site looking toward downtown Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai07,
+    alt: "Kootenai Townhomes site and neighboring houses in Boise",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenai08,
+    alt: "Kootenai Townhomes construction looking toward adjacent buildings in Boise",
+    caption: "Kootenai Townhomes",
+  },
 ];
 
 export const homeHero = seventhFranklinGallery[0];
@@ -310,6 +352,7 @@ export const homeStrip: GalleryImage[] = [
   { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
   { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
   { ...kootenaiGallery[0], href: "/projects#kootenai-townhomes" },
+  { ...kootenaiGallery[1], href: "/projects#kootenai-townhomes" },
 ];
 
 export const homeFeaturedThumbs = {
