@@ -45,6 +45,9 @@ import rvr410TerraceRender from "../assets/images/410-rvr-terrace-render.jpg";
 import rvr410Bath from "../assets/images/410-rvr-bath.jpg";
 import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 
+import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
+import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
+
 export type GalleryImage = {
   src: ImageMetadata;
   alt: string;
@@ -267,6 +270,19 @@ export const rvr410Gallery: GalleryImage[] = [
   },
 ];
 
+export const midtownHeightsGallery: GalleryImage[] = [
+  {
+    src: midtownHeightsTerrace,
+    alt: "Rooftop terrace at Midtown Heights, 1709 S Federal Way in Boise",
+    caption: "Midtown Heights",
+  },
+  {
+    src: midtownHeightsLounge,
+    alt: "Rooftop lounge at Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
+];
+
 export const homeHero = seventhFranklinGallery[0];
 export const homeBleed = seventhFranklinGallery[4];
 
@@ -281,6 +297,8 @@ export const homeStrip: GalleryImage[] = [
   { ...midRvrGallery[3], href: "/projects#mid-rvr" },
   { ...rvr410Gallery[0], href: "/projects#410-rvr" },
   { ...rvr410Gallery[4], href: "/projects#410-rvr" },
+  { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
+  { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
 ];
 
 export const homeFeaturedThumbs = {

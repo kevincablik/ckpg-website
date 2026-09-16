@@ -148,17 +148,40 @@ export const rvr410: FeaturedProject = {
   href: "/projects#410-rvr",
 };
 
+export const midtownHeights: FeaturedProject = {
+  id: "midtown-heights",
+  name: "Midtown Heights",
+  location: "1709 S Federal Way, Boise",
+  kicker: "Completed · 1709 S Federal Way, Boise",
+  headline: "Thirty-five townhomes in Boise",
+  summary:
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+  body: [
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+  ],
+  bullets: ["35 townhomes", "1709 S Federal Way, Boise", "Completed"],
+  image: {
+    src: "/images/midtown-heights-01.jpg",
+    alt: "Rooftop terrace at Midtown Heights, 1709 S Federal Way in Boise.",
+  },
+  extraImage: {
+    src: "/images/midtown-heights-02.jpg",
+    alt: "Rooftop lounge at Midtown Heights in Boise.",
+  },
+  href: "/projects#midtown-heights",
+};
+
 export const featuredProjects = [
   seventhAndFranklinPhase2,
   seventhAndFranklinPhase3,
   seventhAndFranklin,
+  midtownHeights,
   midRvr,
   rvr410,
 ] as const;
 
 export const homePortfolio = [
   { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "Midtown Heights", place: "Boise" },
   { name: "410 RVR", place: "Hailey", status: "Completed" },
 ] as const;
 
@@ -170,7 +193,6 @@ export const atlantaCommunities = [
 
 export const selectPortfolio = [
   { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "Midtown Heights", place: "Boise" },
   { name: "410 RVR", place: "Hailey", status: "Completed" },
   { name: "Edge on Lucy", place: "Atlanta" },
   { name: "975 Piedmont", place: "Atlanta" },

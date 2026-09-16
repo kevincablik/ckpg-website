@@ -24,6 +24,7 @@ export const projectInterestOptions = [
   { value: "seventh-and-franklin-phase-3", label: "seventh&franklin Phase 3" },
   { value: "mid-rvr", label: "MID RVR" },
   { value: "410-rvr", label: "410 RVR" },
+  { value: "midtown-heights", label: "Midtown Heights" },
   { value: "other", label: "Other" },
 ] as const;
 
