@@ -7,7 +7,7 @@ export type FeaturedProject = {
   summary: string;
   body: string[];
   bullets: string[];
-  image?: {
+  image: {
     src: string;
     alt: string;
   };
@@ -18,7 +18,6 @@ export type FeaturedProject = {
   href: string;
   externalUrl?: string;
   externalLabel?: string;
-  photosPending?: boolean;
 };
 
 export const seventhAndFranklin: FeaturedProject = {
@@ -126,36 +125,6 @@ export const midRvr: FeaturedProject = {
   href: "/projects#mid-rvr",
 };
 
-export const k2Apartments: FeaturedProject = {
-  id: "k2-apartments",
-  name: "K2 Apartments",
-  location: "2219 W Kootenai St, Boise",
-  kicker: "Completed · 2219 W Kootenai St, Boise",
-  headline: "Market-rate apartments near Boise State",
-  summary:
-    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
-  body: [
-    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
-    "Photos coming soon.",
-  ],
-  bullets: ["Market-rate multifamily", "2219 W Kootenai St, Boise", "Completed"],
-  href: "/projects#k2-apartments",
-  photosPending: true,
-};
-
-export const deweyStreet: FeaturedProject = {
-  id: "dewey-street",
-  name: "Dewey Street Residences",
-  location: "Boise",
-  kicker: "Completed · Boise",
-  headline: "A completed Boise community",
-  summary: "Dewey Street Residences is a completed Boise community. Photos coming soon.",
-  body: ["Photos coming soon."],
-  bullets: ["Boise", "Completed"],
-  href: "/projects#dewey-street",
-  photosPending: true,
-};
-
 export const rvr410: FeaturedProject = {
   id: "410-rvr",
   name: "410 RVR",
@@ -227,10 +196,8 @@ export const completedProjects = [
   seventhAndFranklin,
   midtownHeights,
   kootenaiTownhomes,
-  k2Apartments,
   rvr410,
   midRvr,
-  deweyStreet,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;
