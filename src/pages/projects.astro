@@ -4,6 +4,8 @@ import PageHero from "../components/PageHero.astro";
 import ProjectFeature from "../components/ProjectFeature.astro";
 import { site } from "../data/site";
 import {
+  k2Apartments,
+  kootenaiTownhomes,
   midRvr,
   midtownHeights,
   rvr410,
@@ -13,6 +15,8 @@ import {
   seventhAndFranklinPhase3,
 } from "../data/projects";
 import {
+  k2ApartmentsGallery,
+  kootenaiTownhomesGallery,
   midRvrGallery,
   midtownHeightsGallery,
   rvr410Gallery,
@@ -24,30 +28,47 @@ import {
 
 <BaseLayout
   title={`Projects | ${site.name}`}
-  description="Featured CK Property Group communities including seventh&franklin Phase 2 and Phase 3 in Downtown Boise, completed Midtown Heights in Boise, MID RVR in Hailey, and completed 410 RVR in Hailey."
+  description="CK Property Group projects in progress and completed, including seventh&franklin Phase 2 and Phase 3 in Downtown Boise, Midtown Heights, Kootenai Townhomes, K2 Apartments, 410 RVR, and MID RVR."
   path="/projects"
-  image="/images/midtown-heights-01.jpg"
+  image="/images/midtown-heights-roof-1.jpg"
   imageAlt="Rooftop terrace at Midtown Heights in Boise"
 >
   <PageHero
     src={midtownHeightsGallery[0].src}
     alt={midtownHeightsGallery[0].alt}
     eyebrow="Projects"
-    title="Thoughtfully designed townhome communities"
+    title="Thoughtfully designed communities"
   />
 
   <div class="mx-auto max-w-2xl px-5 py-10 text-center md:py-12">
     <p class="text-sm font-light leading-relaxed text-muted md:text-base">
-      CK Property Group develops for-sale townhouse communities in highly desirable urban and infill locations. Featured work includes seventh&franklin Phase 2 and Phase 3 in Downtown Boise, completed Midtown Heights in Boise, MID RVR in Hailey, and completed 410 RVR in Hailey.
+      CK Property Group develops for-sale townhouse and multifamily communities in highly desirable urban and infill locations. Current work continues at Seventh & Franklin in Downtown Boise. Completed communities include seventh&franklin Phase 1, Midtown Heights, Kootenai Townhomes, and K2 Apartments in Boise, and 410 RVR and MID RVR in Hailey.
     </p>
   </div>
 
+  <section class="border-y border-line bg-paper-deep/50">
+    <div class="mx-auto max-w-3xl px-5 py-12 text-center md:py-14">
+      <p class="eyebrow">Projects</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">Current / In progress</h2>
+    </div>
+  </section>
+
   <ProjectFeature project={seventhAndFranklinPhase2} gallery={seventhFranklinPhase2Gallery} />
   <ProjectFeature project={seventhAndFranklinPhase3} gallery={seventhFranklinPhase3Gallery} />
+
+  <section class="border-y border-line bg-paper-deep/50">
+    <div class="mx-auto max-w-3xl px-5 py-12 text-center md:py-14">
+      <p class="eyebrow">Projects</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">Completed</h2>
+    </div>
+  </section>
+
   <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
   <ProjectFeature project={midtownHeights} gallery={midtownHeightsGallery} />
-  <ProjectFeature project={midRvr} gallery={midRvrGallery} />
+  <ProjectFeature project={kootenaiTownhomes} gallery={kootenaiTownhomesGallery} />
+  <ProjectFeature project={k2Apartments} gallery={k2ApartmentsGallery} />
   <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
+  <ProjectFeature project={midRvr} gallery={midRvrGallery} />
 
   <section class="border-t border-line bg-paper-deep/50">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">

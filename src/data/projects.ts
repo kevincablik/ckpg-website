@@ -20,55 +20,25 @@ export type FeaturedProject = {
   externalLabel?: string;
 };
 
-export const seventhAndFranklin: FeaturedProject = {
-  id: "seventh-and-franklin",
-  name: "seventh&franklin",
-  location: "Downtown Boise",
-  kicker: "Downtown Boise",
-  headline: "Historic landmark, reimagined",
-  summary:
-    "At the gateway to Downtown Boise, seventh&franklin blends the character of the historic J.W. McLean House—originally designed in 1903—with contemporary architecture, designer interiors, and private rooftop living. Residences are positioned for privacy and retreat while remaining steps from dining, culture, parks, and the Boise River.",
-  body: [
-    "The J.W. McLean House was originally designed in 1903 as brick-terraced residences at Seventh and Franklin. seventh&franklin reimagines that landmark character for contemporary living: historic brickwork paired with a modern addition, light-filled interiors, and a downtown address that still feels like a retreat.",
-    "Each residence is composed for privacy while remaining at the gateway to Downtown Boise—close to dining, culture, parks, and the Boise River. Architecture is by Pivot North Architects.",
-  ],
-  bullets: [
-    "Private rooftop terraces with views toward Downtown Boise, the Idaho State Capitol, and the foothills",
-    "Historic brickwork paired with modern exteriors and light-filled interiors",
-    "Architecture by Pivot North Architects",
-  ],
-  image: {
-    src: "/images/seventh-franklin-exterior.jpg",
-    alt: "Exterior rendering of seventh&franklin at Seventh and Franklin in Downtown Boise, pairing the historic brick residence with a contemporary townhome addition.",
-  },
-  extraImage: {
-    src: "/images/seventh-franklin-dusk.jpg",
-    alt: "Dusk rendering of seventh&franklin showing illuminated interiors, rooftop terraces, and the historic brick façade.",
-  },
-  href: "/projects#seventh-and-franklin",
-  externalUrl: "https://seventhandfranklin.com",
-  externalLabel: "seventhandfranklin.com",
-};
-
 export const seventhAndFranklinPhase2: FeaturedProject = {
   id: "seventh-and-franklin-phase-2",
   name: "seventh&franklin Phase 2",
   location: "Downtown Boise",
-  kicker: "In progress · Downtown Boise",
+  kicker: "In progress · Building B · Downtown Boise",
   headline: "The next chapter at Seventh & Franklin",
   summary:
-    "seventh&franklin Phase 2 continues the Seventh & Franklin community in Downtown Boise, in the 711 W Franklin area. The project is in progress.",
+    "seventh&franklin Phase 2 (Building B) continues the Seventh & Franklin community in Downtown Boise. The project is in progress.",
   body: [
-    "seventh&franklin Phase 2 continues the Seventh & Franklin community in Downtown Boise, in the 711 W Franklin area. The project is in progress.",
+    "seventh&franklin Phase 2 (Building B) continues the Seventh & Franklin community in Downtown Boise. The project is in progress.",
   ],
-  bullets: ["In progress", "Downtown Boise", "711 W Franklin area"],
+  bullets: ["In progress", "Building B", "Downtown Boise"],
   image: {
     src: "/images/seventh-franklin-phase2-01.jpg",
-    alt: "Exterior rendering of seventh&franklin Phase 2 in Downtown Boise.",
+    alt: "Exterior rendering of seventh&franklin Phase 2 (Building B) in Downtown Boise.",
   },
   extraImage: {
     src: "/images/seventh-franklin-phase2-02.jpg",
-    alt: "Street elevation of seventh&franklin Phase 2 in Downtown Boise.",
+    alt: "Street elevation of seventh&franklin Phase 2 (Building B) in Downtown Boise.",
   },
   href: "/projects#seventh-and-franklin-phase-2",
   externalUrl: "https://seventhandfranklin.com",
@@ -100,29 +70,104 @@ export const seventhAndFranklinPhase3: FeaturedProject = {
   externalLabel: "seventhandfranklin.com",
 };
 
-export const midRvr: FeaturedProject = {
-  id: "mid-rvr",
-  name: "MID RVR",
-  location: "317 N River Street, Hailey",
-  kicker: "317 N River Street, Hailey",
-  headline: "Mountain living on River Street",
+export const seventhAndFranklin: FeaturedProject = {
+  id: "seventh-and-franklin",
+  name: "seventh&franklin Phase 1",
+  location: "Downtown Boise",
+  kicker: "Completed · Downtown Boise",
+  headline: "Historic landmark, reimagined",
   summary:
-    "MID RVR is a collection of 10 townhomes in Hailey, designed by Pivot North Architecture and developed in partnership with CK Property Group. Lock-and-leave mountain living near the gateway to Sun Valley, private garages and rooftop decks.",
+    "At the gateway to Downtown Boise, seventh&franklin blends the character of the historic J.W. McLean House—originally designed in 1903—with contemporary architecture, designer interiors, and private rooftop living. Residences are positioned for privacy and retreat while remaining steps from dining, culture, parks, and the Boise River.",
   body: [
-    "MID RVR brings lock-and-leave mountain living to River Street in Hailey, near the gateway to Sun Valley. The community is a collection of 10 townhomes across two buildings, with private garages and rooftop decks.",
-    "The project is designed by Pivot North Architecture, built by Conrad Brothers, and developed in partnership with CK Property Group.",
+    "The J.W. McLean House was originally designed in 1903 as brick-terraced residences at Seventh and Franklin. seventh&franklin reimagines that landmark character for contemporary living: historic brickwork paired with a modern addition, light-filled interiors, and a downtown address that still feels like a retreat.",
+    "Each residence is composed for privacy while remaining at the gateway to Downtown Boise—close to dining, culture, parks, and the Boise River. Architecture is by Pivot North Architects.",
   ],
   bullets: [
-    "10 townhomes across two buildings",
-    "Pivot North Architecture",
-    "Conrad Brothers",
-    "Private garages and rooftop decks",
+    "Private rooftop terraces with views toward Downtown Boise, the Idaho State Capitol, and the foothills",
+    "Historic brickwork paired with modern exteriors and light-filled interiors",
+    "Architecture by Pivot North Architects",
   ],
   image: {
-    src: "/images/midrvr-hero.jpg",
-    alt: "Exterior rendering of MID RVR townhomes on River Street in Hailey, with gabled volumes, balconies, and mountain landscape beyond.",
+    src: "/images/seventh-franklin-exterior.jpg",
+    alt: "Exterior rendering of seventh&franklin at Seventh and Franklin in Downtown Boise, pairing the historic brick residence with a contemporary townhome addition.",
   },
-  href: "/projects#mid-rvr",
+  extraImage: {
+    src: "/images/seventh-franklin-dusk.jpg",
+    alt: "Dusk rendering of seventh&franklin showing illuminated interiors, rooftop terraces, and the historic brick façade.",
+  },
+  href: "/projects#seventh-and-franklin",
+  externalUrl: "https://seventhandfranklin.com",
+  externalLabel: "seventhandfranklin.com",
+};
+
+export const midtownHeights: FeaturedProject = {
+  id: "midtown-heights",
+  name: "Midtown Heights",
+  location: "1709 S Federal Way, Boise",
+  kicker: "Completed · 1709 S Federal Way, Boise",
+  headline: "Thirty-five townhomes in Boise",
+  summary:
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise. The community was sold to a Berkshire Hathaway subsidiary.",
+  body: [
+    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+    "The community was sold to a Berkshire Hathaway subsidiary.",
+  ],
+  bullets: ["35 townhomes", "1709 S Federal Way, Boise", "Completed"],
+  image: {
+    src: "/images/midtown-heights-roof-1.jpg",
+    alt: "Rooftop terrace rendering at Midtown Heights, 1709 S Federal Way in Boise.",
+  },
+  extraImage: {
+    src: "/images/midtown-heights-roof-2.jpg",
+    alt: "Rooftop lounge rendering at Midtown Heights in Boise.",
+  },
+  href: "/projects#midtown-heights",
+};
+
+export const kootenaiTownhomes: FeaturedProject = {
+  id: "kootenai-townhomes",
+  name: "Kootenai Townhomes",
+  location: "2294 W Kootenai St, Boise",
+  kicker: "Completed · 2294 W Kootenai St, Boise",
+  headline: "Seventeen townhomes in Boise",
+  summary:
+    "Kootenai Townhomes is a completed community of 17 townhomes at 2294 W Kootenai St in Boise.",
+  body: [
+    "Kootenai Townhomes is a completed community of 17 townhomes at 2294 W Kootenai St in Boise.",
+  ],
+  bullets: ["17 townhomes", "2294 W Kootenai St, Boise", "Completed"],
+  image: {
+    src: "/images/kootenai-01.jpg",
+    alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise.",
+  },
+  extraImage: {
+    src: "/images/kootenai-04.jpg",
+    alt: "Kootenai Townhomes at 2294 W Kootenai St in Boise.",
+  },
+  href: "/projects#kootenai-townhomes",
+};
+
+export const k2Apartments: FeaturedProject = {
+  id: "k2-apartments",
+  name: "K2 Apartments",
+  location: "2219 W Kootenai St, Boise",
+  kicker: "Completed · 2219 W Kootenai St, Boise",
+  headline: "Market-rate multifamily near Boise State",
+  summary:
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+  body: [
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+  ],
+  bullets: ["Market-rate multifamily", "Boise State University market", "2219 W Kootenai St, Boise", "Completed"],
+  image: {
+    src: "/images/k2-01.jpg",
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise.",
+  },
+  extraImage: {
+    src: "/images/k2-02.jpg",
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise.",
+  },
+  href: "/projects#k2-apartments",
 };
 
 export const rvr410: FeaturedProject = {
@@ -148,42 +193,47 @@ export const rvr410: FeaturedProject = {
   href: "/projects#410-rvr",
 };
 
-export const midtownHeights: FeaturedProject = {
-  id: "midtown-heights",
-  name: "Midtown Heights",
-  location: "1709 S Federal Way, Boise",
-  kicker: "Completed · 1709 S Federal Way, Boise",
-  headline: "Thirty-five townhomes in Boise",
+export const midRvr: FeaturedProject = {
+  id: "mid-rvr",
+  name: "MID RVR",
+  location: "317 N River Street, Hailey",
+  kicker: "Completed · 317 N River Street, Hailey",
+  headline: "Mountain living on River Street",
   summary:
-    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+    "MID RVR is a completed collection of 10 townhomes in Hailey, designed by Pivot North Architecture and developed in partnership with CK Property Group. Lock-and-leave mountain living near the gateway to Sun Valley, private garages and rooftop decks.",
   body: [
-    "Midtown Heights is a completed community of 35 townhomes at 1709 S Federal Way in Boise.",
+    "MID RVR brings lock-and-leave mountain living to River Street in Hailey, near the gateway to Sun Valley. The community is a completed collection of 10 townhomes across two buildings, with private garages and rooftop decks.",
+    "The project is designed by Pivot North Architecture, built by Conrad Brothers, and developed in partnership with CK Property Group.",
   ],
-  bullets: ["35 townhomes", "1709 S Federal Way, Boise", "Completed"],
+  bullets: [
+    "10 townhomes across two buildings",
+    "Pivot North Architecture",
+    "Conrad Brothers",
+    "Private garages and rooftop decks",
+  ],
   image: {
-    src: "/images/midtown-heights-01.jpg",
-    alt: "Rooftop terrace at Midtown Heights, 1709 S Federal Way in Boise.",
+    src: "/images/midrvr-twilight-02.jpg",
+    alt: "Twilight photograph of completed MID RVR townhomes on River Street in Hailey, with illuminated interiors and mountains beyond.",
   },
   extraImage: {
-    src: "/images/midtown-heights-02.jpg",
-    alt: "Rooftop lounge at Midtown Heights in Boise.",
+    src: "/images/midrvr-twilight-01.jpg",
+    alt: "Twilight photograph of the completed MID RVR street elevation in Hailey.",
   },
-  href: "/projects#midtown-heights",
+  href: "/projects#mid-rvr",
 };
 
-export const featuredProjects = [
-  seventhAndFranklinPhase2,
-  seventhAndFranklinPhase3,
+export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
+
+export const completedProjects = [
   seventhAndFranklin,
   midtownHeights,
-  midRvr,
+  kootenaiTownhomes,
+  k2Apartments,
   rvr410,
+  midRvr,
 ] as const;
 
-export const homePortfolio = [
-  { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "410 RVR", place: "Hailey", status: "Completed" },
-] as const;
+export const featuredProjects = [...currentProjects, ...completedProjects] as const;
 
 export const atlantaCommunities = [
   "1463 LaFrance",
@@ -192,8 +242,6 @@ export const atlantaCommunities = [
 ] as const;
 
 export const selectPortfolio = [
-  { name: "Kootenai Townhomes", place: "Boise" },
-  { name: "410 RVR", place: "Hailey", status: "Completed" },
   { name: "Edge on Lucy", place: "Atlanta" },
   { name: "975 Piedmont", place: "Atlanta" },
   { name: "Skypointe", place: "Atlanta" },
