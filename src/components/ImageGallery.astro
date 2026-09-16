@@ -12,29 +12,35 @@ const { images } = Astro.props;
 
 <div class="grid grid-cols-1 gap-1 md:grid-cols-2">
   {
-    images.map((image, index) => (
+    images.map((image, index) => {
+      const wide = index === 0 || (images.length % 2 === 0 && index === images.length - 1);
+      return (
       <figure
         class:list={[
           "overflow-hidden bg-paper-deep",
-          index === 0 && "md:col-span-2",
+          wide && "md:col-span-2",
         ]}
       >
         <div
           class:list={[
-            index === 0
+            "relative overflow-hidden",
+            wide
               ? "min-h-[58vh] aspect-[16/10] md:aspect-auto md:min-h-[86vh]"
               : "aspect-[3/2] min-h-[38vh] md:min-h-[56vh]",
           ]}
         >
-          <SmartImage
-            src={image.src}
-            alt={image.alt}
-            sizes={index === 0 ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
-            priority={index === 0}
-          />
+          <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+            <SmartImage
+              src={image.src}
+              alt={image.alt}
+              sizes={wide ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+              priority={index === 0}
+            />
+          </div>
         </div>
         <figcaption class="sr-only">{image.caption}</figcaption>
       </figure>
-    ))
+      );
+    })
   }
 </div>

@@ -20,13 +20,15 @@ const { project, image, featured = false, overlay = true } = Astro.props;
       featured ? "min-h-[82svh] md:min-h-[90svh]" : "aspect-[4/3] min-h-[46vh] md:min-h-[64vh]",
     ]}
   >
-    <SmartImage
-      src={image.src}
-      alt={image.alt}
-      sizes={featured ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
-      class="transition-transform duration-700 group-hover:scale-[1.03]"
-      widths={[800, 1200, 1800, 2400]}
-    />
+    <div class="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+      <SmartImage
+        src={image.src}
+        alt={image.alt}
+        sizes={featured ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+        class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+        widths={[800, 1200, 1800, 2400]}
+      />
+    </div>
     {
       overlay && (
         <>
