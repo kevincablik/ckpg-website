@@ -7,7 +7,7 @@ export type FeaturedProject = {
   summary: string;
   body: string[];
   bullets: string[];
-  image: {
+  image?: {
     src: string;
     alt: string;
   };
@@ -18,6 +18,7 @@ export type FeaturedProject = {
   href: string;
   externalUrl?: string;
   externalLabel?: string;
+  photosPending?: boolean;
 };
 
 export const seventhAndFranklin: FeaturedProject = {
@@ -104,7 +105,7 @@ export const midRvr: FeaturedProject = {
   id: "mid-rvr",
   name: "MID RVR",
   location: "317 N River Street, Hailey",
-  kicker: "317 N River Street, Hailey",
+  kicker: "Completed · 317 N River Street, Hailey",
   headline: "Mountain living on River Street",
   summary:
     "MID RVR is a collection of 10 townhomes in Hailey, designed by Pivot North Architecture and developed in partnership with CK Property Group. Lock-and-leave mountain living near the gateway to Sun Valley, private garages and rooftop decks.",
@@ -123,6 +124,36 @@ export const midRvr: FeaturedProject = {
     alt: "Exterior rendering of MID RVR townhomes on River Street in Hailey, with gabled volumes, balconies, and mountain landscape beyond.",
   },
   href: "/projects#mid-rvr",
+};
+
+export const k2Apartments: FeaturedProject = {
+  id: "k2-apartments",
+  name: "K2 Apartments",
+  location: "2219 W Kootenai St, Boise",
+  kicker: "Completed · 2219 W Kootenai St, Boise",
+  headline: "Market-rate apartments near Boise State",
+  summary:
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+  body: [
+    "K2 Apartments is a completed market-rate multifamily community at 2219 W Kootenai St in Boise, aimed at the Boise State University market.",
+    "Photos coming soon.",
+  ],
+  bullets: ["Market-rate multifamily", "2219 W Kootenai St, Boise", "Completed"],
+  href: "/projects#k2-apartments",
+  photosPending: true,
+};
+
+export const deweyStreet: FeaturedProject = {
+  id: "dewey-street",
+  name: "Dewey Street Residences",
+  location: "Boise",
+  kicker: "Completed · Boise",
+  headline: "A completed Boise community",
+  summary: "Dewey Street Residences is a completed Boise community. Photos coming soon.",
+  body: ["Photos coming soon."],
+  bullets: ["Boise", "Completed"],
+  href: "/projects#dewey-street",
+  photosPending: true,
 };
 
 export const rvr410: FeaturedProject = {
@@ -196,8 +227,10 @@ export const completedProjects = [
   seventhAndFranklin,
   midtownHeights,
   kootenaiTownhomes,
+  k2Apartments,
   rvr410,
   midRvr,
+  deweyStreet,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;
