@@ -75,9 +75,24 @@ function galleryFor(id: string) {
       <h2 class="font-display mt-3 text-4xl md:text-5xl">Delivered communities</h2>
     </div>
     {
-      completedProjects.map((project) => (
-        <ProjectFeature project={project} gallery={galleryFor(project.id)} />
-      ))
+      completedProjects.map((project) =>
+        project.photosPending ? (
+          <article id={project.id} class="scroll-mt-20">
+            <div class="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">
+              <p class="eyebrow">{project.kicker}</p>
+              <h2 class="font-display mt-4 text-5xl font-normal leading-[1.05] tracking-tight md:text-7xl">
+                {project.name}
+              </h2>
+              <p class="font-display mt-3 text-xl italic text-muted md:text-2xl">{project.headline}</p>
+              {project.body.map((paragraph) => (
+                <p class="mt-6 text-[0.98rem] font-light leading-relaxed text-muted">{paragraph}</p>
+              ))}
+            </div>
+          </article>
+        ) : (
+          <ProjectFeature project={project} gallery={galleryFor(project.id)} />
+        )
+      )
     }
   </section>
 

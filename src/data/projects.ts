@@ -7,7 +7,7 @@ export type FeaturedProject = {
   summary: string;
   body: string[];
   bullets: string[];
-  image: {
+  image?: {
     src: string;
     alt: string;
   };
@@ -18,6 +18,7 @@ export type FeaturedProject = {
   href: string;
   externalUrl?: string;
   externalLabel?: string;
+  photosPending?: boolean;
 };
 
 export const seventhAndFranklin: FeaturedProject = {
@@ -221,6 +222,19 @@ export const k2Apartments: FeaturedProject = {
   href: "/projects#k2-apartments",
 };
 
+export const deweyStreet: FeaturedProject = {
+  id: "dewey-street",
+  name: "Dewey Street Residences",
+  location: "Boise",
+  kicker: "Completed · Boise",
+  headline: "A completed Boise community",
+  summary: "Dewey Street Residences is a completed Boise community. Photos coming soon.",
+  body: ["Photos coming soon."],
+  bullets: ["Boise", "Completed"],
+  href: "/projects#dewey-street",
+  photosPending: true,
+};
+
 export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
 
 export const completedProjects = [
@@ -230,6 +244,7 @@ export const completedProjects = [
   k2Apartments,
   rvr410,
   midRvr,
+  deweyStreet,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;

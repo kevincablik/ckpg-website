@@ -47,6 +47,8 @@ import rvr410Interior from "../assets/images/410-rvr-interior.jpg";
 
 import midtownHeightsTerrace from "../assets/images/midtown-heights-01.jpg";
 import midtownHeightsLounge from "../assets/images/midtown-heights-02.jpg";
+import midtownHeightsStreet from "../assets/images/midtown-heights-03.jpg";
+import midtownHeightsAerial from "../assets/images/midtown-heights-04.jpg";
 
 import kootenai01 from "../assets/images/kootenai-01.jpg";
 import kootenai02 from "../assets/images/kootenai-02.jpg";
@@ -297,6 +299,16 @@ export const midtownHeightsGallery: GalleryImage[] = [
     alt: "Rooftop lounge at Midtown Heights in Boise",
     caption: "Midtown Heights",
   },
+  {
+    src: midtownHeightsStreet,
+    alt: "Street elevation of Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
+  {
+    src: midtownHeightsAerial,
+    alt: "Aerial view of Midtown Heights in Boise",
+    caption: "Midtown Heights",
+  },
 ];
 
 export const kootenaiGallery: GalleryImage[] = [
@@ -391,6 +403,7 @@ export const homeStrip: GalleryImage[] = [
   { ...rvr410Gallery[4], href: "/projects#410-rvr" },
   { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
   { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
+  { ...midtownHeightsGallery[3], href: "/projects#midtown-heights" },
   { ...kootenaiGallery[0], href: "/projects#kootenai-townhomes" },
   { ...kootenaiGallery[1], href: "/projects#kootenai-townhomes" },
   { ...k2Gallery[0], href: "/projects#k2-apartments" },
