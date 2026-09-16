@@ -65,6 +65,8 @@ import k2Living from "../assets/images/k2-03.jpg";
 import k2Kitchen from "../assets/images/k2-04.jpg";
 import k2Interior from "../assets/images/k2-05.jpg";
 import k2Windows from "../assets/images/k2-06.jpg";
+import k2Aerial from "../assets/images/k2-07.jpg";
+import k2Dusk from "../assets/images/k2-08.jpg";
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -356,13 +358,13 @@ export const kootenaiGallery: GalleryImage[] = [
 
 export const k2Gallery: GalleryImage[] = [
   {
-    src: k2Exterior,
-    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise",
+    src: k2Aerial,
+    alt: "Aerial photograph of K2 Apartments at 2219 W Kootenai St in Boise",
     caption: "K2 Apartments",
   },
   {
-    src: k2Massing,
-    alt: "Exterior massing of K2 Apartments in Boise",
+    src: k2Dusk,
+    alt: "Dusk photograph of K2 Apartments in Boise",
     caption: "K2 Apartments",
   },
   {
@@ -383,6 +385,16 @@ export const k2Gallery: GalleryImage[] = [
   {
     src: k2Windows,
     alt: "Windows at K2 Apartments in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Exterior,
+    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise",
+    caption: "K2 Apartments",
+  },
+  {
+    src: k2Massing,
+    alt: "Exterior massing of K2 Apartments in Boise",
     caption: "K2 Apartments",
   },
 ];
@@ -407,7 +419,7 @@ export const homeStrip: GalleryImage[] = [
   { ...kootenaiGallery[0], href: "/projects#kootenai-townhomes" },
   { ...kootenaiGallery[1], href: "/projects#kootenai-townhomes" },
   { ...k2Gallery[0], href: "/projects#k2-apartments" },
-  { ...k2Gallery[3], href: "/projects#k2-apartments" },
+  { ...k2Gallery[1], href: "/projects#k2-apartments" },
 ];
 
 export const homeFeaturedThumbs = {

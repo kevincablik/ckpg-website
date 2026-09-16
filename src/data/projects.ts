@@ -212,12 +212,12 @@ export const k2Apartments: FeaturedProject = {
   ],
   bullets: ["Market-rate multifamily", "2219 W Kootenai St, Boise", "Completed"],
   image: {
-    src: "/images/k2-01.jpg",
-    alt: "Exterior rendering of K2 Apartments at 2219 W Kootenai St in Boise.",
+    src: "/images/k2-07.jpg",
+    alt: "Aerial photograph of K2 Apartments at 2219 W Kootenai St in Boise.",
   },
   extraImage: {
-    src: "/images/k2-03.jpg",
-    alt: "Interior at K2 Apartments in Boise.",
+    src: "/images/k2-08.jpg",
+    alt: "Dusk photograph of K2 Apartments in Boise.",
   },
   href: "/projects#k2-apartments",
 };
