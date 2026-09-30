@@ -4,7 +4,7 @@ import BleedPhoto from "../components/BleedPhoto.astro";
 import ButtonLink from "../components/ButtonLink.astro";
 import { site } from "../data/site";
 import { howWeWork } from "../data/projects";
-import { homeHero, seventhFranklinGallery } from "../data/gallery";
+import { homeHero, midRvrGallery } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -29,7 +29,10 @@ import { homeHero, seventhFranklinGallery } from "../data/gallery";
 
   <section>
     <div class="relative min-h-[78svh] bg-ink md:min-h-[88svh]">
-      <BleedPhoto src={seventhFranklinGallery[1].src} alt={seventhFranklinGallery[1].alt} />
+      <BleedPhoto src={midRvrGallery[0].src} alt={midRvrGallery[0].alt} />
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 to-transparent px-5 pb-8 pt-16 text-center md:pb-10">
+        <p class="eyebrow text-paper/85">{midRvrGallery[0].caption}</p>
+      </div>
     </div>
     <div class="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">
       <p class="eyebrow">Who we are</p>
