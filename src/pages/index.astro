@@ -7,7 +7,6 @@ import ImageStrip from "../components/ImageStrip.astro";
 import { site } from "../data/site";
 import {
   atlantaCommunities,
-  homePortfolio,
   howWeWork,
   midRvr,
   rvr410,
@@ -29,7 +28,7 @@ import {
   description={site.description}
   path="/"
   image="/images/seventh-franklin-phase2-01.jpg"
-  imageAlt="Exterior of seventh&franklin Phase 2 in Downtown Boise"
+  imageAlt="Exterior rendering of Seventh & Franklin Phase 2 in Downtown Boise"
 >
   <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
     <BleedPhoto src={homeHero.src} alt={homeHero.alt} priority />
@@ -55,7 +54,7 @@ import {
         Founded in 2014 by Anna and Kevin Cablik, CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
       </p>
       <p class="mt-4 text-sm font-light leading-relaxed text-muted">
-        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project. CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhouse communities.
+        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project. CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhome communities.
       </p>
       <div class="mt-10 flex justify-center">
         <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>
@@ -87,10 +86,7 @@ import {
 
   <section class="border-t border-line bg-paper-deep/60">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <p class="eyebrow">How we work</p>
-      <h2 class="font-display mt-3 max-w-xl text-4xl md:text-5xl">
-        Prime locations. Sophisticated design. Quality execution.
-      </h2>
+      <h2 class="font-display max-w-xl text-4xl md:text-5xl">How we work</h2>
       <div class="mt-14 grid gap-10 md:grid-cols-3 md:gap-10">
         {
           howWeWork.map((item) => (
@@ -116,28 +112,10 @@ import {
   <section class="border-t border-line">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
       <p class="eyebrow">Select portfolio</p>
-      <h2 class="font-display mt-3 text-4xl">Communities by name</h2>
+      <h2 class="font-display mt-3 text-4xl">Atlanta</h2>
       <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
-        In addition to seventh&franklin—including Phase 2 and Phase 3—completed Midtown Heights, MID RVR, and completed 410 RVR, CK Property Group’s work includes the following communities.
+        {atlantaCommunities.slice(0, -1).join(", ")}, and {atlantaCommunities.at(-1)}.
       </p>
-      <ul class="mt-10 divide-y divide-line border-y border-line">
-        {
-          homePortfolio.map((item) => (
-            <li class="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between">
-              <span class="text-lg">{item.name}</span>
-              <span class="text-sm tracking-wide text-stone">
-                {"status" in item && item.status ? `${item.status} · ${item.place}` : item.place}
-              </span>
-            </li>
-          ))
-        }
-        <li class="py-5">
-          <p class="text-lg">Atlanta communities</p>
-          <p class="mt-2 text-sm font-light leading-relaxed text-muted">
-            Including {atlantaCommunities.join(", ")}, and others.
-          </p>
-        </li>
-      </ul>
     </div>
   </section>
 

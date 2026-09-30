@@ -36,13 +36,15 @@ const hero = gallery[0];
           </p>
         ))
       }
-      <ul class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-ink-soft">
-        {
-          project.bullets.map((item) => (
-            <li>{item}</li>
-          ))
-        }
-      </ul>
+      {
+        project.bullets.length > 0 && (
+          <ul class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-ink-soft">
+            {project.bullets.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )
+      }
       <div class="mt-10 flex flex-wrap justify-center gap-3">
         {
           project.externalUrl && (

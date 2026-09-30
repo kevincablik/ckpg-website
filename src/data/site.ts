@@ -6,7 +6,7 @@ export const site = {
   email: "info@ckpgdevelopment.com",
   tagline: "Prime locations · Sophisticated design · Quality execution.",
   description:
-    "CK Property Group develops thoughtfully designed, for-sale townhome communities in highly desirable urban locations. Founded by Anna & Kevin Cablik.",
+    "CK Property Group develops thoughtfully designed, for-sale townhome communities in highly desirable urban locations. Founded by Anna and Kevin Cablik.",
   foundedYear: 2014,
 } as const;
 
@@ -19,12 +19,14 @@ export const nav = [
 
 export const projectInterestOptions = [
   { value: "general", label: "General" },
-  { value: "seventh-and-franklin", label: "seventh&franklin" },
-  { value: "seventh-and-franklin-phase-2", label: "seventh&franklin Phase 2" },
-  { value: "seventh-and-franklin-phase-3", label: "seventh&franklin Phase 3" },
-  { value: "mid-rvr", label: "MID RVR" },
-  { value: "410-rvr", label: "410 RVR" },
+  { value: "seventh-and-franklin-phase-2", label: "Seventh & Franklin Phase 2" },
+  { value: "seventh-and-franklin-phase-3", label: "Seventh & Franklin Phase 3" },
+  { value: "seventh-and-franklin", label: "Seventh & Franklin Phase 1" },
   { value: "midtown-heights", label: "Midtown Heights" },
+  { value: "kootenai-townhomes", label: "Kootenai Townhomes" },
+  { value: "k2-apartments", label: "K2 Apartments" },
+  { value: "410-rvr", label: "410 RVR" },
+  { value: "mid-rvr", label: "MID RVR" },
   { value: "other", label: "Other" },
 ] as const;
 

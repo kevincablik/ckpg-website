@@ -119,6 +119,9 @@ Official project imagery (not stock photography), also copied under `src/assets/
 
 - `public/images/ckpg-logo.png` — CK Property Group wordmark (header/footer)
 - `public/images/ckpg-mark.png` — CK slash mark used in the header lockup
-- `public/images/seventh-franklin-*.jpg` — seventh&franklin exterior, interiors, roof deck, terrace
-- `public/images/midrvr-*.jpg` — MID RVR exteriors, roof deck, interiors
-- `public/images/410-rvr-*.jpg` — 410 RVR exteriors (completed Hailey community)
+- `public/images/seventh-franklin-*.jpg` — Seventh & Franklin
+- `public/images/midrvr-*.jpg` — MID RVR photographs
+- `public/images/410-rvr-photo-*.jpg` — 410 RVR photographs
+- `public/images/kootenai-*.jpg` — Kootenai Townhomes photographs
+- `public/images/k2-07.jpg` and `k2-08.jpg` — K2 Apartments photographs
+- `public/images/midtown-heights-*.jpg` — Midtown Heights
