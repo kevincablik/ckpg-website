@@ -4,7 +4,7 @@ import BleedPhoto from "../components/BleedPhoto.astro";
 import ButtonLink from "../components/ButtonLink.astro";
 import { site } from "../data/site";
 import { howWeWork } from "../data/projects";
-import { homeBleed, homeHero, seventhFranklinGallery } from "../data/gallery";
+import { homeHero, seventhFranklinGallery } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -42,17 +42,6 @@ import { homeBleed, homeHero, seventhFranklinGallery } from "../data/gallery";
       </p>
       <div class="mt-10 flex justify-center">
         <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>
-      </div>
-    </div>
-  </section>
-
-  <section class="relative min-h-[88svh] overflow-hidden bg-ink text-paper md:min-h-[100svh]">
-    <BleedPhoto src={homeBleed.src} alt={homeBleed.alt} />
-    <div class="absolute inset-0 bg-ink/20"></div>
-    <div class="relative mx-auto flex min-h-[88svh] items-end justify-center px-5 py-16 text-center md:min-h-[100svh] md:py-20">
-      <div>
-        <p class="eyebrow text-paper/75">{homeBleed.caption}</p>
-        <p class="font-display mt-3 text-4xl md:text-6xl">Downtown Boise</p>
       </div>
     </div>
   </section>
