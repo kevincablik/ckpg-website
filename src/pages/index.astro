@@ -2,25 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BleedPhoto from "../components/BleedPhoto.astro";
 import ButtonLink from "../components/ButtonLink.astro";
-import ProjectPoster from "../components/ProjectPoster.astro";
-import ImageStrip from "../components/ImageStrip.astro";
 import { site } from "../data/site";
-import {
-  atlantaCommunities,
-  howWeWork,
-  midRvr,
-  rvr410,
-  seventhAndFranklinPhase2,
-} from "../data/projects";
-import {
-  homeBleed,
-  homeHero,
-  homeStrip,
-  midRvrGallery,
-  rvr410Gallery,
-  seventhFranklinGallery,
-  seventhFranklinPhase2Gallery,
-} from "../data/gallery";
+import { howWeWork } from "../data/projects";
+import { homeBleed, homeHero, seventhFranklinGallery } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -62,17 +46,6 @@ import {
     </div>
   </section>
 
-  <section class="bg-paper pb-8 pt-6 md:pb-12 md:pt-10">
-    <h2 class="font-display px-5 text-center text-4xl md:text-5xl">Featured communities</h2>
-    <div class="mt-10 px-4 md:px-10">
-      <ProjectPoster project={seventhAndFranklinPhase2} image={seventhFranklinPhase2Gallery[0]} featured />
-    </div>
-    <div class="mt-6 grid gap-6 px-4 md:mt-8 md:grid-cols-2 md:px-10">
-      <ProjectPoster project={midRvr} image={midRvrGallery[0]} overlay={false} />
-      <ProjectPoster project={rvr410} image={rvr410Gallery[0]} overlay={false} />
-    </div>
-  </section>
-
   <section class="relative min-h-[88svh] overflow-hidden bg-ink text-paper md:min-h-[100svh]">
     <BleedPhoto src={homeBleed.src} alt={homeBleed.alt} />
     <div class="absolute inset-0 bg-ink/20"></div>
@@ -98,36 +71,6 @@ import {
           ))
         }
       </div>
-    </div>
-  </section>
-
-  <section class="border-t border-line py-16 md:py-20">
-    <div class="px-5 md:px-10">
-      <p class="eyebrow">Selected views</p>
-      <h2 class="font-display mt-3 mb-8 text-4xl">Boise and Hailey</h2>
-    </div>
-    <ImageStrip images={homeStrip} />
-  </section>
-
-  <section class="border-t border-line">
-    <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-      <p class="eyebrow">Select portfolio</p>
-      <h2 class="font-display mt-3 text-4xl">Atlanta</h2>
-      <p class="mt-4 max-w-2xl text-sm font-light leading-relaxed text-muted">
-        {atlantaCommunities.slice(0, -1).join(", ")}, and {atlantaCommunities.at(-1)}.
-      </p>
-    </div>
-  </section>
-
-  <section class="bg-ink text-paper">
-    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-16 md:flex-row md:items-end md:justify-between md:px-8 md:py-20">
-      <div class="max-w-xl">
-        <p class="eyebrow text-paper/50">Start a conversation</p>
-        <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">
-          Partnerships, land, and current communities.
-        </h2>
-      </div>
-      <ButtonLink href="/contact" variant="light">Get in Touch</ButtonLink>
     </div>
   </section>
 </BaseLayout>
