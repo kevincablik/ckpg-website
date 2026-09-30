@@ -2,6 +2,7 @@ export type FeaturedProject = {
   id: string;
   name: string;
   location: string;
+  line: string;
   kicker: string;
   headline: string;
   summary: string;
@@ -24,6 +25,7 @@ export const seventhAndFranklinPhase2: FeaturedProject = {
   id: "seventh-and-franklin-phase-2",
   name: "Seventh & Franklin Phase 2",
   location: "Downtown Boise",
+  line: "Downtown Boise · Building B",
   kicker: "In progress · Building B · Downtown Boise",
   headline: "The next chapter at Seventh & Franklin",
   summary: "Building B continues the Seventh & Franklin community in Downtown Boise.",
@@ -37,7 +39,7 @@ export const seventhAndFranklinPhase2: FeaturedProject = {
     src: "/images/seventh-franklin-phase2-02.jpg",
     alt: "Street elevation rendering of Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
   },
-  href: "/projects#seventh-and-franklin-phase-2",
+  href: "/projects/seventh-and-franklin-phase-2",
   externalUrl: "https://seventhandfranklin.com",
   externalLabel: "seventhandfranklin.com",
 };
@@ -46,6 +48,7 @@ export const seventhAndFranklinPhase3: FeaturedProject = {
   id: "seventh-and-franklin-phase-3",
   name: "Seventh & Franklin Phase 3",
   location: "711 W Franklin, Downtown Boise",
+  line: "Downtown Boise · 711 W Franklin",
   kicker: "Current · 711 W Franklin",
   headline: "The last phase of the community",
   summary: "The last phase of Seventh & Franklin is at 711 W Franklin in Downtown Boise.",
@@ -59,7 +62,7 @@ export const seventhAndFranklinPhase3: FeaturedProject = {
     src: "/images/seventh-franklin-phase3-02.jpg",
     alt: "Street rendering of Seventh & Franklin Phase 3 at 711 W Franklin in Downtown Boise.",
   },
-  href: "/projects#seventh-and-franklin-phase-3",
+  href: "/projects/seventh-and-franklin-phase-3",
   externalUrl: "https://seventhandfranklin.com",
   externalLabel: "seventhandfranklin.com",
 };
@@ -68,6 +71,7 @@ export const seventhAndFranklin: FeaturedProject = {
   id: "seventh-and-franklin",
   name: "Seventh & Franklin Phase 1",
   location: "Downtown Boise",
+  line: "Downtown Boise",
   kicker: "Completed · Downtown Boise",
   headline: "Historic landmark, reimagined",
   summary:
@@ -85,7 +89,7 @@ export const seventhAndFranklin: FeaturedProject = {
     src: "/images/seventh-franklin-dusk.jpg",
     alt: "Dusk rendering of Seventh & Franklin Phase 1 in Downtown Boise, with illuminated interiors and rooftop terraces.",
   },
-  href: "/projects#seventh-and-franklin",
+  href: "/projects/seventh-and-franklin",
   externalUrl: "https://seventhandfranklin.com",
   externalLabel: "seventhandfranklin.com",
 };
@@ -94,6 +98,7 @@ export const midtownHeights: FeaturedProject = {
   id: "midtown-heights",
   name: "Midtown Heights",
   location: "1709 S Federal Way, Boise",
+  line: "Boise · 35 townhomes",
   kicker: "Completed · 1709 S Federal Way, Boise",
   headline: "Thirty-five townhomes in Boise",
   summary:
@@ -111,33 +116,31 @@ export const midtownHeights: FeaturedProject = {
     src: "/images/midtown-heights-roof-2.jpg",
     alt: "Rooftop lounge rendering at Midtown Heights in Boise.",
   },
-  href: "/projects#midtown-heights",
+  href: "/projects/midtown-heights",
 };
 
 export const kootenaiTownhomes: FeaturedProject = {
   id: "kootenai-townhomes",
   name: "Kootenai Townhomes",
   location: "2294 W Kootenai Street, Boise",
+  line: "Boise · 17 townhomes",
   kicker: "Completed · 2294 W Kootenai Street, Boise",
   headline: "Seventeen townhomes in Boise",
   summary: "Kootenai Townhomes is 17 townhomes at 2294 W Kootenai Street in Boise.",
   body: ["The townhomes are at 2294 W Kootenai Street in Boise."],
   bullets: [],
   image: {
-    src: "/images/kootenai-01.jpg",
-    alt: "Dusk exterior of Kootenai Townhomes at 2294 W Kootenai Street in Boise.",
+    src: "/images/kootenai-aerial-dusk.jpg",
+    alt: "Dusk aerial of Kootenai Townhomes at 2294 W Kootenai Street in Boise.",
   },
-  extraImage: {
-    src: "/images/kootenai-04.jpg",
-    alt: "Street view of Kootenai Townhomes at dusk, with the community sign in the foreground.",
-  },
-  href: "/projects#kootenai-townhomes",
+  href: "/projects/kootenai-townhomes",
 };
 
 export const k2Apartments: FeaturedProject = {
   id: "k2-apartments",
   name: "K2 Apartments",
   location: "2219 W Kootenai Street, Boise",
+  line: "Boise · Market-rate multifamily",
   kicker: "Completed · 2219 W Kootenai Street, Boise",
   headline: "Market-rate multifamily near Boise State",
   summary:
@@ -147,40 +150,42 @@ export const k2Apartments: FeaturedProject = {
   ],
   bullets: [],
   image: {
-    src: "/images/k2-08.jpg",
+    src: "/images/k2-dusk.jpg",
     alt: "Dusk exterior of K2 Apartments at 2219 W Kootenai Street in Boise.",
   },
   extraImage: {
-    src: "/images/k2-07.jpg",
-    alt: "Aerial view of K2 Apartments in Boise, beside a canal.",
+    src: "/images/k2-aerial.jpg",
+    alt: "Aerial view of K2 Apartments at 2219 W Kootenai Street in Boise.",
   },
-  href: "/projects#k2-apartments",
+  href: "/projects/k2-apartments",
 };
 
 export const rvr410: FeaturedProject = {
   id: "410-rvr",
   name: "410 RVR",
   location: "410 N River Street, Hailey",
+  line: "Hailey · 12 townhomes",
   kicker: "Completed · 410 N River Street, Hailey",
   headline: "Twelve townhomes on River Street",
   summary: "410 RVR is 12 townhomes at 410 N River Street in Hailey.",
   body: ["The townhomes are at 410 N River Street in Hailey."],
   bullets: [],
   image: {
-    src: "/images/410-rvr-photo-02.jpg",
-    alt: "410 RVR townhomes at 410 N River Street in Hailey, with balconies and mountain views.",
+    src: "/images/410-rvr-photo-04.jpg",
+    alt: "Rooftop deck at 410 RVR in Hailey, with a mountain view.",
   },
   extraImage: {
     src: "/images/410-rvr-photo-01.jpg",
     alt: "Aerial view of the 410 RVR townhomes along the street in Hailey.",
   },
-  href: "/projects#410-rvr",
+  href: "/projects/410-rvr",
 };
 
 export const midRvr: FeaturedProject = {
   id: "mid-rvr",
   name: "MID RVR",
   location: "317 N River Street, Hailey",
+  line: "Hailey · 10 townhomes",
   kicker: "Completed · 317 N River Street, Hailey",
   headline: "Mountain living on River Street",
   summary:
@@ -198,18 +203,18 @@ export const midRvr: FeaturedProject = {
     src: "/images/midrvr-01.jpg",
     alt: "Twilight street view of MID RVR townhomes in Hailey.",
   },
-  href: "/projects#mid-rvr",
+  href: "/projects/mid-rvr",
 };
 
 export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
 
 export const completedProjects = [
-  seventhAndFranklin,
+  midRvr,
   midtownHeights,
+  seventhAndFranklin,
   kootenaiTownhomes,
   k2Apartments,
   rvr410,
-  midRvr,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;

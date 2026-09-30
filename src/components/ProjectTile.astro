@@ -1,0 +1,33 @@
+---
+import type { ImageMetadata } from "astro";
+import SmartImage from "./SmartImage.astro";
+
+interface Props {
+  href: string;
+  name: string;
+  line: string;
+  src: ImageMetadata;
+  alt: string;
+}
+
+const { href, name, line, src, alt } = Astro.props;
+---
+
+
+<a href={href} class="group block bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <div class="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+      <SmartImage
+        src={src}
+        alt={alt}
+        sizes="(min-width: 768px) 46vw, 100vw"
+        widths={[640, 960, 1400]}
+      />
+    </div>
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/15 to-ink/10 transition-opacity duration-500 group-hover:from-ink/80"></div>
+    <div class="absolute inset-x-0 bottom-0 px-6 py-6 text-paper md:px-8 md:py-8">
+      <h3 class="font-display text-3xl leading-tight md:text-4xl">{name}</h3>
+      <p class="mt-2 text-sm font-light tracking-wide text-paper/85">{line}</p>
+    </div>
+  </div>
+</a>
