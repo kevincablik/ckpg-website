@@ -327,4 +327,3 @@ export const midRvrGallery: GalleryImage[] = [
 ];
 
 export const homeHero = seventhFranklinGallery[0];
-export const homeBleed = seventhFranklinGallery[4];
