@@ -214,12 +214,6 @@ export const completedProjects = [
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;
 
-export const atlantaCommunities = [
-  "1463 LaFrance",
-  "Skyhill",
-  "Metropolitan at Phipps",
-] as const;
-
 export const selectPortfolio = [
   { name: "Edge on Lucy", place: "Atlanta" },
   { name: "975 Piedmont", place: "Atlanta" },

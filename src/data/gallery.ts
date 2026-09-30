@@ -60,7 +60,6 @@ export type GalleryImage = {
   src: ImageMetadata;
   alt: string;
   caption: string;
-  href?: string;
 };
 
 export const seventhFranklinGallery: GalleryImage[] = [
@@ -329,18 +328,3 @@ export const midRvrGallery: GalleryImage[] = [
 
 export const homeHero = seventhFranklinGallery[0];
 export const homeBleed = seventhFranklinGallery[4];
-
-export const homeStrip: GalleryImage[] = [
-  { ...seventhFranklinPhase2Gallery[0], href: "/projects#seventh-and-franklin-phase-2" },
-  { ...seventhFranklinPhase3Gallery[0], href: "/projects#seventh-and-franklin-phase-3" },
-  { ...seventhFranklinGallery[0], href: "/projects#seventh-and-franklin" },
-  { ...midtownHeightsGallery[0], href: "/projects#midtown-heights" },
-  { ...midtownHeightsGallery[1], href: "/projects#midtown-heights" },
-  { ...k2ApartmentsGallery[0], href: "/projects#k2-apartments" },
-  { ...rvr410Gallery[0], href: "/projects#410-rvr" },
-  { ...rvr410Gallery[1], href: "/projects#410-rvr" },
-  { ...midRvrGallery[0], href: "/projects#mid-rvr" },
-  { ...midRvrGallery[1], href: "/projects#mid-rvr" },
-  { ...midRvrGallery[4], href: "/projects#mid-rvr" },
-  { ...seventhFranklinGallery[3], href: "/projects#seventh-and-franklin" },
-];
