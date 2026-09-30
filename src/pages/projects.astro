@@ -1,29 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
-import ProjectFeature from "../components/ProjectFeature.astro";
+import ProjectTile from "../components/ProjectTile.astro";
 import { site } from "../data/site";
-import {
-  k2Apartments,
-  kootenaiTownhomes,
-  midRvr,
-  midtownHeights,
-  rvr410,
-  selectPortfolio,
-  seventhAndFranklin,
-  seventhAndFranklinPhase2,
-  seventhAndFranklinPhase3,
-} from "../data/projects";
-import {
-  k2ApartmentsGallery,
-  kootenaiTownhomesGallery,
-  midRvrGallery,
-  midtownHeightsGallery,
-  rvr410Gallery,
-  seventhFranklinGallery,
-  seventhFranklinPhase2Gallery,
-  seventhFranklinPhase3Gallery,
-} from "../data/gallery";
+import { completedProjects, currentProjects, selectPortfolio } from "../data/projects";
+import { galleriesById, midtownHeightsGallery } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -46,29 +27,45 @@ import {
     </p>
   </div>
 
-  <section class="border-y border-line bg-paper-deep/50">
-    <div class="mx-auto max-w-3xl px-5 py-12 text-center md:py-14">
-      <p class="eyebrow">Projects</p>
-      <h2 class="font-display mt-3 text-4xl md:text-5xl">Current and in progress</h2>
+  <section class="mx-auto max-w-[1400px] px-5 pb-6 md:px-8 md:pb-10">
+    <h2 class="font-display text-4xl md:text-5xl">Current</h2>
+    <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+      {
+        currentProjects.map((project) => {
+          const cover = galleriesById[project.id][0];
+          return (
+            <ProjectTile
+              href={project.href}
+              name={project.name}
+              line={project.line}
+              src={cover.src}
+              alt={cover.alt}
+            />
+          );
+        })
+      }
     </div>
   </section>
 
-  <ProjectFeature project={seventhAndFranklinPhase2} gallery={seventhFranklinPhase2Gallery} />
-  <ProjectFeature project={seventhAndFranklinPhase3} gallery={seventhFranklinPhase3Gallery} />
-
-  <section class="border-y border-line bg-paper-deep/50">
-    <div class="mx-auto max-w-3xl px-5 py-12 text-center md:py-14">
-      <p class="eyebrow">Projects</p>
-      <h2 class="font-display mt-3 text-4xl md:text-5xl">Completed</h2>
+  <section class="mx-auto max-w-[1400px] px-5 py-12 md:px-8 md:py-16">
+    <h2 class="font-display text-4xl md:text-5xl">Completed</h2>
+    <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+      {
+        completedProjects.map((project) => {
+          const cover = galleriesById[project.id][0];
+          return (
+            <ProjectTile
+              href={project.href}
+              name={project.name}
+              line={project.line}
+              src={cover.src}
+              alt={cover.alt}
+            />
+          );
+        })
+      }
     </div>
   </section>
-
-  <ProjectFeature project={seventhAndFranklin} gallery={seventhFranklinGallery} />
-  <ProjectFeature project={midtownHeights} gallery={midtownHeightsGallery} />
-  <ProjectFeature project={kootenaiTownhomes} gallery={kootenaiTownhomesGallery} />
-  <ProjectFeature project={k2Apartments} gallery={k2ApartmentsGallery} />
-  <ProjectFeature project={rvr410} gallery={rvr410Gallery} />
-  <ProjectFeature project={midRvr} gallery={midRvrGallery} />
 
   <section class="border-t border-line bg-paper-deep/50">
     <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
@@ -79,9 +76,7 @@ import {
           selectPortfolio.map((item) => (
             <li class="flex items-baseline justify-between gap-6 border-t border-line py-5">
               <span>{item.name}</span>
-              <span class="text-sm tracking-wide text-stone">
-                {"status" in item && item.status ? `${item.status} · ${item.place}` : item.place}
-              </span>
+              <span class="text-sm tracking-wide text-stone">{item.place}</span>
             </li>
           ))
         }

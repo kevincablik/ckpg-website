@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BleedPhoto from "../../components/BleedPhoto.astro";
+import ButtonLink from "../../components/ButtonLink.astro";
+import SmartImage from "../../components/SmartImage.astro";
+import { site } from "../../data/site";
+import { completedProjects, currentProjects } from "../../data/projects";
+import { galleriesById } from "../../data/gallery";
+import type { FeaturedProject } from "../../data/projects";
+
+export function getStaticPaths() {
+  return [...currentProjects, ...completedProjects].map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: FeaturedProject;
+}
+
+const { project } = Astro.props;
+const gallery = galleriesById[project.id as keyof typeof galleriesById];
+const hero = gallery[0];
+const rest = gallery.slice(1);
+---
+
+<BaseLayout
+  title={`${project.name} | ${site.name}`}
+  description={project.summary}
+  path={`/projects/${project.id}`}
+  image={project.image.src}
+  imageAlt={project.image.alt}
+>
+  <section class="relative flex min-h-[78svh] items-end overflow-hidden bg-ink text-paper md:min-h-[88svh]">
+    <BleedPhoto src={hero.src} alt={hero.alt} priority />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-ink/25"></div>
+    <div class="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32 md:px-8 md:pb-16">
+      <p class="eyebrow text-paper/80">{project.line}</p>
+      <h1 class="font-display mt-3 max-w-4xl text-5xl font-normal leading-[0.95] tracking-tight md:text-7xl">
+        {project.name}
+      </h1>
+    </div>
+  </section>
+
+  <section class="bg-paper">
+    <div class="mx-auto max-w-2xl px-5 py-14 text-center md:py-20">
+      <p>
+        <a href="/projects" class="text-[0.7rem] font-medium tracking-[0.18em] text-stone uppercase">
+          All projects
+        </a>
+      </p>
+      <div class="mt-8 space-y-4">
+        {
+          project.body.map((paragraph) => (
+            <p class="text-[0.98rem] font-light leading-relaxed text-muted">{paragraph}</p>
+          ))
+        }
+      </div>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        {
+          project.externalUrl && (
+            <ButtonLink href={project.externalUrl} variant="ghost-dark" external>
+              {project.externalLabel ?? "Project site"}
+            </ButtonLink>
+          )
+        }
+        <ButtonLink href={`/contact?interest=${project.id}`} variant="dark">
+          Inquire
+        </ButtonLink>
+      </div>
+    </div>
+  </section>
+
+  {
+    rest.length > 0 && (
+      <section class="border-t border-line">
+        <div class="mx-auto grid max-w-5xl grid-cols-1 gap-3 px-5 py-10 sm:grid-cols-2 md:px-8 md:py-14">
+          {rest.map((image, index) => (
+            <figure
+              class:list={[
+                "overflow-hidden bg-ink",
+                rest.length % 2 === 1 && index === rest.length - 1
+                  ? "aspect-[3/2] sm:col-span-2 sm:aspect-[2/1]"
+                  : "aspect-[3/2]",
+              ]}
+            >
+              <SmartImage
+                src={image.src}
+                alt={image.alt}
+                sizes={
+                  rest.length % 2 === 1 && index === rest.length - 1
+                    ? "(min-width: 640px) 64rem, 100vw"
+                    : "(min-width: 640px) 32rem, 100vw"
+                }
+              />
+            </figure>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
