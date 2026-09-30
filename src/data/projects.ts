@@ -171,8 +171,8 @@ export const rvr410: FeaturedProject = {
   body: ["The townhomes are at 410 N River Street in Hailey."],
   bullets: [],
   image: {
-    src: "/images/410-rvr-photo-02.jpg",
-    alt: "410 RVR townhomes at 410 N River Street in Hailey, with balconies and mountain views.",
+    src: "/images/410-rvr-photo-04.jpg",
+    alt: "Rooftop deck at 410 RVR in Hailey, with a mountain view.",
   },
   extraImage: {
     src: "/images/410-rvr-photo-01.jpg",

@@ -22,10 +22,10 @@ import midrvr04 from "../assets/images/midrvr-04.jpg";
 import midrvr05 from "../assets/images/midrvr-05.jpg";
 import midrvr09 from "../assets/images/midrvr-09.jpg";
 
-import rvr410Exterior from "../assets/images/410-rvr-photo-02.jpg";
+import rvr410Roof from "../assets/images/410-rvr-photo-04.jpg";
 import rvr410Aerial from "../assets/images/410-rvr-photo-01.jpg";
-import rvr410Living from "../assets/images/410-rvr-photo-04.jpg";
-import rvr410Bedroom from "../assets/images/410-rvr-photo-03.jpg";
+import rvr410Bedroom from "../assets/images/410-rvr-photo-02.jpg";
+import rvr410Bedroom2 from "../assets/images/410-rvr-photo-03.jpg";
 
 import midtownHeightsRoof1 from "../assets/images/midtown-heights-roof-1.jpg";
 import midtownHeightsRoof2 from "../assets/images/midtown-heights-roof-2.jpg";
@@ -170,8 +170,8 @@ export const k2ApartmentsGallery: GalleryImage[] = [
 
 export const rvr410Gallery: GalleryImage[] = [
   {
-    src: rvr410Exterior,
-    alt: "410 RVR townhomes at 410 N River Street in Hailey, with balconies and mountain views.",
+    src: rvr410Roof,
+    alt: "Rooftop deck at 410 RVR in Hailey, with a mountain view.",
     caption: "410 RVR",
   },
   {
@@ -180,12 +180,12 @@ export const rvr410Gallery: GalleryImage[] = [
     caption: "410 RVR",
   },
   {
-    src: rvr410Living,
-    alt: "Living room at 410 RVR in Hailey, with mountain views beyond the windows.",
+    src: rvr410Bedroom,
+    alt: "Bedroom at 410 RVR in Hailey.",
     caption: "410 RVR",
   },
   {
-    src: rvr410Bedroom,
+    src: rvr410Bedroom2,
     alt: "Bedroom at 410 RVR in Hailey.",
     caption: "410 RVR",
   },
