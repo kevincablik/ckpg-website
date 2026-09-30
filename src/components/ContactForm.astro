@@ -24,7 +24,6 @@ const method = formspree ? "POST" : "GET";
     !formspree && (
       <>
         <input type="hidden" name="subject" value="CK Property Group inquiry" />
-        {/* TODO: Replace mailto with Formspree once Kevin confirms the live inbox. Set PUBLIC_FORMSPREE_ENDPOINT. */}
       </>
     )
   }
@@ -69,7 +68,6 @@ const method = formspree ? "POST" : "GET";
       }
     </select>
     <span class="pointer-events-none absolute right-0 top-9 text-stone" aria-hidden="true">▾</span>
-    <p class="mt-2 text-xs text-stone">Optional. Defaults to General.</p>
   </div>
 
   <div>
@@ -94,13 +92,6 @@ const method = formspree ? "POST" : "GET";
   <p class="text-sm leading-relaxed text-muted">
     Or email{' '}
     <a class="underline underline-offset-4" href={`mailto:${email}`}>{email}</a>.
-    {
-      !formspree && (
-        <span class="block mt-2 text-xs text-stone">
-          This form currently opens an email draft. Connect Formspree when the inbox is confirmed.
-        </span>
-      )
-    }
   </p>
 </form>
 
