@@ -4,7 +4,7 @@ import PageHero from "../components/PageHero.astro";
 import ProjectTile from "../components/ProjectTile.astro";
 import { site } from "../data/site";
 import { completedProjects, currentProjects, selectPortfolio } from "../data/projects";
-import { galleriesById, midtownHeightsGallery } from "../data/gallery";
+import { midtownHeightsGallery, tileCover } from "../data/gallery";
 ---
 
 <BaseLayout
@@ -32,7 +32,7 @@ import { galleriesById, midtownHeightsGallery } from "../data/gallery";
     <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
       {
         currentProjects.map((project) => {
-          const cover = galleriesById[project.id][0];
+          const cover = tileCover(project.id);
           return (
             <ProjectTile
               href={project.href}
@@ -52,7 +52,7 @@ import { galleriesById, midtownHeightsGallery } from "../data/gallery";
     <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
       {
         completedProjects.map((project) => {
-          const cover = galleriesById[project.id][0];
+          const cover = tileCover(project.id);
           return (
             <ProjectTile
               href={project.href}

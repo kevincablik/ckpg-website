@@ -209,12 +209,12 @@ export const midRvr: FeaturedProject = {
 export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
 
 export const completedProjects = [
-  seventhAndFranklin,
+  midRvr,
   midtownHeights,
+  seventhAndFranklin,
   kootenaiTownhomes,
   k2Apartments,
   rvr410,
-  midRvr,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;

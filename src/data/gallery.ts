@@ -236,3 +236,8 @@ export const galleriesById = {
 } as const;
 
 export const homeHero = seventhFranklinGallery[0];
+
+export function tileCover(id: string): GalleryImage {
+  if (id === "midtown-heights") return midtownHeightsGallery[1];
+  return galleriesById[id as keyof typeof galleriesById][0];
+}
