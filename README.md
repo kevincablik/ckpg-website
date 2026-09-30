@@ -122,6 +122,6 @@ Official project imagery (not stock photography), also copied under `src/assets/
 - `public/images/seventh-franklin-*.jpg` — Seventh & Franklin
 - `public/images/midrvr-*.jpg` — MID RVR photographs
 - `public/images/410-rvr-photo-*.jpg` — 410 RVR photographs
-- `public/images/kootenai-kitchen.jpg` — Kootenai Townhomes kitchen
+- `public/images/kootenai-aerial-*.jpg` and `kootenai-kitchen.jpg` — Kootenai Townhomes photographs
 - `public/images/k2-dusk.jpg` and `k2-aerial.jpg` — K2 Apartments photographs
 - `public/images/midtown-heights-*.jpg` — Midtown Heights

@@ -30,6 +30,10 @@ import rvr410Bedroom from "../assets/images/410-rvr-photo-03.jpg";
 import midtownHeightsRoof1 from "../assets/images/midtown-heights-roof-1.jpg";
 import midtownHeightsRoof2 from "../assets/images/midtown-heights-roof-2.jpg";
 
+import kootenaiAerialDusk from "../assets/images/kootenai-aerial-dusk.jpg";
+import kootenaiAerialDowntown from "../assets/images/kootenai-aerial-downtown.jpg";
+import kootenaiAerialFoothills from "../assets/images/kootenai-aerial-foothills.jpg";
+import kootenaiAerialCourtyard from "../assets/images/kootenai-aerial-courtyard.jpg";
 import kootenaiKitchen from "../assets/images/kootenai-kitchen.jpg";
 
 import k2Dusk from "../assets/images/k2-dusk.jpg";
@@ -124,6 +128,26 @@ export const midtownHeightsGallery: GalleryImage[] = [
 ];
 
 export const kootenaiTownhomesGallery: GalleryImage[] = [
+  {
+    src: kootenaiAerialDusk,
+    alt: "Dusk aerial of Kootenai Townhomes at 2294 W Kootenai Street in Boise.",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenaiAerialDowntown,
+    alt: "Aerial view of Kootenai Townhomes in Boise, looking toward downtown.",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenaiAerialFoothills,
+    alt: "Aerial view of Kootenai Townhomes in Boise, with the foothills beyond.",
+    caption: "Kootenai Townhomes",
+  },
+  {
+    src: kootenaiAerialCourtyard,
+    alt: "Aerial view of the courtyard at Kootenai Townhomes in Boise.",
+    caption: "Kootenai Townhomes",
+  },
   {
     src: kootenaiKitchen,
     alt: "Kitchen at Kootenai Townhomes at 2294 W Kootenai Street in Boise.",
