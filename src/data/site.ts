@@ -19,9 +19,7 @@ export const nav = [
 
 export const projectInterestOptions = [
   { value: "general", label: "General" },
-  { value: "seventh-and-franklin-phase-2", label: "Seventh & Franklin Phase 2" },
-  { value: "seventh-and-franklin-phase-3", label: "Seventh & Franklin Phase 3" },
-  { value: "seventh-and-franklin", label: "Seventh & Franklin Phase 1" },
+  { value: "seventh-franklin", label: "Seventh & Franklin" },
   { value: "midtown-heights", label: "Midtown Heights" },
   { value: "kootenai-townhomes", label: "Kootenai Townhomes" },
   { value: "k2-apartments", label: "K2 Apartments" },

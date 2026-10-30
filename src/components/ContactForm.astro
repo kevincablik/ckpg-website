@@ -3,9 +3,15 @@ import { projectInterestOptions, site } from "../data/site";
 
 const formspree = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT?.trim();
 const email = import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || site.email;
+const legacyInterest: Record<string, string> = {
+  "seventh-and-franklin": "seventh-franklin",
+  "seventh-and-franklin-phase-2": "seventh-franklin",
+  "seventh-and-franklin-phase-3": "seventh-franklin",
+};
 const requestedInterest = Astro.url.searchParams.get("interest") ?? "general";
-const validInterest = projectInterestOptions.some((option) => option.value === requestedInterest)
-  ? requestedInterest
+const normalizedInterest = legacyInterest[requestedInterest] ?? requestedInterest;
+const validInterest = projectInterestOptions.some((option) => option.value === normalizedInterest)
+  ? normalizedInterest
   : "general";
 
 const action = formspree || `mailto:${email}`;

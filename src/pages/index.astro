@@ -11,8 +11,8 @@ import { homeHero, midRvrGallery } from "../data/gallery";
   title={`${site.name} | Urban Infill Development`}
   description={site.description}
   path="/"
-  image="/images/seventh-franklin-phase2-01.jpg"
-  imageAlt="Exterior rendering of Seventh & Franklin Phase 2 in Downtown Boise"
+  image="/images/seventh-franklin-exterior.jpg"
+  imageAlt={homeHero.alt}
 >
   <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
     <BleedPhoto src={homeHero.src} alt={homeHero.alt} priority />
@@ -38,10 +38,7 @@ import { homeHero, midRvrGallery } from "../data/gallery";
       <p class="eyebrow">Who we are</p>
       <h2 class="font-display mt-4 text-4xl leading-tight md:text-5xl">A mother-and-son team</h2>
       <p class="mt-6 text-base font-light leading-relaxed text-ink-soft">
-        Founded in 2014 by Anna and Kevin Cablik, CK Property Group brings together construction expertise and careful site selection to deliver residential communities in places people want to live.
-      </p>
-      <p class="mt-4 text-sm font-light leading-relaxed text-muted">
-        As a mother-and-son team with decades of combined experience in residential and commercial construction, we emphasize thorough due diligence, financial strength, and craftsmanship at every stage of a project. CK Property Group is a privately funded urban and infill development company focused on attainable, high-quality for-sale townhome communities.
+        Founded in 2014 by Anna and Kevin Cablik, CK Property Group is a privately funded company focused on for-sale townhome communities.
       </p>
       <div class="mt-10 flex justify-center">
         <ButtonLink href="/about" variant="dark">About CK Property Group</ButtonLink>

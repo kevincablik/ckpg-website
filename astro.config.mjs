@@ -9,6 +9,11 @@ export default defineConfig({
   site: "https://ckpgdevelopment.com",
   base: "/",
   integrations: [sitemap()],
+  redirects: {
+    "/projects/seventh-and-franklin": "/projects/seventh-franklin",
+    "/projects/seventh-and-franklin-phase-2": "/projects/seventh-franklin",
+    "/projects/seventh-and-franklin-phase-3": "/projects/seventh-franklin",
+  },
   vite: {
     plugins: [tailwindcss()],
   },

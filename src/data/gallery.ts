@@ -225,9 +225,7 @@ export const midRvrGallery: GalleryImage[] = [
 ];
 
 export const galleriesById = {
-  "seventh-and-franklin-phase-2": seventhFranklinPhase2Gallery,
-  "seventh-and-franklin-phase-3": seventhFranklinPhase3Gallery,
-  "seventh-and-franklin": seventhFranklinGallery,
+  "seventh-franklin": seventhFranklinGallery,
   "midtown-heights": midtownHeightsGallery,
   "kootenai-townhomes": kootenaiTownhomesGallery,
   "k2-apartments": k2ApartmentsGallery,
