@@ -9,10 +9,12 @@ import { galleriesById } from "../../data/gallery";
 import type { FeaturedProject } from "../../data/projects";
 
 export function getStaticPaths() {
-  return [...currentProjects, ...completedProjects].map((project) => ({
-    params: { slug: project.id },
-    props: { project },
-  }));
+  return [...currentProjects, ...completedProjects]
+    .filter((project) => project.id !== "seventh-franklin")
+    .map((project) => ({
+      params: { slug: project.id },
+      props: { project },
+    }));
 }
 
 interface Props {

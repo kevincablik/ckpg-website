@@ -21,78 +21,48 @@ export type FeaturedProject = {
   externalLabel?: string;
 };
 
-export const seventhAndFranklinPhase2: FeaturedProject = {
-  id: "seventh-and-franklin-phase-2",
-  name: "Seventh & Franklin Phase 2",
-  location: "Downtown Boise",
-  line: "Downtown Boise · Building B",
-  kicker: "In progress · Building B · Downtown Boise",
-  headline: "The next chapter at Seventh & Franklin",
-  summary: "Building B continues the Seventh & Franklin community in Downtown Boise.",
-  body: ["Building B continues the Seventh & Franklin community in Downtown Boise."],
-  bullets: [],
-  image: {
-    src: "/images/seventh-franklin-phase2-01.jpg",
-    alt: "Exterior rendering of Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
-  },
-  extraImage: {
-    src: "/images/seventh-franklin-phase2-02.jpg",
-    alt: "Street elevation rendering of Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
-  },
-  href: "/projects/seventh-and-franklin-phase-2",
-  externalUrl: "https://seventhandfranklin.com",
-  externalLabel: "seventhandfranklin.com",
-};
-
-export const seventhAndFranklinPhase3: FeaturedProject = {
-  id: "seventh-and-franklin-phase-3",
-  name: "Seventh & Franklin Phase 3",
-  location: "711 W Franklin, Downtown Boise",
-  line: "Downtown Boise · 711 W Franklin",
-  kicker: "Current · 711 W Franklin",
-  headline: "The last phase of the community",
-  summary: "The last phase of Seventh & Franklin is at 711 W Franklin in Downtown Boise.",
-  body: ["The last phase of Seventh & Franklin is at 711 W Franklin in Downtown Boise."],
-  bullets: [],
-  image: {
-    src: "/images/seventh-franklin-phase3-01.jpg",
-    alt: "Aerial rendering of Seventh & Franklin Phase 3 at 711 W Franklin in Downtown Boise.",
-  },
-  extraImage: {
-    src: "/images/seventh-franklin-phase3-02.jpg",
-    alt: "Street rendering of Seventh & Franklin Phase 3 at 711 W Franklin in Downtown Boise.",
-  },
-  href: "/projects/seventh-and-franklin-phase-3",
-  externalUrl: "https://seventhandfranklin.com",
-  externalLabel: "seventhandfranklin.com",
-};
-
 export const seventhAndFranklin: FeaturedProject = {
-  id: "seventh-and-franklin",
-  name: "Seventh & Franklin Phase 1",
+  id: "seventh-franklin",
+  name: "Seventh & Franklin",
   location: "Downtown Boise",
   line: "Downtown Boise",
-  kicker: "Completed · Downtown Boise",
+  kicker: "Current · Downtown Boise",
   headline: "Historic landmark, reimagined",
   summary:
     "Seventh & Franklin reimagines the historic J.W. McLean House, originally designed in 1903, as contemporary residences at the gateway to Downtown Boise.",
   body: [
-    "The J.W. McLean House was originally designed in 1903 as brick-terraced residences at Seventh and Franklin. Seventh & Franklin reimagines that landmark character for contemporary living: historic brickwork paired with a modern addition, light-filled interiors, and a downtown address that still feels like a retreat.",
-    "Each residence is composed for privacy while remaining at the gateway to Downtown Boise, close to dining, culture, parks, and the Boise River. Private rooftop terraces look toward Downtown Boise, the Idaho State Capitol, and the foothills. Designed by Pivot North Architecture.",
+    "Seventh & Franklin reimagines the historic J.W. McLean House, originally designed in 1903, as contemporary residences at the gateway to Downtown Boise.",
   ],
   bullets: [],
   image: {
     src: "/images/seventh-franklin-exterior.jpg",
     alt: "Exterior rendering of Seventh & Franklin Phase 1 in Downtown Boise, with the historic brick residence beside a contemporary townhome addition.",
   },
-  extraImage: {
-    src: "/images/seventh-franklin-dusk.jpg",
-    alt: "Dusk rendering of Seventh & Franklin Phase 1 in Downtown Boise, with illuminated interiors and rooftop terraces.",
-  },
-  href: "/projects/seventh-and-franklin",
+  href: "/projects/seventh-franklin",
   externalUrl: "https://seventhandfranklin.com",
   externalLabel: "seventhandfranklin.com",
 };
+
+export const seventhFranklinPhases = [
+  {
+    title: "Phase 1",
+    line: "Completed",
+    paragraphs: [
+      "The J.W. McLean House was originally designed in 1903 as brick-terraced residences at Seventh and Franklin. Historic brickwork is paired with a modern addition.",
+      "Private rooftop terraces look toward Downtown Boise, the Idaho State Capitol, and the foothills. Designed by Pivot North Architecture.",
+    ],
+  },
+  {
+    title: "Phase 2",
+    line: "Building B",
+    paragraphs: ["Building B continues the Seventh & Franklin community in Downtown Boise."],
+  },
+  {
+    title: "Phase 3",
+    line: "711 W Franklin",
+    paragraphs: ["The last phase of Seventh & Franklin is at 711 W Franklin in Downtown Boise."],
+  },
+] as const;
 
 export const midtownHeights: FeaturedProject = {
   id: "midtown-heights",
@@ -104,8 +74,7 @@ export const midtownHeights: FeaturedProject = {
   summary:
     "Midtown Heights is 35 townhomes at 1709 S Federal Way in Boise. The community was sold to a Berkshire Hathaway subsidiary.",
   body: [
-    "The townhomes are at 1709 S Federal Way in Boise.",
-    "The community was sold to a Berkshire Hathaway subsidiary.",
+    "Midtown Heights is 35 townhomes at 1709 S Federal Way in Boise. The community was sold to a Berkshire Hathaway subsidiary.",
   ],
   bullets: [],
   image: {
@@ -127,7 +96,7 @@ export const kootenaiTownhomes: FeaturedProject = {
   kicker: "Completed · 2294 W Kootenai Street, Boise",
   headline: "Seventeen townhomes in Boise",
   summary: "Kootenai Townhomes is 17 townhomes at 2294 W Kootenai Street in Boise.",
-  body: ["The townhomes are at 2294 W Kootenai Street in Boise."],
+  body: ["Kootenai Townhomes is 17 townhomes at 2294 W Kootenai Street in Boise."],
   bullets: [],
   image: {
     src: "/images/kootenai-aerial-dusk.jpg",
@@ -146,7 +115,7 @@ export const k2Apartments: FeaturedProject = {
   summary:
     "K2 Apartments is a market-rate multifamily community at 2219 W Kootenai Street in Boise, aimed at the Boise State University market.",
   body: [
-    "The community is at 2219 W Kootenai Street in Boise and is aimed at the Boise State University market.",
+    "K2 Apartments is a market-rate multifamily community at 2219 W Kootenai Street in Boise, aimed at the Boise State University market.",
   ],
   bullets: [],
   image: {
@@ -168,7 +137,7 @@ export const rvr410: FeaturedProject = {
   kicker: "Completed · 410 N River Street, Hailey",
   headline: "Twelve townhomes on River Street",
   summary: "410 RVR is 12 townhomes at 410 N River Street in Hailey.",
-  body: ["The townhomes are at 410 N River Street in Hailey."],
+  body: ["410 RVR is 12 townhomes at 410 N River Street in Hailey."],
   bullets: [],
   image: {
     src: "/images/410-rvr-photo-04.jpg",
@@ -206,12 +175,11 @@ export const midRvr: FeaturedProject = {
   href: "/projects/mid-rvr",
 };
 
-export const currentProjects = [seventhAndFranklinPhase2, seventhAndFranklinPhase3] as const;
+export const currentProjects = [seventhAndFranklin] as const;
 
 export const completedProjects = [
   midRvr,
   midtownHeights,
-  seventhAndFranklin,
   kootenaiTownhomes,
   k2Apartments,
   rvr410,
