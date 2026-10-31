@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import SmartImage from "../components/SmartImage.astro";
+import { site } from "../data/site";
+
+import heroImg from "../assets/images/vanguard-exterior-dusk.jpg";
+import vanguardCardImg from "../assets/images/vanguard-corner-dusk.jpg";
+import landingImg from "../assets/images/the-landing-clubhouse.jpg";
+import alturasImg from "../assets/images/fifth-alturas-rendering.jpg";
+
+const services = [
+  {
+    title: "Feasibility & Strategy",
+    text: "Market study, concept planning, cost estimate and pro forma, so you can make the go/no-go decision before committing to design and construction.",
+  },
+  {
+    title: "Design Management & Entitlements",
+    text: "Design professionals recommended and managed, constructability and cost reviews, and permits and conditions of approval tracked through to certificate of occupancy.",
+  },
+  {
+    title: "Procurement & Contracts",
+    text: "Procurement strategy, bidder pre-qualification, bid leveling and analysis, and a negotiated construction contract with protections for retainage, insurance and written change orders.",
+  },
+  {
+    title: "Cost & Schedule Control",
+    text: "Approved budget and project schedule kept current, with written change-order recommendations, value engineering, and review of pay applications and lien waivers.",
+  },
+  {
+    title: "Construction Oversight",
+    text: "Owner-architect-contractor meetings, site observation, RFI and submittal tracking, and monthly written reports with photographs.",
+  },
+  {
+    title: "Closeout & Handover",
+    text: "Punch list, certificates of occupancy, warranties, as-builts and systems training, with complete project records delivered to you.",
+  },
+];
+
+const clients = [
+  { title: "Public owners", text: "Cities, counties, ports and agencies delivering civic facilities." },
+  { title: "School districts", text: "Bond-funded new schools, modernizations and campus improvements." },
+  { title: "Private owners", text: "Clubs, institutions, landowners and investors building without an in-house team." },
+];
+
+const projects = [
+  {
+    name: "The Landing at Crane Creek",
+    place: "Crane Creek Country Club · Boise, Idaho",
+    text: "Owner's representative to Crane Creek Country Club for its Phase 1 clubhouse expansion, including a new kitchen and bar, locker rooms, golf simulators and covered patio spaces. Full owner's representation from planning and design through procurement, construction and closeout.",
+    src: landingImg,
+    alt: "The Landing at Crane Creek Country Club",
+  },
+  {
+    name: "Fifth & Alturas",
+    place: "Boise, Idaho",
+    text: "Owner's representative for an eight-home luxury townhome community in Boise, leading planning, design coordination, approvals, procurement and construction oversight for the owner.",
+    src: alturasImg,
+    alt: "Rendering of the Fifth & Alturas townhomes",
+  },
+  {
+    name: "Vanguard Apartments",
+    place: "Boise, Idaho",
+    text: "Owner's representative for Vanguard Apartments, 600 W Front St, Boise. Architect: Holst Architecture.",
+    src: vanguardCardImg,
+    alt: "Vanguard Apartments at the corner of 6th and Front, Boise",
+  },
+];
+---
+
+<BaseLayout
+  title={`Owner's Representation | ${site.name}`}
+  description="Owner's representation from a developer's perspective: planning, budget and schedule control, procurement and construction oversight for public and private owners."
+  path="/owners-rep"
+  image="/images/vanguard-exterior-dusk.jpg"
+  imageAlt="Vanguard Apartments at dusk, 600 W Front St, Boise"
+>
+  <PageHero
+    src={heroImg}
+    alt="Vanguard Apartments at dusk, 600 W Front St, Boise"
+    eyebrow="Owner's Representative Services"
+    title="Owner's Representation"
+    lede="We build for ourselves. We bring that same discipline to your project."
+  />
+
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <div class="grid gap-10 md:grid-cols-12">
+        <div class="md:col-span-4">
+          <p class="eyebrow">What we do</p>
+          <h2 class="font-display mt-3 text-4xl leading-tight md:text-5xl">From feasibility to handover</h2>
+        </div>
+        <p class="text-lg font-light leading-relaxed text-ink-soft md:col-span-7 md:col-start-6 md:pt-10">
+          We represent you, not the designer or the contractor. You keep every decision; we bring one accountable lead and clear monthly reporting.
+        </p>
+      </div>
+      <ol class="mt-16 grid gap-x-12 gap-y-12 md:grid-cols-3">
+        {
+          services.map((s, i) => (
+            <li class="border-t border-ink pt-6">
+              <span class="font-display text-2xl text-stone">{String(i + 1).padStart(2, "0")}</span>
+              <h3 class="mt-3 text-[0.78rem] font-medium tracking-[0.2em] uppercase">{s.title}</h3>
+              <p class="mt-4 text-[0.95rem] font-light leading-relaxed text-muted">{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-t border-line bg-paper-deep/50">
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-24">
+      <p class="eyebrow">Who we serve</p>
+      <div class="mt-10 grid gap-10 md:grid-cols-3">
+        {
+          clients.map((c) => (
+            <div>
+              <h3 class="font-display text-3xl">{c.title}</h3>
+              <p class="mt-3 text-[0.95rem] font-light leading-relaxed text-muted">{c.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-12 md:px-8 md:py-28">
+      <div class="md:col-span-5">
+        <p class="eyebrow text-paper/60">Why CK Property Group</p>
+        <h2 class="font-display mt-3 text-4xl leading-tight md:text-5xl">A developer's perspective, working only for you</h2>
+      </div>
+      <div class="space-y-6 text-[1.02rem] font-light leading-relaxed text-paper/80 md:col-span-6 md:col-start-7 md:pt-3">
+        <p>
+          As a developer, we carry the budget, the schedule and the outcome on our own projects. We know where costs hide, how decisions ripple through a schedule, and what it takes to deliver quality that lasts.
+        </p>
+        <p>
+          As your representative, we put that experience to work for you, with construction expertise, thorough due diligence and straightforward communication from start to finish.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+      <p class="eyebrow">Select experience</p>
+      <h2 class="font-display mt-3 text-4xl md:text-5xl">Owner's representation projects</h2>
+      <div class="mt-14 grid gap-12 md:grid-cols-2 md:gap-10">
+        {
+          projects.map((p) => (
+            <article>
+              <div class="relative aspect-[4/3] overflow-hidden bg-ink">
+                <SmartImage src={p.src} alt={p.alt} sizes="(min-width: 768px) 46vw, 100vw" widths={[640, 960, 1400]} />
+              </div>
+              <p class="eyebrow mt-6">{p.place}</p>
+              <h3 class="font-display mt-2 text-3xl md:text-4xl">{p.name}</h3>
+              <p class="mt-4 max-w-lg text-[0.95rem] font-light leading-relaxed text-muted">{p.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
+      <div>
+        <p class="eyebrow text-paper/60">Start a conversation</p>
+        <p class="font-display mt-3 max-w-xl text-4xl leading-snug md:text-5xl">Planning a project? Let's talk.</p>
+        <a href={`mailto:${site.email}`} class="mt-4 inline-block text-sm font-light tracking-wide text-paper/75 hover:text-paper">{site.email}</a>
+      </div>
+      <ButtonLink href="/contact" variant="light">Get in Touch</ButtonLink>
+    </div>
+  </section>
+</BaseLayout>
