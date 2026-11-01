@@ -5,13 +5,15 @@ import ButtonLink from "../components/ButtonLink.astro";
 import { site } from "../data/site";
 import { howWeWork } from "../data/projects";
 import { homeHero, midRvrGallery } from "../data/gallery";
+
+const homeBand = midRvrGallery[1];
 ---
 
 <BaseLayout
   title={`${site.name} | Urban Infill Development`}
   description={site.description}
   path="/"
-  image="/images/seventh-franklin-exterior.jpg"
+  image="/images/midrvr-02.jpg"
   imageAlt={homeHero.alt}
 >
   <section class="relative min-h-[100svh] overflow-hidden bg-ink text-paper">
@@ -29,9 +31,9 @@ import { homeHero, midRvrGallery } from "../data/gallery";
 
   <section>
     <div class="relative min-h-[78svh] bg-ink md:min-h-[88svh]">
-      <BleedPhoto src={midRvrGallery[0].src} alt={midRvrGallery[0].alt} />
+      <BleedPhoto src={homeBand.src} alt={homeBand.alt} />
       <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 to-transparent px-5 pb-8 pt-16 text-center md:pb-10">
-        <p class="eyebrow text-paper/85">{midRvrGallery[0].caption}</p>
+        <p class="eyebrow text-paper/85">{homeBand.caption}</p>
       </div>
     </div>
     <div class="mx-auto max-w-2xl px-5 py-16 text-center md:py-20">

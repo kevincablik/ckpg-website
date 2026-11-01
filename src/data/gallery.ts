@@ -233,7 +233,11 @@ export const galleriesById = {
   "mid-rvr": midRvrGallery,
 } as const;
 
-export const homeHero = seventhFranklinGallery[0];
+export const homeHero: GalleryImage = {
+  src: midrvr02,
+  alt: "Twilight aerial of MID RVR townhomes at the corner of River Street in Hailey, Idaho, with mountains beyond.",
+  caption: "MID RVR",
+};
 
 export function tileCover(id: string): GalleryImage {
   if (id === "midtown-heights") return midtownHeightsGallery[1];
