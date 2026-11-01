@@ -179,10 +179,10 @@ export const currentProjects = [seventhAndFranklin] as const;
 
 export const completedProjects = [
   midRvr,
-  midtownHeights,
-  kootenaiTownhomes,
   k2Apartments,
   rvr410,
+  midtownHeights,
+  kootenaiTownhomes,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;
