@@ -26,6 +26,7 @@ export const projectInterestOptions = [
   { value: "k2-apartments", label: "K2 Apartments" },
   { value: "410-rvr", label: "410 RVR" },
   { value: "mid-rvr", label: "MID RVR" },
+  { value: "dewey-street", label: "Dewey Street Residences" },
   { value: "other", label: "Other" },
 ] as const;
 

@@ -150,6 +150,26 @@ export const rvr410: FeaturedProject = {
   href: "/projects/410-rvr",
 };
 
+export const deweyStreet: FeaturedProject = {
+  id: "dewey-street",
+  name: "Dewey Street Residences",
+  location: "Boise, Idaho",
+  line: "Boise, Idaho",
+  kicker: "Completed · Boise, Idaho",
+  headline: "Two custom spec homes on the North End",
+  summary:
+    "Two custom spec homes on Boise's North End, designed with Pivot North Design. CKPG's first Boise project, completed in 2019.",
+  body: [
+    "Two custom spec homes on Boise's North End, designed with Pivot North Design. CKPG's first Boise project, completed in 2019.",
+  ],
+  bullets: [],
+  image: {
+    src: "/images/dewey-street-aerial-dusk.jpg",
+    alt: "Dusk aerial of Dewey Street Residences in Boise, with the foothills beyond.",
+  },
+  href: "/projects/dewey-street",
+};
+
 export const midRvr: FeaturedProject = {
   id: "mid-rvr",
   name: "MID RVR",
@@ -179,10 +199,11 @@ export const currentProjects = [seventhAndFranklin] as const;
 
 export const completedProjects = [
   midRvr,
-  midtownHeights,
-  kootenaiTownhomes,
   k2Apartments,
   rvr410,
+  midtownHeights,
+  kootenaiTownhomes,
+  deweyStreet,
 ] as const;
 
 export const featuredProjects = [...currentProjects, ...completedProjects] as const;

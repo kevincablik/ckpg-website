@@ -39,6 +39,14 @@ import kootenaiKitchen from "../assets/images/kootenai-kitchen.jpg";
 import k2Dusk from "../assets/images/k2-dusk.jpg";
 import k2Aerial from "../assets/images/k2-aerial.jpg";
 
+import deweyAerialDusk from "../assets/images/dewey-street-aerial-dusk.jpg";
+import deweyAerialDusk2 from "../assets/images/dewey-street-aerial-dusk-2.jpg";
+import deweyKitchenLiving from "../assets/images/dewey-street-kitchen-living.jpg";
+import deweyGreatRoom from "../assets/images/dewey-street-great-room.jpg";
+import deweyKitchenIsland from "../assets/images/dewey-street-kitchen-island.jpg";
+import deweyBedroom from "../assets/images/dewey-street-bedroom.jpg";
+import deweyPatio from "../assets/images/dewey-street-patio.jpg";
+
 export type GalleryImage = {
   src: ImageMetadata;
   alt: string;
@@ -191,6 +199,44 @@ export const rvr410Gallery: GalleryImage[] = [
   },
 ];
 
+export const deweyStreetGallery: GalleryImage[] = [
+  {
+    src: deweyAerialDusk,
+    alt: "Dusk aerial of Dewey Street Residences in Boise, with the foothills beyond.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyAerialDusk2,
+    alt: "Dusk aerial of a Dewey Street Residences home in Boise.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyKitchenLiving,
+    alt: "Kitchen opening to the living room at Dewey Street Residences in Boise.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyGreatRoom,
+    alt: "Great room and stair at Dewey Street Residences in Boise.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyKitchenIsland,
+    alt: "Kitchen island at Dewey Street Residences in Boise.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyBedroom,
+    alt: "Primary bedroom at Dewey Street Residences in Boise.",
+    caption: "Dewey Street Residences",
+  },
+  {
+    src: deweyPatio,
+    alt: "Covered patio at Dewey Street Residences in Boise.",
+    caption: "Dewey Street Residences",
+  },
+];
+
 export const midRvrGallery: GalleryImage[] = [
   {
     src: midrvr02,
@@ -231,6 +277,7 @@ export const galleriesById = {
   "k2-apartments": k2ApartmentsGallery,
   "410-rvr": rvr410Gallery,
   "mid-rvr": midRvrGallery,
+  "dewey-street": deweyStreetGallery,
 } as const;
 
 export const homeHero: GalleryImage = {
