@@ -1,27 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
+import SmartImage from "../components/SmartImage.astro";
 import { site } from "../data/site";
-import { midRvrGallery } from "../data/gallery";
+import landingDusk from "../assets/images/the-landing-patio-dusk.jpg";
+import kevinCablik from "../assets/images/kevin-cablik.jpg";
+
+const landingAlt = "The Landing at Crane Creek Country Club at dusk";
 ---
 
 <BaseLayout
   title={`About | ${site.name}`}
   description="Founded in 2014 by Anna and Kevin Cablik, CK Property Group is a privately funded urban and infill development company focused on for-sale townhome communities."
   path="/about"
-  image="/images/midrvr-02.jpg"
-  imageAlt="Twilight view of MID RVR townhomes in Hailey"
+  image="/images/the-landing-patio-dusk.jpg"
+  imageAlt={landingAlt}
 >
   <PageHero
-    src={midRvrGallery[0].src}
-    alt={midRvrGallery[0].alt}
+    src={landingDusk}
+    alt={landingAlt}
     eyebrow="About"
     title="Founded in 2014 by Anna and Kevin Cablik"
   />
 
   <section class="border-t border-line bg-paper-deep/50">
-    <div class="mx-auto grid max-w-6xl gap-16 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
-      <article>
+    <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <article class="max-w-3xl">
         <p class="eyebrow">Founder</p>
         <h2 class="font-display mt-3 text-4xl">Anna Cablik</h2>
         <div class="mt-6 space-y-4 text-[0.98rem] font-light leading-relaxed text-muted">
@@ -32,11 +36,21 @@ import { midRvrGallery } from "../data/gallery";
             That work encompassed major civic and commercial projects, including the Atlanta Airport International Terminal and Mercedes-Benz Stadium. She has served on the Truist board and previously served on the board of Georgia Power.
           </p>
         </div>
-      </article>
 
-      <article>
-        <p class="eyebrow">Managing Partner</p>
-        <h2 class="font-display mt-3 text-4xl">Kevin Cablik</h2>
+        <div class="mt-12 flex items-center gap-4 md:mt-14">
+          <div class="relative aspect-[3/4] w-14 shrink-0 overflow-hidden bg-sand sm:w-16 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:object-[center_18%] [&_picture]:block [&_picture]:h-full [&_picture]:w-full">
+            <SmartImage
+              src={kevinCablik}
+              alt="Kevin Cablik"
+              widths={[112, 192, 280]}
+              sizes="64px"
+            />
+          </div>
+          <div>
+            <p class="eyebrow">Managing Partner</p>
+            <h2 class="font-display mt-2 text-4xl">Kevin Cablik</h2>
+          </div>
+        </div>
         <div class="mt-6 space-y-4 text-[0.98rem] font-light leading-relaxed text-muted">
           <p>
             Kevin Cablik is Managing Partner of CK Property Group. He earned a Bachelor of Science in Building Construction from the Georgia Institute of Technology in 2006.
