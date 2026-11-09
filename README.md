@@ -38,15 +38,13 @@ npm run preview
 
 ## Contact form and email
 
-The public contact address on the site is a **placeholder**: `info@ckpgdevelopment.com`.
+The contact form posts to Formspree when `PUBLIC_FORMSPREE_ENDPOINT` is set. Otherwise it opens a `mailto:` draft in the browser. The inbox is assembled in client-side script from separate parts and is not written into the page HTML.
 
-**Kevin must confirm the live inbox** before launch. Update:
+`src/data/site.ts` still holds `email` for internal reference. Do not render that value, or a `mailto:` link to it, on any page.
 
-- `src/data/site.ts` (`email`)
-- `PUBLIC_CONTACT_EMAIL` in GitHub Actions / repository variables, if used
-- Any DNS/mail records for the domain
+**Kevin must confirm the live inbox** before launch. Update the split parts in `src/components/ContactForm.astro`, `email` in `src/data/site.ts`, and any DNS/mail records for the domain.
 
-The contact form currently opens a `mailto:` draft so the site works with no backend. To switch to Formspree:
+To switch to Formspree:
 
 1. Confirm the inbox.
 2. Create a form at [formspree.io](https://formspree.io).
