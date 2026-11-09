@@ -3,7 +3,6 @@
 
 interface ImportMetaEnv {
   readonly PUBLIC_FORMSPREE_ENDPOINT?: string;
-  readonly PUBLIC_CONTACT_EMAIL?: string;
 }
 
 interface ImportMeta {
