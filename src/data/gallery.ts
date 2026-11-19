@@ -8,7 +8,18 @@ import seventhFranklinTerrace from "../assets/images/seventh-franklin-terrace.jp
 
 import seventhFranklinPhase201 from "../assets/images/seventh-franklin-phase2-01.jpg";
 import seventhFranklinPhase202 from "../assets/images/seventh-franklin-phase2-02.jpg";
-import seventhFranklinPhase203 from "../assets/images/seventh-franklin-phase2-03.jpg";
+import seventhFranklinPhase2Kitchen from "../assets/images/seventh-franklin-phase2-kitchen.jpg";
+import seventhFranklinPhase2Dining from "../assets/images/seventh-franklin-phase2-dining.jpg";
+import seventhFranklinPhase2Stair from "../assets/images/seventh-franklin-phase2-stair.jpg";
+import seventhFranklinPhase2Range from "../assets/images/seventh-franklin-phase2-range.jpg";
+import seventhFranklinPhase2FireplaceDetail from "../assets/images/seventh-franklin-phase2-fireplace-detail.jpg";
+import seventhFranklinPhase2BonusRoom from "../assets/images/seventh-franklin-phase2-bonus-room.jpg";
+import seventhFranklinPhase2RoofDeck from "../assets/images/seventh-franklin-phase2-roof-deck.jpg";
+import seventhFranklinPhase2DeckFireplace from "../assets/images/seventh-franklin-phase2-deck-fireplace.jpg";
+import seventhFranklinPhase2PrimaryBath from "../assets/images/seventh-franklin-phase2-primary-bath.jpg";
+import seventhFranklinPhase2Bedroom from "../assets/images/seventh-franklin-phase2-bedroom.jpg";
+import seventhFranklinPhase2LivingFireplace from "../assets/images/seventh-franklin-phase2-living-fireplace.jpg";
+import seventhFranklinPhase2KitchenLong from "../assets/images/seventh-franklin-phase2-kitchen-long.jpg";
 
 import seventhFranklinPhase301 from "../assets/images/seventh-franklin-phase3-01.jpg";
 import seventhFranklinPhase302 from "../assets/images/seventh-franklin-phase3-02.jpg";
@@ -93,8 +104,53 @@ export const seventhFranklinPhase2Gallery: GalleryImage[] = [
     caption: "Seventh & Franklin Phase 2",
   },
   {
-    src: seventhFranklinPhase203,
-    alt: "Rooftop terrace rendering at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    src: seventhFranklinPhase2Kitchen,
+    alt: "Kitchen with a marble-clad island and range wall at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2Dining,
+    alt: "Dining area with a built-in cabinet, herringbone wood floor, and tall windows at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2Stair,
+    alt: "Stair with a wood handrail and black metal balusters at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2Range,
+    alt: "Gas range and hood set into a marble backsplash, with cream cabinets, at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2FireplaceDetail,
+    alt: "Fireplace with a dark veined stone surround and a fire burning at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2BonusRoom,
+    alt: "Bonus room with a wood wet bar, dark tile backsplash, and sliding doors to a balcony at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2RoofDeck,
+    alt: "Covered roof deck with a tile floor and black railing, looking out on autumn trees, at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2DeckFireplace,
+    alt: "Brick fireplace on the tiled roof deck, with autumn trees beyond, at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2PrimaryBath,
+    alt: "Primary bathroom with a glass-enclosed shower and a light wood double vanity at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
+    src: seventhFranklinPhase2Bedroom,
+    alt: "Bedroom with pale blue walls, carpet, and a large window looking onto autumn trees at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
     caption: "Seventh & Franklin Phase 2",
   },
 ];
@@ -284,6 +340,18 @@ export const homeHero: GalleryImage = {
   src: midrvr02,
   alt: "Twilight aerial of MID RVR townhomes at the corner of River Street in Hailey, Idaho, with mountains beyond.",
   caption: "MID RVR",
+};
+
+export const homeBand: GalleryImage = {
+  src: seventhFranklinPhase2LivingFireplace,
+  alt: "Living room with a herringbone wood floor and a dark stone fireplace at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+  caption: "Seventh & Franklin Phase 2",
+};
+
+export const contactHero: GalleryImage = {
+  src: seventhFranklinPhase2KitchenLong,
+  alt: "Long view down the kitchen, with a marble island and cream cabinets, at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+  caption: "Seventh & Franklin Phase 2",
 };
 
 export function tileCover(id: string): GalleryImage {
