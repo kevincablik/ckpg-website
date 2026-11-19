@@ -22,54 +22,56 @@ const phaseGalleries: GalleryImage[][] = [
 
 type GalleryFrame = {
   portrait: boolean;
-  wide: boolean;
+  colSpan: number;
+  cinematic: boolean;
 };
 
-// A clearly portrait photo (the roof-deck fireplace) spans two rows at its own
-// aspect ratio so the fireplace is not cropped into a 3:2 frame. Slightly tall
-// images stay in the landscape grid.
+// A clearly portrait photo spans two rows on the right at its own aspect ratio.
+// The three images before it are bonus room, bedroom, then the roof deck, so the
+// bath after the portrait sits under the roof deck. The image before that group
+// spans the row when the count would otherwise put the portrait on the left.
 function framesFor(images: GalleryImage[]): GalleryFrame[] {
-  const columns = 2;
-  const occupied = new Set<string>();
+  const portraitIndex = images.findIndex((image) => image.src.height / image.src.width > 1.25);
+  if (portraitIndex < 4) {
+    return images.map((_, index) => ({
+      portrait: false,
+      colSpan: images.length % 2 === 1 && index === images.length - 1 ? 2 : 1,
+      cinematic: images.length % 2 === 1 && index === images.length - 1,
+    }));
+  }
+
+  const bridge = portraitIndex - 4;
+  const frames: GalleryFrame[] = [];
   let row = 0;
   let col = 0;
-  const placed: { portrait: boolean; row: number; rowSpan: number }[] = [];
+  const occupied = new Set<string>();
 
-  const advanceToFreeCell = () => {
+  const advance = () => {
     while (occupied.has(`${row}:${col}`)) {
       col += 1;
-      if (col >= columns) {
+      if (col > 1) {
         col = 0;
         row += 1;
       }
     }
   };
 
-  for (const image of images) {
-    advanceToFreeCell();
-    const portrait = image.src.height / image.src.width > 1.25;
-    const rowSpan = portrait ? 2 : 1;
+  for (let index = 0; index < images.length; index++) {
+    advance();
+    const portrait = index === portraitIndex;
+    const colSpan = index === bridge && col === 0 ? 2 : 1;
     occupied.add(`${row}:${col}`);
+    if (colSpan === 2) occupied.add(`${row}:${col + 1}`);
     if (portrait) occupied.add(`${row + 1}:${col}`);
-    placed.push({ portrait, row, rowSpan });
-    col += 1;
-    if (col >= columns) {
+    frames.push({ portrait, colSpan, cinematic: false });
+    col += colSpan;
+    if (col > 1) {
       col = 0;
       row += 1;
     }
   }
 
-  const occupants = new Map<number, number>();
-  for (const item of placed) {
-    for (let spanned = item.row; spanned < item.row + item.rowSpan; spanned += 1) {
-      occupants.set(spanned, (occupants.get(spanned) ?? 0) + 1);
-    }
-  }
-
-  return placed.map((item) => ({
-    portrait: item.portrait,
-    wide: !item.portrait && (occupants.get(item.row) ?? 0) === 1,
-  }));
+  return frames;
 }
 ---
 
@@ -144,9 +146,11 @@ function framesFor(images: GalleryImage[]): GalleryFrame[] {
                     "relative overflow-hidden bg-ink",
                     frame.portrait
                       ? "sm:row-span-2"
-                      : frame.wide
-                        ? "aspect-[3/2] sm:col-span-2"
-                        : "aspect-[3/2]",
+                      : frame.cinematic
+                        ? "aspect-[3/2] sm:col-span-2 sm:aspect-[2/1]"
+                        : frame.colSpan === 2
+                          ? "aspect-[3/2] sm:col-span-2"
+                          : "aspect-[3/2]",
                   ]}
                   style={
                     frame.portrait
@@ -159,7 +163,7 @@ function framesFor(images: GalleryImage[]): GalleryFrame[] {
                     alt={image.alt}
                     class="absolute inset-0"
                     sizes={
-                      frame.wide
+                      frame.colSpan === 2
                         ? "(min-width: 640px) 64rem, 100vw"
                         : "(min-width: 640px) 32rem, 100vw"
                     }

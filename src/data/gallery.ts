@@ -134,6 +134,11 @@ export const seventhFranklinPhase2Gallery: GalleryImage[] = [
     caption: "Seventh & Franklin Phase 2",
   },
   {
+    src: seventhFranklinPhase2Bedroom,
+    alt: "Bedroom with pale blue walls, carpet, and a large window looking onto autumn trees at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
+    caption: "Seventh & Franklin Phase 2",
+  },
+  {
     src: seventhFranklinPhase2RoofDeck,
     alt: "Covered roof deck with a tile floor and black railing, looking out on autumn trees, at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
     caption: "Seventh & Franklin Phase 2",
@@ -146,11 +151,6 @@ export const seventhFranklinPhase2Gallery: GalleryImage[] = [
   {
     src: seventhFranklinPhase2PrimaryBath,
     alt: "Primary bathroom with a glass-enclosed shower and a light wood double vanity at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
-    caption: "Seventh & Franklin Phase 2",
-  },
-  {
-    src: seventhFranklinPhase2Bedroom,
-    alt: "Bedroom with pale blue walls, carpet, and a large window looking onto autumn trees at Seventh & Franklin Phase 2, Building B, in Downtown Boise.",
     caption: "Seventh & Franklin Phase 2",
   },
 ];
