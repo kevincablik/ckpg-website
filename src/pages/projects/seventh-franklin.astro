@@ -19,6 +19,60 @@ const phaseGalleries: GalleryImage[][] = [
   seventhFranklinPhase2Gallery,
   seventhFranklinPhase3Gallery,
 ];
+
+type GalleryFrame = {
+  portrait: boolean;
+  colSpan: number;
+  cinematic: boolean;
+};
+
+// A clearly portrait photo spans two rows on the right at its own aspect ratio.
+// The three images before it are bonus room, bedroom, then the roof deck, so the
+// bath after the portrait sits under the roof deck. The image before that group
+// spans the row when the count would otherwise put the portrait on the left.
+function framesFor(images: GalleryImage[]): GalleryFrame[] {
+  const portraitIndex = images.findIndex((image) => image.src.height / image.src.width > 1.25);
+  if (portraitIndex < 4) {
+    return images.map((_, index) => ({
+      portrait: false,
+      colSpan: images.length % 2 === 1 && index === images.length - 1 ? 2 : 1,
+      cinematic: images.length % 2 === 1 && index === images.length - 1,
+    }));
+  }
+
+  const bridge = portraitIndex - 4;
+  const frames: GalleryFrame[] = [];
+  let row = 0;
+  let col = 0;
+  const occupied = new Set<string>();
+
+  const advance = () => {
+    while (occupied.has(`${row}:${col}`)) {
+      col += 1;
+      if (col > 1) {
+        col = 0;
+        row += 1;
+      }
+    }
+  };
+
+  for (let index = 0; index < images.length; index++) {
+    advance();
+    const portrait = index === portraitIndex;
+    const colSpan = index === bridge && col === 0 ? 2 : 1;
+    occupied.add(`${row}:${col}`);
+    if (colSpan === 2) occupied.add(`${row}:${col + 1}`);
+    if (portrait) occupied.add(`${row + 1}:${col}`);
+    frames.push({ portrait, colSpan, cinematic: false });
+    col += colSpan;
+    if (col > 1) {
+      col = 0;
+      row += 1;
+    }
+  }
+
+  return frames;
+}
 ---
 
 <BaseLayout
@@ -71,6 +125,7 @@ const phaseGalleries: GalleryImage[][] = [
   {
     seventhFranklinPhases.map((phase, phaseIndex) => {
       const images = phaseGalleries[phaseIndex];
+      const frames = framesFor(images);
       return (
         <section class="border-t border-line">
           <div class="mx-auto max-w-2xl px-5 py-12 text-center md:py-16">
@@ -82,27 +137,40 @@ const phaseGalleries: GalleryImage[][] = [
               ))}
             </div>
           </div>
-          <div class="mx-auto grid max-w-5xl grid-cols-1 gap-3 px-5 pb-12 sm:grid-cols-2 md:px-8 md:pb-16">
-            {images.map((image, index) => (
-              <figure
-                class:list={[
-                  "overflow-hidden bg-ink",
-                  images.length % 2 === 1 && index === images.length - 1
-                    ? "aspect-[3/2] sm:col-span-2 sm:aspect-[2/1]"
-                    : "aspect-[3/2]",
-                ]}
-              >
-                <SmartImage
-                  src={image.src}
-                  alt={image.alt}
-                  sizes={
-                    images.length % 2 === 1 && index === images.length - 1
-                      ? "(min-width: 640px) 64rem, 100vw"
-                      : "(min-width: 640px) 32rem, 100vw"
+          <div class="mx-auto grid max-w-5xl grid-cols-1 gap-3 px-5 pb-12 sm:grid-cols-2 sm:items-start md:px-8 md:pb-16">
+            {images.map((image, index) => {
+              const frame = frames[index];
+              return (
+                <figure
+                  class:list={[
+                    "relative overflow-hidden bg-ink",
+                    frame.portrait
+                      ? "sm:row-span-2"
+                      : frame.cinematic
+                        ? "aspect-[3/2] sm:col-span-2 sm:aspect-[2/1]"
+                        : frame.colSpan === 2
+                          ? "aspect-[3/2] sm:col-span-2"
+                          : "aspect-[3/2]",
+                  ]}
+                  style={
+                    frame.portrait
+                      ? { aspectRatio: `${image.src.width} / ${image.src.height}` }
+                      : undefined
                   }
-                />
-              </figure>
-            ))}
+                >
+                  <SmartImage
+                    src={image.src}
+                    alt={image.alt}
+                    class="absolute inset-0"
+                    sizes={
+                      frame.colSpan === 2
+                        ? "(min-width: 640px) 64rem, 100vw"
+                        : "(min-width: 640px) 32rem, 100vw"
+                    }
+                  />
+                </figure>
+              );
+            })}
           </div>
         </section>
       );
